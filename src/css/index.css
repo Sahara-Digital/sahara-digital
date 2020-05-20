@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 40px;
+    color: #1C1C1C;
+    background: #ffffff;
+    min-height: 100%;   
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+}
+
+a{
+    text-decoration: none;
+    padding: 0.75rem;
+    font-size: 14px;
+    line-height: 25px;
+    color: #FFE156;
+}
+
+a:focus, a:active, i:focus, i:active{
+    text-decoration: none;
+    color: #677DB7;
+}
+
+p{
+    margin: 1rem
+}
+
+header{
+    background-color: #1C1C1C;
+    width: 100%;
+}
