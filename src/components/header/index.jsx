@@ -15,7 +15,6 @@ const Header = () => {
             </div>
             <div className={`qa-navigation-container`}>
                 <Link to='/'>Home</Link>
-                {/* <Link to='/1'>Clients</Link> */}
                 <Link to='/about'>About</Link>
                 <Link to='/contact'>Contact</Link> 
             </div>

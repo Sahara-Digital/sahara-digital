@@ -1,0 +1,29 @@
+.qa-copyright{
+    align-self: baseline;
+    padding: 1rem 1rem 0rem 1rem;
+    font-size: 14px;
+}
+
+.qa-footer-container{
+    display: flex;
+    padding: 1rem;
+}
+
+.qa-footer-resources {
+    display: flex;
+    flex-direction: column;
+}
+.qa-brand-details{
+    font-size: 14px;
+    max-width: 21rem;
+}
+.qa-contact-details{
+    font-size: 14px;
+}
+.qa-footer-resources, .qa-footer-something, .qa-footer-contact{
+    padding: 0.5rem;
+}
+
+.fa-linkedin, .fa-github-square, .fa-twitter-square{
+    margin-right: 0.5rem;
+}
