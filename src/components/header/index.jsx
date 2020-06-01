@@ -8,15 +8,11 @@ const Header = () => {
             <div className={`qa-company-header-wrapper`}>
                 <h1 className={`qa-company-name`}>Sahara Digital</h1>
             </div>
-            <div className={`qa-company-header-email`}>
-            <span>
-            contact@saharadigital.co.uk
-            </span>
-            </div>
             <div className={`qa-navigation-container`}>
-                <Link to='/'>Home</Link>
-                <Link to='/about'>About</Link>
-                <Link to='/contact'>Contact</Link> 
+                <Link to='/'>HOME</Link>
+                <Link to='/about'>ABOUT</Link>
+                <Link to='/events'>EVENTS</Link>
+                <Link to='/contact'>CONTACT</Link> 
             </div>
         </header>
     );

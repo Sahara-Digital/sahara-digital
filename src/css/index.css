@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    line-height: 1.8;
 }
 
 body{
@@ -38,6 +39,9 @@ a:focus, a:active, i:focus, i:active {
     text-decoration: none;
     color: #677DB7;
 }
+p{
+    padding: 0.5rem 0rem 0.5rem 0rem;
+}
 
 main{
     flex: 1 0 auto;
@@ -50,4 +54,5 @@ footer {
     justify-content: center;
     color: #FAAD4D;
     background-color: #303030;
+    padding: 1rem;
 }
