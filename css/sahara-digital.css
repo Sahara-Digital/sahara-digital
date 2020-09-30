@@ -31,6 +31,15 @@ p {
   font-size: 0.8rem;
 }
 
+.tm-sitename,
+a {
+  font-size: 2.5rem;
+  color: #9cc;
+}
+
+a:hover {
+  color: white;
+}
 /* Navigation */
 .navbar-toggler {
   padding: 8px 15px;
@@ -190,6 +199,7 @@ hr {
   background-color: white;
   color: black;
   border: 0;
+  border-radius: 2px;
 }
 
 .btn-primary:hover {
@@ -391,6 +401,7 @@ textarea {
   }
   .tm-sitename {
     font-size: 1.8rem;
+    color: #9cc;
   }
   .tm-slogon {
     font-size: 0.8rem;
