@@ -1,1 +1,0 @@
-export { default as Down} from './down-arrow';
