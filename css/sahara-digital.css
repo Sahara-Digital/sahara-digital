@@ -81,9 +81,7 @@ a:hover {
 .nav-item.nav-item:hover {
     color: white
 }
-/* .nav-item {
-    border-bottom: 3px solid grey;
-} */ 
+
 .nav-item.active .tm-nav-link,
 .nav-item:hover .tm-nav-link {
     color: white;
