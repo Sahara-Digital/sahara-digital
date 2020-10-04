@@ -1,0 +1,6 @@
+name: Saharadigital
+title: Saharadigital
+url: "https://Saharadigital.co.uk"
+permalink: pretty
+plugins:
+    - jekyll-sitemap
