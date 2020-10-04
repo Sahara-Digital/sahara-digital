@@ -65,9 +65,8 @@ a:hover {
 
 .navbar-expand-lg .navbar-nav .tm-nav-link {
     font-size: 1.3rem;
-    font-weight: 400;
-    color: white;
-    padding-bottom: 30px;
+    font-weight: 600;
+    /* color: white; */
 }
 
 .nav-item {
@@ -77,10 +76,18 @@ a:hover {
 .nav-item:last-child {
     margin-right: 0;
 }
-
+.nav-item.active {
+    border-bottom: 3px solid white;
+}
+.nav-item.nav-item:hover {
+    color: white
+}
+/* .nav-item {
+    border-bottom: 3px solid grey;
+} */ 
 .nav-item.active .tm-nav-link,
 .nav-item:hover .tm-nav-link {
-    color: #9cc;
+    color: white;
 }
 
 /* Page Background */
@@ -160,7 +167,9 @@ a:hover {
 .tm-content {
     max-width: 660px;
     margin-top: 50px;
-    padding-right: 20px;
+    padding: 20px;
+    border-radius: 3px;
+    backdrop-filter: invert(17%);
 }
 
 .tm-about {
@@ -180,6 +189,7 @@ a:hover {
 
 .tm-content-title {
     font-size: 1.5rem;
+    font-weight: 700;
 }
 hr {
     border-top: 1px solid white;
