@@ -2,40 +2,40 @@ import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
     colors: {
-      white: '#FFFFFF',
-      black: '#000000',
-      brand: {
-        primary: '#29194F',
-        secondary: '#FEF000',
-        tertiary: '#FDD200',
-      },
-      default: {
-        primary: '#29194F',
-        secondary: '#FEF000',
-        tertiary: '#FDD200',
-      },
+        white: '#FFFFFF',
+        black: '#000000',
+        brand: {
+            primary: '#29194F',
+            secondary: '#FEF000',
+            tertiary: '#FDD200',
+        },
+        default: {
+            primary: '#29194F',
+            secondary: '#FEF000',
+            tertiary: '#FDD200',
+        },
     },
     fontsize: {
-      xsmall: '0.6rem',
-      small: '0.8rem',
-      medium: '1rem',
-      large: '1.4rem',
-      xlarge: '1.6rem',
-      xxlarge: '2.5rem',
+        xsmall: '0.6rem',
+        small: '0.8rem',
+        medium: '1rem',
+        large: '1.4rem',
+        xlarge: '1.6rem',
+        xxlarge: '2.5rem',
     },
     fontFamily: {
-      Lato: 'Lato,sans-serif;',
-      Poppins: `Poppins, sans-serif`,
+        Lato: 'Lato,sans-serif;',
+        Poppins: `Poppins, sans-serif`,
     },
     lineHeight: {
-      small: '1.1125',
-      medium: '1.2',
-      large: '1.4',
-      xlarge: '1.8',
+        small: '1.1125',
+        medium: '1.2',
+        large: '1.4',
+        xlarge: '1.8',
     },
-  };
-  
-  const GlobalStyle = createGlobalStyle`
+};
+
+const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -54,6 +54,5 @@ const theme: DefaultTheme = {
     }
   
   `;
-
 
 export { theme, GlobalStyle };

@@ -1,7 +1,7 @@
-import React from "react";
-import { History } from "history";
-import { Router, Switch, Route } from "react-router-dom";
-import { Home } from "../pages/home";
+import React from 'react';
+import { History } from 'history';
+import { Router, Switch, Route } from 'react-router-dom';
+import { Home } from '../pages/home';
 
 interface IProps {
     history: History;

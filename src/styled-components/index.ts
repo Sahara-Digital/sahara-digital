@@ -1,6 +1,3 @@
-import { GlobalStyle, theme}  from './theme';
+import { GlobalStyle, theme } from './theme';
 
-export { 
-    GlobalStyle,
-    theme,
-}
+export { GlobalStyle, theme };
