@@ -17,7 +17,7 @@ export const StyledUnderLineLink = styled(StyledLink)`
 export const MenuLink = styled(NavLink)`
     ${({ theme }) => css`
         text-decoration: none;
-        font-size: ${theme.fontsize.medium};
+        font-size: ${theme.fontsize.regular};
         font-family: ${theme.fontFamily.Poppins};
         color: ${theme.colors.black};
         padding: 0 0.75em;
