@@ -31,7 +31,6 @@ declare module 'styled-components' {
             xxlarge: string;
         };
         fontFamily: {
-            Lato: string;
             Poppins: string;
         };
         lineHeight: {

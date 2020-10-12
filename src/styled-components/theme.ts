@@ -24,7 +24,6 @@ const theme: DefaultTheme = {
         xxlarge: '2.5rem',
     },
     fontFamily: {
-        Lato: 'Lato,sans-serif;',
         Poppins: `Poppins, sans-serif`,
     },
     lineHeight: {
@@ -51,6 +50,8 @@ const GlobalStyle = createGlobalStyle`
       ${({ theme }) => `font-size: ${theme.fontsize.xxlarge}`};
       line-height: 1.125;
       margin: 0 0 1.875rem;
+      ${({ theme }) => `font-family: ${theme.fontFamily.Poppins},sans-serif; `};
+      font-weight: 700;
     }
   
   `;
