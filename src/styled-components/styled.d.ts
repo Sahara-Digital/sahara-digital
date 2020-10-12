@@ -26,6 +26,7 @@ declare module 'styled-components' {
             xsmall: string;
             small: string;
             medium: string;
+            regular: string;
             large: string;
             xlarge: string;
             xxlarge: string;
