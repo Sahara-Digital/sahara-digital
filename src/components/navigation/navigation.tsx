@@ -1,27 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Router } from 'react-router-dom';
+import { StyledLink, MenuLink } from '../';
 
-import { StyledLink } from '../';
-import { IHeaderNavigation } from '../../interfaces';
-
-export const HeaderNavigation = ({ history }: IHeaderNavigation) => {
+export const HeaderNavigation = () => {
     return (
         <Container>
-            <Router history={history}>
-                <StyledLink to={'/'}>Home</StyledLink>
-                <StyledLink to={'/franchising'}>
-                    Become a Geek Retreat Franchisee
-                </StyledLink>
-                <StyledLink to={'/store-locations'}>Store Finder</StyledLink>
-
-                <StyledLink to={'/about'}>About</StyledLink>
-                <StyledLink to={'/shop-online'}>Shop Online</StyledLink>
-            </Router>
+            <MenuLink to={'/'}>Home</MenuLink>
+            <MenuLink to={'/about'}>About</MenuLink>
+            <MenuLink to={'/services'}>Services</MenuLink>
+            <MenuLink to={'/team'}>Team</MenuLink>
+            <MenuLink to={'/careers'}>Careers</MenuLink>
+            <MenuLink to={'/contact'}>Contact</MenuLink>
         </Container>
     );
 };
 
-const Container = styled.nav`
+const Container = styled.div`
     padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
 `;

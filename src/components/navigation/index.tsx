@@ -18,7 +18,6 @@ export const Navigation = ({ children, history }: IHeaderNavigation) => {
                     />
                 </StyledLink>
             </Router>
-
             {children}
         </NavigationContainer>
     );
@@ -27,6 +26,9 @@ export const Navigation = ({ children, history }: IHeaderNavigation) => {
 const NavigationContainer = styled.nav`
     display: flex;
     flex-direction: row;
+    align-items: center;
     padding: 0.5rem;
-    box-shadow: 0 2px 8px rgb(221, 221, 221);
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 10px 8px rgb(221, 221, 221);
 `;
