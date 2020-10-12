@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from './styled-components';
 import { history } from './lib';
-import { Header, Navigation } from './components';
 import Routes from './app-routes';
 
 function App() {
