@@ -1,17 +1,23 @@
 import styled, { css } from 'styled-components';
 import { Link, NavLink } from 'react-router-dom';
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)<{ color?: string }>`
     text-decoration: none;
-    padding: 0 0.75em;
     font-weight: 500;
     ${({ theme }) => `font-size: ${theme.fontsize.medium}`};
     ${({ theme }) => `font-family: ${theme.fontFamily.Poppins}`};
-    ${({ theme }) => `color: ${theme.colors.black}`};
+    ${({ theme, color }) =>
+        color ? `color: ${theme.colors.black}` : `color: #9ccc;`};
+    &:hover {
+        padding-top: 2px;
+        color: white;
+        border-bottom: 2px solid #9ccccc;
+    }
 `;
 
 export const StyledUnderLineLink = styled(StyledLink)`
     text-decoration: underline;
+    color: #9ccc;
 `;
 
 export const MenuLink = styled(NavLink)`

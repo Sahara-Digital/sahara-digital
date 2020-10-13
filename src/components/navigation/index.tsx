@@ -1,22 +1,21 @@
 import React from 'react';
-import { Router } from 'react-router-dom';
+import { Router, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Image } from '../';
 import { saharadigital } from '../../img';
 import { IHeaderNavigation } from '../../interfaces';
-import { StyledLink } from '../styled-link';
 
 export const Navigation = ({ children, history }: IHeaderNavigation) => {
     return (
-        <NavigationContainer className="container">
+        <NavigationContainer>
             <Router history={history}>
-                <StyledLink to={'/'}>
+                <Link to={'/'}>
                     <Image
                         width="11rem"
                         img={saharadigital}
                         alt="Sahara Digitial Logo"
                     />
-                </StyledLink>
+                </Link>
             </Router>
             {children}
         </NavigationContainer>
