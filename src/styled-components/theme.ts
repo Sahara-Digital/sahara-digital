@@ -4,13 +4,18 @@ const theme: DefaultTheme = {
     colors: {
         white: '#FFFFFF',
         black: '#000000',
+        footer: {
+            primary: '#2c353c',
+            linkedIn: '#0e76a8',
+            twitter: '#1fa1f1',
+        },
         brand: {
-            primary: '#29194F',
+            primary: '#9CCCCC',
             secondary: '#FEF000',
             tertiary: '#FDD200',
         },
         default: {
-            primary: '#29194F',
+            primary: '#9CCCCC',
             secondary: '#FEF000',
             tertiary: '#FDD200',
         },
@@ -23,7 +28,7 @@ const theme: DefaultTheme = {
         large: '1.4rem',
         xlarge: '1.6rem',
         xxlarge: '2.5rem',
-        xxxlarge: '3.75rem'
+        xxxlarge: '3.75rem',
     },
     fontFamily: {
         Poppins: `Poppins, sans-serif`,
@@ -40,13 +45,12 @@ const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
-
+  
   body {
       ${({ theme }) => `background-color:${theme.colors.white}`};
-      font-family: Lato,sans-serif;
-      
-      ${({ theme }) => `font-size: ${theme.fontsize.medium}`};
+      ${({ theme }) => `font-family: ${theme.fontFamily.Poppins},sans-serif; `};
       line-height: 1.5;
   }
 
@@ -54,7 +58,6 @@ const GlobalStyle = createGlobalStyle`
       ${({ theme }) => `font-size: ${theme.fontsize.xxxlarge}`};
       line-height: 1.125;
       margin: 0 0 1.875rem;
-      ${({ theme }) => `font-family: ${theme.fontFamily.Poppins},sans-serif; `};
       font-weight: 700;
     }
   
@@ -65,11 +68,6 @@ const GlobalStyle = createGlobalStyle`
       color: white;
       border-bottom: 2px solid #9ccccc;
       }
-   }
-
-   span {
-    ${({ theme }) => `font-size: ${theme.fontsize.medium}`};
-    font-weight: 700;
    }
 
    footer{

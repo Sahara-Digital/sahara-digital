@@ -11,6 +11,11 @@ declare module 'styled-components' {
         colors: {
             white: string;
             black: string;
+            footer: {
+                primary: string;
+                linkedIn: string;
+                twitter: string;
+            };
             brand: {
                 primary: string;
                 secondary: string;
