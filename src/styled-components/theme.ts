@@ -23,6 +23,7 @@ const theme: DefaultTheme = {
         large: '1.4rem',
         xlarge: '1.6rem',
         xxlarge: '2.5rem',
+        xxxlarge: '3.75rem'
     },
     fontFamily: {
         Poppins: `Poppins, sans-serif`,
@@ -40,21 +41,41 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-    body {
+
+  body {
       ${({ theme }) => `background-color:${theme.colors.white}`};
       font-family: Lato,sans-serif;
       
       ${({ theme }) => `font-size: ${theme.fontsize.medium}`};
       line-height: 1.5;
-    }
-    h1, h2, h4{
-      ${({ theme }) => `font-size: ${theme.fontsize.xxlarge}`};
+  }
+
+    h1{
+      ${({ theme }) => `font-size: ${theme.fontsize.xxxlarge}`};
       line-height: 1.125;
       margin: 0 0 1.875rem;
       ${({ theme }) => `font-family: ${theme.fontFamily.Poppins},sans-serif; `};
       font-weight: 700;
     }
   
+   i{
+     padding: 0.2rem;
+     &:hover {
+      padding-top: 2px;
+      color: white;
+      border-bottom: 2px solid #9ccccc;
+      }
+   }
+
+   span {
+    ${({ theme }) => `font-size: ${theme.fontsize.medium}`};
+    font-weight: 700;
+   }
+
+   footer{
+    ${({ theme }) => `font-family: ${theme.fontFamily.Poppins},sans-serif; `};
+    ${({ theme }) => `font-size: ${theme.fontsize.xxlarge}`};
+   }
   `;
 
 export { theme, GlobalStyle };
