@@ -21,7 +21,6 @@ const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
     ${media.lessThan('small')`
-    overflow: hidden;
         margin: 0;
         a {
             ${({ theme }) => `font-size:${theme.fontsize.small}`};

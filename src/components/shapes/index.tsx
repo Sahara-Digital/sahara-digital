@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import {
     ShapeFour,
     ShapeOne,
@@ -29,4 +30,8 @@ const ShapesContainer = styled.div<{ zIndex?: number }>`
     position: absolute;
     top: 100px;
     left: 275px;
+    ${media.lessThan('small')`
+        top: 0px;
+        left: 0px;
+    `}
 `;
