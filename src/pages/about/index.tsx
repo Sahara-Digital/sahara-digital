@@ -5,8 +5,9 @@ import {
     BurgerMenu,
     Menu,
 } from '../../components';
+import { IPagesProps } from '../../interfaces';
 
-export const About = () => {
+export const About = ({history}: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
     return (
         <>
