@@ -1,7 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { Card, Navigation, HeaderNavigation, Footer, Shapes, BurgerMenu, Menu } from '../../components';
+import {
+    Card,
+    Navigation,
+    HeaderNavigation,
+    Footer,
+    Shapes,
+    BurgerMenu,
+    Menu,
+} from '../../components';
 import { ShapeFour, ShapeThree } from '../../components/image/svg';
 import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
@@ -13,7 +21,7 @@ export const Home = ({ history }: IPagesProps) => {
             <Navigation history={history}>
                 <HeaderNavigation />
                 {<BurgerMenu open={open} setOpen={setOpen} />}
-                 <Menu open={open} setOpen={setOpen} />
+                <Menu open={open} setOpen={setOpen} />
             </Navigation>
             <Main>
                 <Content className="qa-homepage-content">

@@ -15,9 +15,7 @@ const Routes = ({ history }: IProps) => {
                 <Route
                     exact
                     path="/"
-                    render={({ history }: IProps) => (
-                        <Home history={history} />
-                    )}
+                    render={({ history }: IProps) => <Home history={history} />}
                 />
                 <Route
                     exact
