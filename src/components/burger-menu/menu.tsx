@@ -8,12 +8,24 @@ export const Menu = ({ open }: IProps) => {
     return (
         open && (
             <StyledMenu open={open}>
-                <MenuLink to={'/'}>Home</MenuLink>
-                <MenuLink to={'/about'}>About</MenuLink>
-                <MenuLink to={'/services'}>Services</MenuLink>
-                <MenuLink to={'/team'}>Team</MenuLink>
-                <MenuLink to={'/careers'}>Careers</MenuLink>
-                <MenuLink to={'/contact'}>Contact</MenuLink>
+                <MenuLink exact={true} to={'/'}>
+                    Home
+                </MenuLink>
+                <MenuLink exact={true} to={'/about'}>
+                    About
+                </MenuLink>
+                <MenuLink exact={true} to={'/services'}>
+                    Services
+                </MenuLink>
+                <MenuLink exact={true} to={'/team'}>
+                    Team
+                </MenuLink>
+                <MenuLink exact={true} to={'/careers'}>
+                    Careers
+                </MenuLink>
+                <MenuLink exact={true} to={'/contact'}>
+                    Contact
+                </MenuLink>
             </StyledMenu>
         )
     );
