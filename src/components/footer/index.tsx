@@ -129,7 +129,8 @@ const SocialMediaLinks = styled.span`
     .fa-twitter {
         ${({ theme }) => `color:${theme.colors.footer.twitter}`};
     }
-    .fa-twitter:hover, .fa-linkedin:hover {
+    .fa-twitter:hover,
+    .fa-linkedin:hover {
         ${({ theme }) => `color:${theme.colors.white}`};
     }
 

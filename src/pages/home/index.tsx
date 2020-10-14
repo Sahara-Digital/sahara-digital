@@ -1,16 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Card, Navigation, HeaderNavigation, Footer } from '../../components';
-import { ShapeFour, ShapeThree } from '../../components/image/svg';
-import { Shapes } from '../../components';
-import { IPagesProps } from '../../interfaces';
 import media from 'styled-media-query';
+import { Card, Navigation, HeaderNavigation, Footer, Shapes, BurgerMenu, Menu } from '../../components';
+import { ShapeFour, ShapeThree } from '../../components/image/svg';
+import { IPagesProps } from '../../interfaces';
+import { customMedia } from '../../lib';
 
 export const Home = ({ history }: IPagesProps) => {
+    const [open, setOpen] = React.useState(false);
     return (
         <>
             <Navigation history={history}>
-                <HeaderNavigation />
+                {open === false && <HeaderNavigation />}
+                {<BurgerMenu open={open} setOpen={setOpen} />}
+                 <Menu open={open} setOpen={setOpen} />
             </Navigation>
             <Main>
                 <Content className="qa-homepage-content">
@@ -87,7 +90,7 @@ const Content = styled.div`
     position: relative;
     align-items: center;
     text-align: center;
-    ${media.lessThan('small')`
+    ${customMedia.lessThan('small')`
        padding: 1rem;
         h1{
             ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
@@ -98,7 +101,7 @@ const Main = styled.main`
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    ${media.lessThan('small')`
+    ${customMedia.lessThan('small')`
        padding: 0.5rem;
         h1{
             ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};

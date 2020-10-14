@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MenuLink } from '../';
 import media from 'styled-media-query';
+import { MenuLink } from '../';
+import { customMedia } from '../../lib/index';
 
-export const HeaderNavigation = () => {
+interface IProps {
+    open?: any;
+}
+export const HeaderNavigation = ({ open }: IProps) => {
     return (
-        <Container>
+        <Container open={open}>
             <MenuLink to={'/'}>Home</MenuLink>
             <MenuLink to={'/about'}>About</MenuLink>
             <MenuLink to={'/services'}>Services</MenuLink>
@@ -16,7 +20,7 @@ export const HeaderNavigation = () => {
     );
 };
 
-const Container = styled.div`
+const Container = styled.div<{ open: any }>`
     padding: 1rem;
     display: flex;
     justify-content: space-evenly;
@@ -27,5 +31,14 @@ const Container = styled.div`
         }
         flex-direction: column;
         padding: 0;
+        display: none;
+    `}
+
+    ${customMedia.between('xxsmall', 'medium')` 
+  
+     display: none;
+    `}
+    ${customMedia.between('xxsmall', 'medium')` 
+        
     `}
 `;

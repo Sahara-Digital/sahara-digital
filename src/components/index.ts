@@ -6,6 +6,8 @@ import { Card } from './card';
 import { HeaderNavigation } from './navigation/navigation';
 import { Footer } from './footer';
 import { Shapes } from './shapes';
+import { Menu } from './burger-menu/menu';
+import { BurgerMenu } from './burger-menu';
 
 export {
     Navigation,
@@ -18,4 +20,6 @@ export {
     HeaderNavigation,
     Footer,
     Shapes,
+    BurgerMenu,
+    Menu
 };

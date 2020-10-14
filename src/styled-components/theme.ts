@@ -52,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
       ${({ theme }) => `background-color:${theme.colors.white}`};
       ${({ theme }) => `font-family: ${theme.fontFamily.Poppins},sans-serif; `};
       line-height: 1.5;
+      height: 100vh;
   }
 
     h1{

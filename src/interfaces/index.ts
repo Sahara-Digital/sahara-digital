@@ -13,3 +13,8 @@ export interface ISVG {
     height?: string;
     fill?: string;
 }
+
+export interface IProps {
+    open?: any;
+    setOpen?: any;
+}
