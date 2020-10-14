@@ -11,7 +11,7 @@ export const Home = ({ history }: IPagesProps) => {
     return (
         <>
             <Navigation history={history}>
-                {open === false && <HeaderNavigation />}
+                <HeaderNavigation />
                 {<BurgerMenu open={open} setOpen={setOpen} />}
                  <Menu open={open} setOpen={setOpen} />
             </Navigation>
