@@ -50,47 +50,25 @@ const StyledMenu = styled.div<{ open: any }>`
   a {
       ${({ theme }) => `font-size:${theme.fontsize.regular}`};
       text-align: center;
-      padding: 1.5rem 0;
+      margin-bottom: 1.5rem;
   }
 `}
     ${media.lessThan('medium')`
   a {
       ${({ theme }) => `font-size:${theme.fontsize.regular}`};
       text-align: center;
-      padding: 1.5rem 0;
+      margin-bottom: 1.5rem;
   }
+`}
+
+${media.greaterThan('medium')`
+    display: none
 `}
 
   @media (max-width: 576px) {
         width: 100%;
     }
-
     ${media.greaterThan('huge')`
-    a {
-        ${({ theme }) => `font-size:${theme.fontsize.regular}`};
-        text-align: center;
-        padding: 1.5rem 0;
         display: none;
-    }
   `}
 `;
-
-// a {
-//   font-size: 2rem;
-//   padding: 2rem 0;
-//   font-weight: bold;
-//   letter-spacing: 0.5rem;
-//   color: black;
-//   text-decoration: none;
-//   flex-direction: row;
-//   transition: color 0.3s linear;
-
-//   // @media (max-width: 576px) {
-//   //   font-size: 1.5rem;
-//   //   text-align: center;
-//   // }
-
-//   &:hover {
-//     color: #343078;
-//   }
-// }
