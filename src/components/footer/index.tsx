@@ -78,6 +78,7 @@ const FooterContainer = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
     ${({ theme }) => `background-color :${theme.colors.footer.primary}`};
     a {
         text-decoration: none;
