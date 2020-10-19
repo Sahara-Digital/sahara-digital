@@ -15,7 +15,7 @@ export const values = [
         id: '3',
         name: 'Quality',
         paragraph:
-            'We are dedicated to providing a high standard of services across the board, making us competitive with other companies in our field. We understand that clean, good-quality code makes the software more robust, usable, and easier to maintain.',
+            'We are dedicated to providing a high standard of services across the board, making us competitive with other companies in our field. We understand that clean, good-quality code makes software more robust, usable, and easier to maintain.',
     },
     {
         id: '4',

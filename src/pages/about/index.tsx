@@ -34,9 +34,8 @@ export const About = ({ history }: IPagesProps) => {
                         })}
                     </div>
                 </AboutUsWrapper>
-
                 <AboutUsContent>
-                    <WhyUs>Why choose us?</WhyUs>
+                    <WhyUs>Why work with us?</WhyUs>
                     <ValuesWrapper>
                     {values.map((value: any) => {
                         return (
