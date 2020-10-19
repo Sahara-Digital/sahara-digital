@@ -56,6 +56,13 @@ export const Footer = () => {
                             >
                                 <i className="fab fa-linkedin"></i>
                             </a>
+                            <a
+                                href="https://www.facebook.com/Saharadigitalleeds/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i className="fab fa-facebook"></i>
+                            </a>
                         </SocialMediaLinks>
                     </FooterContent>
                 </FooterWrapper>
@@ -130,8 +137,11 @@ const SocialMediaLinks = styled.span`
     .fa-twitter {
         ${({ theme }) => `color:${theme.colors.footer.twitter}`};
     }
+     .fa-facebook{
+        ${({ theme }) => `color: #4267B2`};
+    }
     .fa-twitter:hover,
-    .fa-linkedin:hover {
+    .fa-linkedin:hover, .fa-facebook:hover {
         ${({ theme }) => `color:${theme.colors.white}`};
     }
 
