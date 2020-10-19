@@ -43,3 +43,14 @@ export const introduction = [
             'Our core business structure involves a system called OKR; (Objectives and Key Results) we use this system to align ourselves with our companies objectives, our clients’ objectives, or even a developer’s learning objectives. This is what makes us different from other businesses in our sector.',
     },
 ];
+
+export const homepageIntro = [
+    {
+        id: '1',
+        paragraph: 'Welcome to Sahara Digital, a digital agency that provides a range of Web Development and Application services.'
+    },
+    {
+        id: '2',
+        paragraph: ' People and products are at the core of everything that we do, whether it’s our team of knowledgeable developers, or you and your unique business. we bring together a well-rounded skill set to provide the quality that you are looking for. Whether you are a small business or large company, we have the design and navigation solution to make you stand out from the crowd.'
+    }
+]

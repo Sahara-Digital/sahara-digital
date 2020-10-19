@@ -13,6 +13,7 @@ import {
 import { ShapeFour, ShapeThree } from '../../components/image/svg';
 import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
+import { homepageIntro } from '../../lib/website-content';
 
 export const Home = ({ history }: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
@@ -28,21 +29,12 @@ export const Home = ({ history }: IPagesProps) => {
                     <h1>
                         Solution driven <br /> digital consultancy
                     </h1>
-                    <p>
-                        Welcome to Sahara Digital, a digital agency that
-                        provides a range of Web Development and Application
-                        services.
-                    </p>
-                    <Paragraph>
-                        People are at the core of everything that we do at
-                        Sahara Digital, whether it’s our team of knowledgeable
-                        developers, or you and your unique business. Each of our
-                        teams will bring together a well-rounded skill set to
-                        provide the quality that you are looking for. Whether
-                        you are a small business or large company, we have the
-                        design and navigation solution to make you stand out
-                        from the crowd.
-                    </Paragraph>
+                    {homepageIntro.map((intro: any)=> {
+                        console.log(intro, 'intro')
+                        return <Paragraph>
+                            {intro.paragraph}
+                        </Paragraph>
+                    })}
                     <Shapes />
                 </Content>
 
@@ -73,7 +65,7 @@ const Paragraph = styled.p`
         }
   `}
 `;
-const CardContainer = styled.div`
+const CardContainer = styled.section`
     display: flex;
     padding: 2rem;
     margin: 2rem;
@@ -88,7 +80,7 @@ const CardContainer = styled.div`
         }
   `}
 `;
-const Content = styled.div`
+const Content = styled.section`
     width: 100%;
     display: flex;
     padding: 2rem;
