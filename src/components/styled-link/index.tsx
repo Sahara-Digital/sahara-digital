@@ -37,5 +37,6 @@ export const MenuLink = styled(NavLink)`
     &:hover {
         padding-top: 2px;
         border-bottom: 2px solid #9ccccc;
+        width: fit-content;
     }
 `;
