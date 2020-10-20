@@ -5,18 +5,18 @@ interface ICardProps {
     component?: React.ReactNode;
     backgroundColor?: string;
     title?: string;
+    itag?: any;
+    paragraph?: string
 }
-export const Card = ({ component, backgroundColor, title }: ICardProps) => {
+export const Card = ({ component, backgroundColor, title, itag, paragraph }: ICardProps) => {
     return (
         <CardWrapper backgroundColor={backgroundColor}>
             <span className="container">
-                <SVGWrapper> {component} </SVGWrapper>
+                {component ? <SVGWrapper>{component}</SVGWrapper> : itag } 
             </span>
             <h3>{title}</h3>
             <p>
-                Our approach integrates lean user-centred experience design with
-                Agile delivery and DevOps. This allows us to consistently
-                deliver meaningful transformation.
+            {paragraph}
             </p>
         </CardWrapper>
     );
@@ -31,7 +31,7 @@ const CardWrapper = styled.div<{
     left?: number;
     backgroundColor?: string;
 }>`
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     max-width: 350px;
     margin: 1rem;
@@ -40,9 +40,6 @@ const CardWrapper = styled.div<{
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     overflow: hidden;
-    .container {
-    }
-
     span {
         font-size: 20px;
         padding: 8px 20px;
