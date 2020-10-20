@@ -1,4 +1,4 @@
-export const values = [
+export const values: Array<Object> = [
     {
         id: '1',
         title: 'Why choose us?',
@@ -31,7 +31,7 @@ export const values = [
     },
 ];
 
-export const introduction = [
+export const aboutPage: Array<any> = [
     {
         id: '1',
         pageTitle: 'About us',
@@ -42,9 +42,17 @@ export const introduction = [
         paragraph:
             'Our core business structure involves a system called OKR; (Objectives and Key Results) we use this system to align ourselves with our companies objectives, our clients’ objectives, or even a developer’s learning objectives. This is what makes us different from other businesses in our sector.',
     },
+    {
+        cardcontent: [
+            {
+                id: '1',
+                paragraph: 'We encompasse our knowledge to provide you with a range of services including Web developement, Responsive web design and Search engine optimisation.'
+            },
+        ]
+    }
 ];
 
-export const homepageIntro = [
+export const homepageIntro: Array<Object> = [
     {
         id: '1',
         paragraph: 'Welcome to Sahara Digital, a digital agency that provides a range of Web Development and Application services.'
@@ -52,5 +60,18 @@ export const homepageIntro = [
     {
         id: '2',
         paragraph: ' People and products are at the core of everything that we do, whether it’s our team of knowledgeable developers, or you and your unique business. we bring together a well-rounded skill set to provide the quality that you are looking for. Whether you are a small business or large company, we have the design and navigation solution to make you stand out from the crowd.'
+    }
+]
+
+export const homepage: Array<Object> = [
+    {
+        id: '1',
+        title: "Web Consulting",
+        paragraph: 'Our approach allows us to intergrate with your business to accomplish your objectives, solve problems and implemtent solutions.'
+    },
+    {
+        id: '2',
+        title: "Web Development",
+        paragraph: `Your website is your companies digital portfolio to your customers, so don't just tell them how awesome you are, let's show them!`
     }
 ]
