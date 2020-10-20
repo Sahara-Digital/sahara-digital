@@ -107,11 +107,7 @@ const FooterWrapper = styled.div`
        margin: 0;
        flex-direction: column;
        ${({ theme }) => `font-size:${theme.fontsize.small}`};
-  `}/* ${customMedia.between(`regular`, `medium`)`
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-      `} */
+   `}
 `;
 
 const FooterContent = styled.span`
