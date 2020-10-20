@@ -36,7 +36,6 @@ export const Home = ({ history }: IPagesProps) => {
                     })}
                     <Shapes />
                 </Content>
-
             </Main>
             <Footer />
         </>
@@ -73,6 +72,7 @@ const Content = styled.section`
 const Main = styled.main`
     padding: 2rem;
     display: flex;
+    flex: 1;
     flex-direction: column;
     ${customMedia.lessThan('small')`
        padding: 0.5rem;
