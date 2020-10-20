@@ -1,9 +1,11 @@
+import { History } from 'history';
+
 export interface IPagesProps {
-    history: any;
+    history: History;
 }
 
 export interface IHeaderNavigation {
-    history: any;
+    history: History;
     children?: any;
 }
 
