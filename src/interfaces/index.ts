@@ -6,7 +6,7 @@ export interface IPagesProps {
 
 export interface IHeaderNavigation {
     history: History;
-    children?: any;
+    children?: React.ReactNode;
 }
 
 export interface ISVG {
