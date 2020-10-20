@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { customMedia } from '../../lib';
 
 interface ICardProps {
     component?: React.ReactNode;
@@ -70,4 +71,7 @@ const CardWrapper = styled.div<{
     &:hover {
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
     }
+    ${customMedia.lessThan('regular')`
+       padding: 1rem;
+    `}
 `;

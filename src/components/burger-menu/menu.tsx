@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from 'styled-media-query';
 import { MenuLink } from '..';
 import { IProps } from '../../interfaces';
+import { customMedia } from '../../lib';
 
 export const Menu = ({ open }: IProps) => {
     return (
@@ -46,29 +46,27 @@ const StyledMenu = styled.div<{ open: any }>`
     top: 0;
     right: 0;
     transition: transform 0.3s ease-in-out;
-    ${media.lessThan('small')`
-  a {
-      ${({ theme }) => `font-size:${theme.fontsize.regular}`};
-      text-align: center;
-      margin-bottom: 1.5rem;
-  }
-`}
-    ${media.lessThan('medium')`
-  a {
-      ${({ theme }) => `font-size:${theme.fontsize.regular}`};
-      text-align: center;
-      margin-bottom: 1.5rem;
-  }
-`}
-
-${media.greaterThan('medium')`
-    display: none
-`}
-
-  @media (max-width: 576px) {
+    ${customMedia.lessThan('medium')` 
+        align-items: center;
         width: 100%;
+        height: 100vh;
+        a {
+        ${({ theme }) => `font-size:${theme.fontsize.large}`};
+        text-align: center;
+        margin-bottom: 1rem;
+        max-width: fit-content;
+        
     }
-    ${media.greaterThan('huge')`
-        display: none;
-  `}
+    `}
+    ${customMedia.greaterThan('medium')` 
+        flex-direction: row;
+        width: 100%;
+        a {
+        ${({ theme }) => `font-size:${theme.fontsize.large}`};
+        text-align: center;
+        margin-bottom: 1rem;
+        max-width: fit-content;
+        
+    }
+    `}
 `;

@@ -49,7 +49,7 @@ const Container = styled.div<{ open: any }>`
   
      display: none;
     `}
-    ${customMedia.between('xxsmall', 'medium')` 
-        
+    ${customMedia.between('medium', 'tablet')` 
+        padding: 0;
     `}
 `;

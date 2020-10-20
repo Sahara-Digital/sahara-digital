@@ -11,6 +11,7 @@ import {
 import { IPagesProps } from '../../interfaces';
 import { aboutPage, values } from '../../lib/website-content';
 import { Code, Cog } from '../../components/image/svg';
+import { customMedia } from '../../lib';
 
 export const About = ({ history }: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
@@ -88,6 +89,10 @@ const Main = styled.main`
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    ${customMedia.lessThan('small')`
+       padding: 0.5rem;
+    `}
 `;
 const CogWrapper = styled.div`
     text-align: center;
@@ -98,7 +103,7 @@ const AboutUsServices = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    .fa-code{
+    .fa-code {
         margin: 1rem;
         font-size: 24px;
         background-color: #7cffcb;
@@ -113,6 +118,9 @@ const AboutUsWrapper = styled.section`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    ${customMedia.lessThan('small')`
+       padding: 0.5rem;
+    `}
 `;
 const AboutUsContent = styled.section`
     padding: 2rem;
@@ -121,6 +129,9 @@ const AboutUsContent = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    ${customMedia.lessThan('small')`
+       padding: 0.5rem;
+    `}
 `;
 
 const ValuesWrapper = styled.div`
@@ -138,12 +149,14 @@ const Values = styled.div`
     justify-content: center;
     align-items: center;
     max-width: 500px;
-    background: color lightgray;
 `;
 
 const Paragraph = styled.p`
     padding: 2rem;
     max-width: 750px;
+    ${customMedia.lessThan('small')`
+       padding: 1rem;
+    `}
 `;
 
 const WhyUs = styled.h2`
