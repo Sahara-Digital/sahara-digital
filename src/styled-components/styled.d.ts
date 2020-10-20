@@ -15,6 +15,7 @@ declare module 'styled-components' {
                 primary: string;
                 linkedIn: string;
                 twitter: string;
+                facebook: string;
             };
             brand: {
                 primary: string;

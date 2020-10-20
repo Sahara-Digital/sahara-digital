@@ -3,19 +3,30 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 import { MenuLink } from '../';
 import { customMedia } from '../../lib/index';
-
 interface IProps {
     open?: any;
 }
 export const HeaderNavigation = ({ open }: IProps) => {
     return (
         <Container open={open}>
-            <MenuLink to={'/'}>Home</MenuLink>
-            <MenuLink to={'/about'}>About</MenuLink>
-            <MenuLink to={'/services'}>Services</MenuLink>
-            <MenuLink to={'/team'}>Team</MenuLink>
-            <MenuLink to={'/careers'}>Careers</MenuLink>
-            <MenuLink to={'/contact'}>Contact</MenuLink>
+            <MenuLink exact={true} to={'/'}>
+                Home
+            </MenuLink>
+            <MenuLink exact={true} to={'/about'}>
+                About
+            </MenuLink>
+            <MenuLink exact={true} to={'/services'}>
+                Services
+            </MenuLink>
+            <MenuLink exact={true} to={'/team'}>
+                Team
+            </MenuLink>
+            <MenuLink exact={true} to={'/careers'}>
+                Careers
+            </MenuLink>
+            <MenuLink exact={true} to={'/contact'}>
+                Contact
+            </MenuLink>
         </Container>
     );
 };
@@ -38,7 +49,7 @@ const Container = styled.div<{ open: any }>`
   
      display: none;
     `}
-    ${customMedia.between('xxsmall', 'medium')` 
-        
+    ${customMedia.between('medium', 'tablet')` 
+        padding: 0;
     `}
 `;

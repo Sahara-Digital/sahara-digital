@@ -56,7 +56,7 @@ const StyledBurger = styled.button<{ open: any }>`
         }
     }
 
-    ${customMedia.between('medium', 'laptop')`
+    ${customMedia.between('slaptop', 'laptop')`
     display: none;
   `}
     ${customMedia.greaterThan(`tablet`)`

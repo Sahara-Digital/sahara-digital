@@ -4,6 +4,7 @@ import { Image } from '../../components';
 import { saharadigital } from '../../img';
 import { StyledLink } from '../styled-link';
 import media from 'styled-media-query';
+import { customMedia } from '../../lib';
 
 export const Footer = () => {
     return (
@@ -56,6 +57,13 @@ export const Footer = () => {
                             >
                                 <i className="fab fa-linkedin"></i>
                             </a>
+                            <a
+                                href="https://www.facebook.com/Saharadigitalleeds/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i className="fab fa-facebook"></i>
+                            </a>
                         </SocialMediaLinks>
                     </FooterContent>
                 </FooterWrapper>
@@ -78,6 +86,7 @@ const FooterContainer = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
     ${({ theme }) => `background-color :${theme.colors.footer.primary}`};
     a {
         text-decoration: none;
@@ -98,7 +107,7 @@ const FooterWrapper = styled.div`
        margin: 0;
        flex-direction: column;
        ${({ theme }) => `font-size:${theme.fontsize.small}`};
-  `}
+   `}
 `;
 
 const FooterContent = styled.span`
@@ -111,13 +120,20 @@ const FooterContent = styled.span`
         font-size: 24px;
         padding-right: 0.3rem;
     }
-    ${media.lessThan('small')`
+    ${customMedia.lessThan('mobile')`
        padding: 1rem 1rem 1rem 1rem;
        margin: 0;
        flex-direction: column;
        justify-content: center;
        align-items: center;
     `}
+    ${customMedia.between(`regular`, `medium`)`
+            padding: 1rem 1rem 1rem 1rem;
+            a {
+            ${({ theme }) => `font-size:${theme.fontsize.small}`};
+           }
+           ${({ theme }) => `font-size:${theme.fontsize.small}`};
+      `}
 `;
 const SocialMediaLinks = styled.span`
     display: flex;
@@ -129,8 +145,12 @@ const SocialMediaLinks = styled.span`
     .fa-twitter {
         ${({ theme }) => `color:${theme.colors.footer.twitter}`};
     }
+    .fa-facebook {
+        ${({ theme }) => `color: #4267B2`};
+    }
     .fa-twitter:hover,
-    .fa-linkedin:hover {
+    .fa-linkedin:hover,
+    .fa-facebook:hover {
         ${({ theme }) => `color:${theme.colors.white}`};
     }
 
@@ -142,6 +162,11 @@ const SocialMediaLinks = styled.span`
             ${({ theme }) => `font-size:${theme.fontsize.regular}`}; 
         }
     `}
+    ${customMedia.between(`regular`, `medium`)`
+           a {
+            ${({ theme }) => `font-size:${theme.fontsize.regular}`};
+           }
+      `}
 `;
 
 const TermsAndPolicy = styled.div`
@@ -157,4 +182,9 @@ const TermsAndPolicy = styled.div`
             ${({ theme }) => `font-size:${theme.fontsize.small}`};
         }
     `}
+    ${customMedia.between(`regular`, `medium`)`
+           a {
+            ${({ theme }) => `font-size:${theme.fontsize.small}`};
+           }
+      `}
 `;

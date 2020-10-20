@@ -8,6 +8,7 @@ const theme: DefaultTheme = {
             primary: '#2c353c',
             linkedIn: '#0e76a8',
             twitter: '#1fa1f1',
+            facebook: '#4267B2',
         },
         brand: {
             primary: '#9CCCCC',

@@ -21,5 +21,5 @@ export {
     Footer,
     Shapes,
     BurgerMenu,
-    Menu
+    Menu,
 };
