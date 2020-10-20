@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import {
-    Card,
+    // Card,
     Navigation,
     HeaderNavigation,
     Footer,
@@ -10,11 +10,11 @@ import {
     BurgerMenu,
     Menu,
 } from '../../components';
-import { ShapeFour, ShapeThree } from '../../components/image/svg';
+// import { ShapeFour, ShapeThree } from '../../components/image/svg';
 import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 import { homepageIntro } from '../../lib/website-content';
-
+//homepage
 export const Home = ({ history }: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
     return (
@@ -29,26 +29,30 @@ export const Home = ({ history }: IPagesProps) => {
                     <h1>
                         Solution driven <br /> digital consultancy
                     </h1>
-                    {homepageIntro.map((intro: any)=> {
-                        console.log(intro, 'intro')
-                        return <Paragraph>
-                            {intro.paragraph}
-                        </Paragraph>
+                    {homepageIntro.map((intro: any) => {
+                        return (
+                            <Paragraph key={intro.id}>
+                                {intro.paragraph}
+                            </Paragraph>
+                        );
                     })}
                     <Shapes />
                 </Content>
 
-                <CardContainer>
-                    <Card
-                        title="IT Consulting"
-                        component={<ShapeFour width="10rem" />}
-                    />
-                    <Card
-                        title="Web Development"
-                        backgroundColor={'white'}
-                        component={<ShapeThree width="10rem" />}
-                    />
-                </CardContainer>
+                {/* <CardContainer>
+                    {
+                      homepage.map((content: any)=> {
+                        return (
+                           content.title &&  <Card
+                           title={content.title}
+                           component={content.title === "Web Consulting" ? <ShapeFour width="10rem" /> : <ShapeThree width="10rem" />}
+                           paragraph={content.paragraph}
+                       /> 
+                        )
+                      })
+                    }
+
+                </CardContainer> */}
             </Main>
             <Footer />
         </>
@@ -65,21 +69,21 @@ const Paragraph = styled.p`
         }
   `}
 `;
-const CardContainer = styled.section`
-    display: flex;
-    padding: 2rem;
-    margin: 2rem;
-    flex-direction: row;
-    justify-content: center;
-    ${media.lessThan('small')`
-       padding: 1rem 1rem 1rem 1rem;
-       margin: 0;
-       flex-direction: column;
-        h1{
-            ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
-        }
-  `}
-`;
+// const CardContainer = styled.section`
+//     display: flex;
+//     padding: 2rem;
+//     margin: 2rem;
+//     flex-direction: row;
+//     justify-content: center;
+//     ${media.lessThan('small')`
+//        padding: 1rem 1rem 1rem 1rem;
+//        margin: 0;
+//        flex-direction: column;
+//         h1{
+//             ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
+//         }
+//   `}
+// `;
 const Content = styled.section`
     width: 100%;
     display: flex;

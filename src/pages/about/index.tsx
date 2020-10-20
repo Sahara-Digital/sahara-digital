@@ -6,10 +6,11 @@ import {
     BurgerMenu,
     Menu,
     Footer,
+    Card,
 } from '../../components';
 import { IPagesProps } from '../../interfaces';
-import { introduction, values } from '../../lib/website-content';
-import { Cog } from '../../components/image/svg';
+import { aboutPage, values } from '../../lib/website-content';
+import { Code, Cog } from '../../components/image/svg';
 
 export const About = ({ history }: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
@@ -24,32 +25,57 @@ export const About = ({ history }: IPagesProps) => {
                 <AboutUsWrapper>
                     <div>
                         <AboutUsHeading>About us</AboutUsHeading>
-                        {introduction.map((intro) => {
+                        {aboutPage.map((intro: any) => {
                             return (
                                 <React.Fragment key={intro.id}>
-                                    <Paragraph>{intro.paragraph}</Paragraph>
-                                    {intro.id === '1' ? <CogWrapper>  <Cog /></CogWrapper> : <></>}
+                                    {intro.id < 3 ? (
+                                        <Paragraph>{intro.paragraph}</Paragraph>
+                                    ) : (
+                                        <></>
+                                    )}
+                                    {intro.id === '1' ? (
+                                        <CogWrapper>
+                                            <Cog />
+                                        </CogWrapper>
+                                    ) : (
+                                        <></>
+                                    )}
                                 </React.Fragment>
                             );
                         })}
                     </div>
                 </AboutUsWrapper>
-                <AboutUsContent>
-                    <WhyUs>Why work with us?</WhyUs>
-                    <ValuesWrapper>
-                    {values.map((value: any) => {
+                <AboutUsServices>
+                    {aboutPage[2].cardcontent.map((content: any) => {
                         return (
-                            <React.Fragment key={value.id}>
-                                <Values key={value.id}>
-                                    <Paragraph>
-                                        <strong>{value.name}</strong> <br />
-                                        {value.paragraph}
-                                    </Paragraph>
-                                    <Cog />
-                                </Values>
+                            <React.Fragment key={content.id}>
+                                <Card
+                                    title="Digital Services"
+                                    key={content.id}
+                                    paragraph={content.paragraph}
+                                    itag={<Code />}
+                                    backgroundColor={'white'}
+                                />
                             </React.Fragment>
                         );
                     })}
+                </AboutUsServices>
+                <AboutUsContent>
+                    <WhyUs>Why work with us?</WhyUs>
+                    <ValuesWrapper>
+                        {values.map((value: any) => {
+                            return (
+                                <React.Fragment key={value.id}>
+                                    <Values key={value.id}>
+                                        <Paragraph>
+                                            <strong>{value.name}</strong> <br />
+                                            {value.paragraph}
+                                        </Paragraph>
+                                        <Cog />
+                                    </Values>
+                                </React.Fragment>
+                            );
+                        })}
                     </ValuesWrapper>
                 </AboutUsContent>
             </Main>
@@ -67,6 +93,18 @@ const CogWrapper = styled.div`
     text-align: center;
 `;
 
+const AboutUsServices = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .fa-code{
+        margin: 1rem;
+        font-size: 24px;
+        background-color: #7cffcb;
+        background-image: linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
+    }
+`;
 
 const AboutUsWrapper = styled.section`
     width: 100%;
@@ -77,7 +115,6 @@ const AboutUsWrapper = styled.section`
     align-items: center;
 `;
 const AboutUsContent = styled.section`
-    width: 100%;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -101,7 +138,7 @@ const Values = styled.div`
     justify-content: center;
     align-items: center;
     max-width: 500px;
-    background: color: lightgray;
+    background: color lightgray;
 `;
 
 const Paragraph = styled.p`
@@ -109,7 +146,7 @@ const Paragraph = styled.p`
     max-width: 750px;
 `;
 
-const WhyUs = styled.h2`  
+const WhyUs = styled.h2`
     font-weight: 500;
     letter-spacing: 1px;
     margin: 20px;
@@ -120,7 +157,6 @@ const WhyUs = styled.h2`
     margin-left: auto;
     margin-right: auto;
 `;
-
 
 const AboutUsHeading = styled.h2`
     text-transform: uppercase;
