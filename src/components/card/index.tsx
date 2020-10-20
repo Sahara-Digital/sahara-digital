@@ -6,18 +6,22 @@ interface ICardProps {
     backgroundColor?: string;
     title?: string;
     itag?: any;
-    paragraph?: string
+    paragraph?: string;
 }
-export const Card = ({ component, backgroundColor, title, itag, paragraph }: ICardProps) => {
+export const Card = ({
+    component,
+    backgroundColor,
+    title,
+    itag,
+    paragraph,
+}: ICardProps) => {
     return (
         <CardWrapper backgroundColor={backgroundColor}>
             <span className="container">
-                {component ? <SVGWrapper>{component}</SVGWrapper> : itag } 
+                {component ? <SVGWrapper>{component}</SVGWrapper> : itag}
             </span>
             <h3>{title}</h3>
-            <p>
-            {paragraph}
-            </p>
+            <p>{paragraph}</p>
         </CardWrapper>
     );
 };

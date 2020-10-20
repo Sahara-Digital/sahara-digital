@@ -7,11 +7,14 @@ export const StyledLink = styled(Link)<{ color?: string }>`
     ${({ theme }) => `font-size: ${theme.fontsize.medium}`};
     ${({ theme }) => `font-family: ${theme.fontFamily.Poppins}`};
     ${({ theme, color }) =>
-        color ? `color: ${theme.colors.black}` : `color: ${theme.colors.brand.primary}`};
+        color
+            ? `color: ${theme.colors.black}`
+            : `color: ${theme.colors.brand.primary}`};
     &:hover {
         padding-top: 2px;
         color: white;
-        ${({ theme }) => ` border-bottom: 2px solid: ${theme.colors.brand.primary}`};
+        ${({ theme }) =>
+            ` border-bottom: 2px solid: ${theme.colors.brand.primary}`};
     }
 `;
 
@@ -30,12 +33,14 @@ export const MenuLink = styled(NavLink)`
         font-weight: 500;
         &.active {
             padding-top: 2px;
-            ${({ theme }) => ` border-bottom: 2px solid ${theme.colors.brand.primary};`};
+            ${({ theme }) =>
+                ` border-bottom: 2px solid ${theme.colors.brand.primary};`};
             font-weight: 700;
         }
     `};
     &:hover {
         padding-top: 2px;
-        ${({ theme }) => ` border-bottom: 2px solid ${theme.colors.brand.primary};`};
+        ${({ theme }) =>
+            ` border-bottom: 2px solid ${theme.colors.brand.primary};`};
     }
 `;

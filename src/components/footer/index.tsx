@@ -137,11 +137,12 @@ const SocialMediaLinks = styled.span`
     .fa-twitter {
         ${({ theme }) => `color:${theme.colors.footer.twitter}`};
     }
-     .fa-facebook{
+    .fa-facebook {
         ${({ theme }) => `color: #4267B2`};
     }
     .fa-twitter:hover,
-    .fa-linkedin:hover, .fa-facebook:hover {
+    .fa-linkedin:hover,
+    .fa-facebook:hover {
         ${({ theme }) => `color:${theme.colors.white}`};
     }
 
