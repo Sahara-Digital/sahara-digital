@@ -60,5 +60,5 @@ const CardContainer = styled.section`
         h1{
             ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
         }
-  `}//
+  `}
 `;
