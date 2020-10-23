@@ -90,6 +90,7 @@ const Main = styled.main`
     display: flex;
     flex-direction: column;
     text-align: center;
+    flex: 1;
     ${customMedia.lessThan('small')`
        padding: 0.5rem;
     `}
@@ -102,7 +103,7 @@ const AboutUsServices = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     .fa-code {
         margin: 1rem;
         font-size: 24px;
@@ -139,7 +140,7 @@ const ValuesWrapper = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 `;
 const Values = styled.div`
     text-align: center;

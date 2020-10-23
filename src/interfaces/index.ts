@@ -1,10 +1,12 @@
+import { History } from 'history';
+
 export interface IPagesProps {
-    history: any;
+    history: History;
 }
 
 export interface IHeaderNavigation {
-    history: any;
-    children?: any;
+    history: History;
+    children?: React.ReactNode;
 }
 
 export interface ISVG {

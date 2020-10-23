@@ -71,7 +71,7 @@ export const homepage: Array<Record<string, any>> = [
         id: '1',
         title: 'Web Consulting',
         paragraph:
-            'Our approach allows us to intergrate with your business to accomplish your objectives, solve problems and implemtent solutions.',
+            'Our approach allows us to intergrate with your business to accomplish your objectives, solve problems and implement solutions.',
     },
     {
         id: '2',
