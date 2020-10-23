@@ -18,11 +18,11 @@ const HeaderWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #9cc;
+    ${({ theme }) => `color: ${theme.colors.brand.primary}`};
     padding: 0.5rem;
 `;
 
 const Anchor = styled.a`
     text-decoration: none;
-    color: black;
+    ${({ theme }) => `color: ${theme.colors.black}`};
 `;

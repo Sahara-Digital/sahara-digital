@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { MenuLink } from '..';
 import { IProps } from '../../interfaces';
 import { customMedia } from '../../lib';
@@ -36,8 +36,10 @@ const StyledMenu = styled.div<{ open: any }>`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
-    ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
+    ${({ theme }) => css`
+        background-color: ${theme.colors.white};
+        font-size: ${theme.fontsize.xxlarge};
+    `};
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
     height: 100vh;
     text-align: left;

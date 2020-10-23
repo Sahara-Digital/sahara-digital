@@ -120,6 +120,9 @@ const FooterContent = styled.span`
         font-size: 24px;
         padding-right: 0.3rem;
     }
+    .fa-envelope:hover {
+        border-bottom: 2px solid white;
+    }
     ${customMedia.lessThan('mobile')`
        padding: 1rem 1rem 1rem 1rem;
        margin: 0;
@@ -146,7 +149,7 @@ const SocialMediaLinks = styled.span`
         ${({ theme }) => `color:${theme.colors.footer.twitter}`};
     }
     .fa-facebook {
-        ${({ theme }) => `color: #4267B2`};
+        ${({ theme }) => `color: ${theme.colors.footer.facebook}`};
     }
     .fa-twitter:hover,
     .fa-linkedin:hover,
