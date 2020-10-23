@@ -33,8 +33,5 @@ const Main = styled.main`
     flex-direction: column;
     ${customMedia.lessThan('small')`
        padding: 0.5rem;
-        h1{
-            ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
-        }
   `}
 `;

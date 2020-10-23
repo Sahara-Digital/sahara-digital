@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import {
     Navigation,
     HeaderNavigation,
@@ -18,8 +19,15 @@ export const Contact = ({ history }: IPagesProps) => {
                 {<BurgerMenu open={open} setOpen={setOpen} />}
                 <Menu open={open} setOpen={setOpen} />
             </Navigation>
-            Contact
+            <Main>Contact</Main>
             <Footer />
         </>
     );
 };
+
+const Main = styled.main`
+    padding: 2rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+`;
