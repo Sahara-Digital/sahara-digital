@@ -99,7 +99,6 @@ const ContactUsContent = styled.div`
     ${customMedia.lessThan('small')`
        padding: 2rem;
        margin: 2rem 0rem;
-       border: 1px solid red;
     `}
 `;
 const Paragraph = styled.p`
@@ -107,7 +106,6 @@ const Paragraph = styled.p`
     max-width: 750px;
     ${customMedia.lessThan('small')`
        padding: 0.5rem 0;
-       border: 1px solid red;
     `}
 `;
 const Email = styled.p`
@@ -132,6 +130,5 @@ const Coordinates = styled.span`
     ${customMedia.lessThan('small')`
        padding: 1.75rem 0;
        margin: 0.5rem 0;
-       border: 1px solid red;
     `}
 `;
