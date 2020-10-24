@@ -12,9 +12,9 @@ export const StyledLink = styled(Link)<{ color?: string }>`
             : `color: ${theme.colors.brand.primary}`};
     &:hover {
         padding-top: 2px;
-        color: white;
-        ${({ theme }) =>
-            ` border-bottom: 2px solid: ${theme.colors.brand.primary}`};
+        ${({ theme }) => css`
+         color: ${theme.colors.white}
+         border-bottom: 2px solid: ${theme.colors.brand.primary}`};
     }
 `;
 

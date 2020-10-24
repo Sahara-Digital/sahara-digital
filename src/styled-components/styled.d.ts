@@ -11,6 +11,7 @@ declare module 'styled-components' {
         colors: {
             white: string;
             black: string;
+            blue: string;
             footer: {
                 primary: string;
                 linkedIn: string;

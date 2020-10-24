@@ -79,3 +79,26 @@ export const homepage: Array<Record<string, any>> = [
         paragraph: `Your website is your companies digital portfolio to your customers, so don't just tell them how awesome you are, let's show them!`,
     },
 ];
+
+export const contactUs: Array<Record<string, any>> = [
+    {
+        id: '1',
+        question: 'How can we help?',
+        subheading: 'Getting in touch is easy, you can find us at: -',
+        coordinates: `23° 48' 21.8808'' N and 11° 17' 18.4272'' E.`,
+        subintro: 'We would love to help you.',
+        paragraph:
+            'If you have any queries, do not hesitate to contact us on our socials, Facebook, Twitter, LinkedIn; or via the email address below: - ',
+    },
+];
+
+export const team: Array<Record<string, any>> =[ 
+    {
+        id: '1',
+        paragraph: 'Sahara Digital was founded with the idea that everyone is equal, we are all human at the end of the day, we have one goal in mind to share knowledge, work together as a team to improve and grow because without people or knowledge, products or services would not exist.'
+    },
+    {
+        id:'2',
+        paragraph: `We develop each person's skills and abilities alongside a core learning structure, treating everyone as an equal on their journey, we incorporate our Objective and Key Results (OKR) system at a developer level as we understand that each individual is at a different stage in their development.`
+    }
+]

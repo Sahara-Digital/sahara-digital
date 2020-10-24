@@ -65,7 +65,7 @@ const CardWrapper = styled.div<{
         ${({ theme, backgroundColor }) =>
             backgroundColor
                 ? `${backgroundColor}`
-                : `background-color:#4da6ff;`};
+                : `background-color: ${theme.colors.blue}`};
         mix-blend-mode: darken;
     }
     &:hover {

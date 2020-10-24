@@ -103,7 +103,6 @@ const AboutUsServices = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: center; */
     .fa-code {
         margin: 1rem;
         font-size: 24px;

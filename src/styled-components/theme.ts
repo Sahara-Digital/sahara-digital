@@ -4,6 +4,7 @@ const theme: DefaultTheme = {
     colors: {
         white: '#FFFFFF',
         black: '#000000',
+        blue: '#4da6ff',
         footer: {
             primary: '#2c353c',
             linkedIn: '#0e76a8',
@@ -66,9 +67,7 @@ const GlobalStyle = createGlobalStyle`
    i{
      padding: 0.2rem;
      &:hover {
-      padding-top: 2px;
-      color: white;
-      border-bottom: 2px solid #9ccccc;
+      ${({ theme }) => ` color: ${theme.colors.white};`};
       }
    }
 
