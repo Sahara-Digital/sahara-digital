@@ -35,7 +35,6 @@ export const Contact = ({ history }: IPagesProps) => {
 
                                 <Paragraph> {contact.paragraph}</Paragraph>
                                 <Email>
-                                    <i className="far fa-envelope"> </i>
                                     <a href="mailto:hello@saharadigital.co.uk">
                                         hello@saharadigital.co.uk
                                     </a>
@@ -94,9 +93,6 @@ const ContactUsHeading = styled.h2`
 const ContactUsContent = styled.div`
     display: flex;
     flex-direction: column;
-    /* ${({ theme }) => `background-color: white; :${theme.colors.white}`};  
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); */
-    /* border-radius: 5px; */
     padding: 2rem;
     margin: 2rem;
     max-width: 500px;
@@ -116,16 +112,6 @@ const Paragraph = styled.p`
 `;
 const Email = styled.p`
     font-size: 16px;
-    .fa-envelope:hover {
-        ${({ theme }) => ` color: ${theme.colors.black};`};
-        box-sizing: border-box;
-    }
-    i:hover {
-        ${({ theme }) => ` color: ${theme.colors.black};`};
-    }
-    i {
-        font-size: 20px;
-    }
     a {
         text-decoration: none;
         ${({ theme }) => ` color: ${theme.colors.brand.primary};`};
