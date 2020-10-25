@@ -3,49 +3,19 @@ import styled, { css } from 'styled-components';
 import { MenuLink } from '..';
 import { IProps } from '../../interfaces';
 import { customMedia } from '../../lib';
+import { navigation } from '../../lib/website-content';
 
 export const Menu = ({ open }: IProps) => {
     return (
         open && (
             <StyledMenu className="styled-menu" open={open}>
-                <MenuLink className="styled-menu-home" exact={true} to={'/'}>
-                    Home
-                </MenuLink>
-                <MenuLink
-                    className="styled-menu-about"
-                    exact={true}
-                    to={'/about'}
-                >
-                    About
-                </MenuLink>
-                <MenuLink
-                    className="styled-menu-services"
-                    exact={true}
-                    to={'/services'}
-                >
-                    Services
-                </MenuLink>
-                <MenuLink
-                    className="styled-menu-team"
-                    exact={true}
-                    to={'/team'}
-                >
-                    Team
-                </MenuLink>
-                <MenuLink
-                    className="styled-menu-careers"
-                    exact={true}
-                    to={'/careers'}
-                >
-                    Careers
-                </MenuLink>
-                <MenuLink
-                    className="styled-menu-contact"
-                    exact={true}
-                    to={'/contact'}
-                >
-                    Contact
-                </MenuLink>
+                {navigation.map((path: Record<string, any>) => {
+                return (
+                    <MenuLink key={path.id} exact={true} to={path.to}>
+                        {path.name}
+                    </MenuLink>
+                );
+            })}
             </StyledMenu>
         )
     );

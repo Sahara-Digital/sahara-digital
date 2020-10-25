@@ -32,8 +32,8 @@ export const Services = ({ history }: IPagesProps) => {
                     setOpen={setOpen}
                 />
             </Navigation>
-            <ServicesMain>
-                <CardContainer>
+            <ServicesMain className="services-main">
+                <CardContainer className="services-card-container">
                     {homepage.map((content: any) => {
                         return (
                             content.title && (

@@ -31,20 +31,20 @@ export const Contact = ({ history }: IPagesProps) => {
                     setOpen={setOpen}
                 />
             </Navigation>
-            <ContactUsMain>
-                <ContactUsWrapper>
-                    <ContactUsHeading>Contact Us</ContactUsHeading>
+            <ContactUsMain className="contact-us-main">
+                <ContactUsWrapper className="contact-us-wrapper">
+                    <ContactUsHeading className="contact-us-heading">Contact Us</ContactUsHeading>
                     {contactUs.map((contact: any) => {
                         return (
-                            <ContactUsContent key={contact.id}>
+                            <ContactUsContent className="contact-us-content" key={contact.id}>
                                 <h3> {contact.subheading}</h3>
 
-                                <Coordinates>{contact.coordinates}</Coordinates>
+                                <Coordinates className="contact-us-coordinates">{contact.coordinates}</Coordinates>
 
                                 <h4>{contact.subintro} </h4>
 
-                                <Paragraph> {contact.paragraph}</Paragraph>
-                                <Email>
+                                <Paragraph className="contact-us-paragraph"> {contact.paragraph}</Paragraph>
+                                <Email className="contact-us-email">
                                     <a href="mailto:hello@saharadigital.co.uk">
                                         hello@saharadigital.co.uk
                                     </a>
@@ -68,6 +68,7 @@ const ContactUsMain = styled.main`
        padding: 0.5rem;
     `}
 `;
+ContactUsMain.displayName = "ContactUsMain";
 
 const ContactUsWrapper = styled.section`
     padding: 2rem;
@@ -80,6 +81,7 @@ const ContactUsWrapper = styled.section`
        padding: 0.5rem;
     `}
 `;
+ContactUsWrapper.displayName = "ContactUsWrapper";
 
 const ContactUsHeading = styled.h2`
     text-transform: uppercase;
@@ -100,6 +102,7 @@ const ContactUsHeading = styled.h2`
            `border-bottom: 5px solid ${theme.colors.brand.primary}`};
     `}
 `;
+ContactUsHeading.displayName = "ContactUsHeading";
 
 const ContactUsContent = styled.div`
     display: flex;
@@ -112,6 +115,8 @@ const ContactUsContent = styled.div`
        margin: 2rem 0rem;
     `}
 `;
+ContactUsContent.displayName = "ContactUsContent";
+
 const Paragraph = styled.p`
     padding: 2rem 2rem 2rem 0rem;
     max-width: 750px;
@@ -119,6 +124,8 @@ const Paragraph = styled.p`
        padding: 0.5rem 0;
     `}
 `;
+Paragraph.displayName = "Paragraph";
+
 const Email = styled.p`
     font-size: 16px;
     a {
@@ -132,6 +139,7 @@ const Email = styled.p`
         border-bottom: 2px solid #9ccccc;
     }
 `;
+Email.displayName = "Email";
 
 const Coordinates = styled.span`
     ${({ theme }) => `color :${theme.colors.brand.primary}`};
@@ -143,3 +151,4 @@ const Coordinates = styled.span`
        margin: 0.5rem 0;
     `}
 `;
+Coordinates.displayName = "Coordinates";

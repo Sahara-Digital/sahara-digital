@@ -84,7 +84,7 @@ export const Footer = ({ className = 'footer' }: IProps) => {
                 </FooterWrapper>
             </FooterContainer>
             <TermsAndPolicy className="terms-privacy-policy">
-                <FooterLink to="/termsandconditions">
+                <FooterLink className="styled-link" to="/termsandconditions">
                     Terms and conditions
                 </FooterLink>
                 <FooterLink className="styled-link" to="/privacypolicy">
@@ -178,7 +178,8 @@ FooterContent.displayName = 'FooterContent';
 const SocialMediaLinks = styled.span`
     display: flex;
     flex-direction: row;
-    font-size: 24px;
+    
+    font-size: ${({ theme }) => `${theme.fontsize.large}`};
     .fa-linkedin {
         ${({ theme }) => `color:${theme.colors.footer.linkedIn}`};
     }
