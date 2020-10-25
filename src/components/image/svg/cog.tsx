@@ -3,11 +3,11 @@ import { ISVG } from '../../../interfaces';
 
 export const SVG = ({
     viewBox = '0 0 34 36',
-    fill = '#FA4D56',
+    className,
     width = '34px',
 }: ISVG) => {
     return (
-        <svg width={width} viewBox={viewBox} version="1.1">
+        <svg className={className} width={width} viewBox={viewBox} version="1.1">
             <defs>
                 <linearGradient
                     x1="87.7944659%"

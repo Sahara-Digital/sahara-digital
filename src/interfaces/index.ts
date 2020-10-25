@@ -7,6 +7,7 @@ export interface IPagesProps {
 export interface IHeaderNavigation {
     history: History;
     children?: React.ReactNode;
+    className?: string;
 }
 
 export interface ISVG {
@@ -14,9 +15,11 @@ export interface ISVG {
     width?: string;
     height?: string;
     fill?: string;
+    className?: string;
 }
 
 export interface IProps {
-    open?: any;
-    setOpen?: any;
+    open: any;
+    setOpen: any;
+    className?: string;
 }

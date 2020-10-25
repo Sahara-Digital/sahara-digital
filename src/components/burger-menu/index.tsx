@@ -5,7 +5,11 @@ import { customMedia } from '../../lib/index';
 
 export const BurgerMenu = ({ open, setOpen }: IProps) => {
     return (
-        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <StyledBurger
+            className="burger-menu"
+            open={open}
+            onClick={() => setOpen(!open)}
+        >
             <div />
             <div />
             <div />
@@ -66,3 +70,4 @@ const StyledBurger = styled.button<{ open: any }>`
     display: none;
   `}
 `;
+StyledBurger.displayName = 'StyledBurger';

@@ -11,17 +11,18 @@ export const StyledLink = styled(Link)<{ color?: string }>`
             ? `color: ${theme.colors.black}`
             : `color: ${theme.colors.brand.primary}`};
     &:hover {
-        padding-top: 2px;
-        ${({ theme }) => css`
+        ${({ theme }) => `
          color: ${theme.colors.white}
          border-bottom: 2px solid: ${theme.colors.brand.primary}`};
     }
 `;
+StyledLink.displayName = 'StyledLink';
 
 export const StyledUnderLineLink = styled(StyledLink)`
     text-decoration: underline;
     ${({ theme }) => ` color: ${theme.colors.brand.primary};`};
 `;
+StyledUnderLineLink.displayName = 'StyledUnderLineLink';
 
 export const MenuLink = styled(NavLink)`
     ${({ theme }) => css`
@@ -30,12 +31,12 @@ export const MenuLink = styled(NavLink)`
         font-family: ${theme.fontFamily.Poppins};
         color: ${theme.colors.black};
         padding: 0 0.75em;
-        font-weight: 500;
         &.active {
             padding-top: 2px;
-            ${({ theme }) =>
-                ` border-bottom: 2px solid ${theme.colors.brand.primary};`};
-            font-weight: 700;
+            ${({ theme }) => css`
+                border-bottom: 2px solid ${theme.colors.brand.primary};
+            `};
+            font-weight: 500;
         }
     `};
     &:hover {
@@ -44,3 +45,4 @@ export const MenuLink = styled(NavLink)`
             ` border-bottom: 2px solid ${theme.colors.brand.primary};`};
     }
 `;
+MenuLink.displayName = 'MenuLink';

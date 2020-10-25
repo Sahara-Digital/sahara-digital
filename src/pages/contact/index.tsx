@@ -16,12 +16,22 @@ export const Contact = ({ history }: IPagesProps) => {
 
     return (
         <>
-            <Navigation history={history}>
-                <HeaderNavigation />
-                {<BurgerMenu open={open} setOpen={setOpen} />}
-                <Menu open={open} setOpen={setOpen} />
+            <Navigation className="navigation-component" history={history}>
+                <HeaderNavigation className="header-navigation-component" />
+                {
+                    <BurgerMenu
+                        className="header-navigation-component"
+                        open={open}
+                        setOpen={setOpen}
+                    />
+                }
+                <Menu
+                    className="menu-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
             </Navigation>
-            <Main>
+            <ContactUsMain>
                 <ContactUsWrapper>
                     <ContactUsHeading>Contact Us</ContactUsHeading>
                     {contactUs.map((contact: any) => {
@@ -43,13 +53,13 @@ export const Contact = ({ history }: IPagesProps) => {
                         );
                     })}
                 </ContactUsWrapper>
-            </Main>
+            </ContactUsMain>
             <Footer />
         </>
     );
 };
 
-const Main = styled.main`
+const ContactUsMain = styled.main`
     padding: 2rem;
     display: flex;
     flex: 1;
@@ -86,7 +96,8 @@ const ContactUsHeading = styled.h2`
     ${customMedia.lessThan('small')`
        text-align: center;
        ${({ theme }) => `font-size:${theme.fontsize.xlarge}`};
-       ${({ theme }) => `border-bottom: 5px solid ${theme.colors.brand.primary}`};
+       ${({ theme }) =>
+           `border-bottom: 5px solid ${theme.colors.brand.primary}`};
     `}
 `;
 

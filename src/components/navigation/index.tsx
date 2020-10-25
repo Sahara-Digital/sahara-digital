@@ -7,7 +7,7 @@ import { IHeaderNavigation } from '../../interfaces';
 
 export const Navigation = ({ children, history }: IHeaderNavigation) => {
     return (
-        <NavigationContainer>
+        <NavigationContainer className="navigation-container">
             <Router history={history}>
                 <Link to={'/'}>
                     <Image
@@ -27,7 +27,7 @@ const NavigationContainer = styled.nav`
     flex-direction: row;
     align-items: center;
     padding: 0.5rem;
-    width: 100%;
     justify-content: space-between;
     box-shadow: 0 10px 8px rgb(221, 221, 221);
 `;
+NavigationContainer.displayName = 'NavigationContainer';

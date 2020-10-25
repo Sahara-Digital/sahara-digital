@@ -3,35 +3,27 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 import { MenuLink } from '../';
 import { customMedia } from '../../lib/index';
+import { navigation } from '../../lib/website-content';
+
 interface IProps {
-    open?: any;
+    open?: boolean;
+    className?: string;
 }
 export const HeaderNavigation = ({ open }: IProps) => {
     return (
-        <Container open={open}>
-            <MenuLink exact={true} to={'/'}>
-                Home
-            </MenuLink>
-            <MenuLink exact={true} to={'/about'}>
-                About
-            </MenuLink>
-            <MenuLink exact={true} to={'/services'}>
-                Services
-            </MenuLink>
-            <MenuLink exact={true} to={'/team'}>
-                Team
-            </MenuLink>
-            <MenuLink exact={true} to={'/careers'}>
-                Careers
-            </MenuLink>
-            <MenuLink exact={true} to={'/contact'}>
-                Contact
-            </MenuLink>
-        </Container>
+        <HeaderContainer className="header-container" open={open}>
+            {navigation.map((path: Record<string, any>) => {
+                return (
+                    <MenuLink key={path.id} exact={true} to={path.to}>
+                        {path.name}
+                    </MenuLink>
+                );
+            })}
+        </HeaderContainer>
     );
 };
 
-const Container = styled.div<{ open: any }>`
+const HeaderContainer = styled.div<{ open: any }>`
     padding: 1rem;
     display: flex;
     justify-content: space-evenly;
@@ -46,10 +38,11 @@ const Container = styled.div<{ open: any }>`
     `}
 
     ${customMedia.between('xxsmall', 'medium')` 
-  
+
      display: none;
     `}
     ${customMedia.between('medium', 'tablet')` 
         padding: 0;
     `}
 `;
+HeaderContainer.displayName = 'HeaderContainer';

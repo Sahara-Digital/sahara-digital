@@ -7,23 +7,43 @@ import { customMedia } from '../../lib';
 export const Menu = ({ open }: IProps) => {
     return (
         open && (
-            <StyledMenu open={open}>
-                <MenuLink exact={true} to={'/'}>
+            <StyledMenu className="styled-menu" open={open}>
+                <MenuLink className="styled-menu-home" exact={true} to={'/'}>
                     Home
                 </MenuLink>
-                <MenuLink exact={true} to={'/about'}>
+                <MenuLink
+                    className="styled-menu-about"
+                    exact={true}
+                    to={'/about'}
+                >
                     About
                 </MenuLink>
-                <MenuLink exact={true} to={'/services'}>
+                <MenuLink
+                    className="styled-menu-services"
+                    exact={true}
+                    to={'/services'}
+                >
                     Services
                 </MenuLink>
-                <MenuLink exact={true} to={'/team'}>
+                <MenuLink
+                    className="styled-menu-team"
+                    exact={true}
+                    to={'/team'}
+                >
                     Team
                 </MenuLink>
-                <MenuLink exact={true} to={'/careers'}>
+                <MenuLink
+                    className="styled-menu-careers"
+                    exact={true}
+                    to={'/careers'}
+                >
                     Careers
                 </MenuLink>
-                <MenuLink exact={true} to={'/contact'}>
+                <MenuLink
+                    className="styled-menu-contact"
+                    exact={true}
+                    to={'/contact'}
+                >
                     Contact
                 </MenuLink>
             </StyledMenu>
@@ -72,3 +92,5 @@ const StyledMenu = styled.div<{ open: any }>`
     }
     `}
 `;
+
+StyledMenu.displayName = 'StyledMenu';
