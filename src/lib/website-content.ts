@@ -57,7 +57,7 @@ export const homepageIntro: Array<Record<any, any>> = [
     {
         id: '1',
         paragraph:
-            'Welcome to Sahara Digital, a digital agency that provides a range of Web Development and Application services.',
+            'Welcome to Sahara Digital, we provide Web Development and Application Services.',
     },
     {
         id: '2',
@@ -92,13 +92,47 @@ export const contactUs: Array<Record<string, any>> = [
     },
 ];
 
-export const team: Array<Record<string, any>> =[ 
+export const team: Array<Record<string, any>> = [
     {
         id: '1',
-        paragraph: 'Sahara Digital was founded with the idea that everyone is equal, we are all human at the end of the day, we have one goal in mind to share knowledge, work together as a team to improve and grow because without people or knowledge, products or services would not exist.'
+        paragraph:
+            'Sahara Digital was founded with the idea that everyone is equal, we are all human at the end of the day, we have one goal in mind to share knowledge, work together as a team to improve and grow because without people or knowledge, products or services would not exist.',
     },
     {
-        id:'2',
-        paragraph: `We develop each person's skills and abilities alongside a core learning structure, treating everyone as an equal on their journey, we incorporate our Objective and Key Results (OKR) system at a developer level as we understand that each individual is at a different stage in their development.`
-    }
-]
+        id: '2',
+        paragraph: `We develop each person's skills and abilities alongside a core learning structure, treating everyone as an equal on their journey, we incorporate our Objective and Key Results (OKR) system at a developer level as we understand that each individual is at a different stage in their development.`,
+    },
+];
+
+export const navigation: Array<Record<string, any>> = [
+    {
+        id: '1',
+        to: '/',
+        name: 'Home',
+    },
+    {
+        id: '2',
+        to: '/about',
+        name: 'About',
+    },
+    {
+        id: '3',
+        to: '/services',
+        name: 'Services',
+    },
+    {
+        id: '4',
+        to: '/team',
+        name: 'Team',
+    },
+    {
+        id: '5',
+        to: '/careers',
+        name: 'Careers',
+    },
+    {
+        id: '6',
+        to: '/contact',
+        name: 'Contact',
+    },
+];

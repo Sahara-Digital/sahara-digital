@@ -6,33 +6,48 @@ import { StyledLink } from '../styled-link';
 import media from 'styled-media-query';
 import { customMedia } from '../../lib';
 
-export const Footer = () => {
+interface IProps {
+    className?: string;
+}
+export const Footer = ({ className = 'footer' }: IProps) => {
     return (
         <>
-            <FooterContainer>
+            <FooterContainer className={`${className}-container`}>
                 <FooterWrapper>
-                    <FooterContent className="qa-company-info">
+                    <FooterContent className={`${className}-company-info`}>
                         <Image
                             width="9rem"
                             img={saharadigital}
                             alt="Sahara Digital Logo"
                         />
-                        <span>&copy; 2020 Sahara Digital.</span>
-                        <span>Company no: 12636576.</span>
+                        <CompanyInfo>&copy; 2020 Sahara Digital.</CompanyInfo>
+                        <CompanyInfo>Company no: 12636576.</CompanyInfo>
                     </FooterContent>
 
                     <FooterContent>
                         <h3>Navigation</h3>
 
-                        <StyledLink to="/">Home</StyledLink>
-                        <StyledLink to="/about">About</StyledLink>
-                        <StyledLink to="/services">Services</StyledLink>
+                        <StyledLink className="styled-link" to="/">
+                            Home
+                        </StyledLink>
+                        <StyledLink className="styled-link" to="/about">
+                            About
+                        </StyledLink>
+                        <StyledLink className="styled-link" to="/services">
+                            Services
+                        </StyledLink>
 
-                        <StyledLink to="/careers">Careers</StyledLink>
-                        <StyledLink to="/team">Team</StyledLink>
-                        <StyledLink to="/contact">Contact</StyledLink>
+                        <StyledLink className="styled-link" to="/careers">
+                            Careers
+                        </StyledLink>
+                        <StyledLink className="styled-link" to="/team">
+                            Team
+                        </StyledLink>
+                        <StyledLink className="styled-link" to="/contact">
+                            Contact
+                        </StyledLink>
                     </FooterContent>
-                    <FooterContent className="qa-contact-us">
+                    <FooterContent className="contact-us">
                         <h3>Contact us </h3>
                         <span>
                             <a href="mailto:hello@saharadigital.co.uk">
@@ -40,9 +55,9 @@ export const Footer = () => {
                             </a>
                         </span>
                     </FooterContent>
-                    <FooterContent className="qa-social-media-links-container">
+                    <FooterContent className="social-media-links-container">
                         <h3>Social Media</h3>
-                        <SocialMediaLinks className="qa-social-media-links">
+                        <SocialMediaLinks className="social-media-links">
                             <a
                                 href="https://twitter.com/Sahara__Digital"
                                 target="_blank"
@@ -68,11 +83,13 @@ export const Footer = () => {
                     </FooterContent>
                 </FooterWrapper>
             </FooterContainer>
-            <TermsAndPolicy className="qa-terms-privacy-policy">
-                <FooterLink to="/termsandconditions">
+            <TermsAndPolicy className="terms-privacy-policy">
+                <FooterLink className="styled-link" to="/termsandconditions">
                     Terms and conditions
                 </FooterLink>
-                <FooterLink to="/privacypolicy">Privacy policy</FooterLink>
+                <FooterLink className="styled-link" to="/privacypolicy">
+                    Privacy policy
+                </FooterLink>
             </TermsAndPolicy>
         </>
     );
@@ -80,7 +97,17 @@ export const Footer = () => {
 
 const FooterLink = styled(StyledLink)`
     padding: 0.5rem 0.5rem;
+    ${({ theme }) => `font-size:${theme.fontsize.medium}`};
+    .styled-link:hover {
+        ${({ theme }) => `color:${theme.colors.white}`};
+    }
 `;
+FooterLink.displayName = 'FooterLink';
+
+const CompanyInfo = styled.span`
+    ${({ theme }) => `font-size:${theme.fontsize.medium}`};
+`;
+CompanyInfo.displayName = 'CompanyInfo';
 
 const FooterContainer = styled.footer`
     display: flex;
@@ -96,6 +123,7 @@ const FooterContainer = styled.footer`
         ${({ theme }) => `color :${theme.colors.white}`};
     }
 `;
+FooterContainer.displayName = 'FooterContainer';
 
 const FooterWrapper = styled.div`
     display: flex;
@@ -109,6 +137,7 @@ const FooterWrapper = styled.div`
        ${({ theme }) => `font-size:${theme.fontsize.small}`};
    `}
 `;
+FooterWrapper.displayName = 'FooterWrapper';
 
 const FooterContent = styled.span`
     display: flex;
@@ -117,31 +146,40 @@ const FooterContent = styled.span`
     padding: 2rem;
     text-align: left;
     .fa-envelope {
-        font-size: 24px;
+        ${({ theme }) => `font-size:${theme.fontsize.large}`};
         padding-right: 0.3rem;
     }
     .fa-envelope:hover {
         border-bottom: 2px solid white;
     }
+    .styled-link:hover {
+        ${({ theme }) => `color:${theme.colors.white}`};
+    }
     ${customMedia.lessThan('mobile')`
-       padding: 1rem 1rem 1rem 1rem;
+       padding: 1rem 1rem;
        margin: 0;
        flex-direction: column;
        justify-content: center;
        align-items: center;
+       h3 {
+        ${({ theme }) => `font-size:${theme.fontsize.medium}`};
+       }
     `}
     ${customMedia.between(`regular`, `medium`)`
-            padding: 1rem 1rem 1rem 1rem;
+            padding: 1rem 1rem;
             a {
             ${({ theme }) => `font-size:${theme.fontsize.small}`};
            }
            ${({ theme }) => `font-size:${theme.fontsize.small}`};
       `}
 `;
+FooterContent.displayName = 'FooterContent';
+
 const SocialMediaLinks = styled.span`
     display: flex;
     flex-direction: row;
-    font-size: 24px;
+    
+    font-size: ${({ theme }) => `${theme.fontsize.large}`};
     .fa-linkedin {
         ${({ theme }) => `color:${theme.colors.footer.linkedIn}`};
     }
@@ -161,8 +199,8 @@ const SocialMediaLinks = styled.span`
         margin: 0;
         flex-direction: row;
         justify-content: center;
-        .fa-linkedin, .fa-twitter{
-            ${({ theme }) => `font-size:${theme.fontsize.regular}`}; 
+        .fa-linkedin, .fa-twitter, .fa-facebook{
+            ${({ theme }) => `font-size:${theme.fontsize.large}`}; 
         }
     `}
     ${customMedia.between(`regular`, `medium`)`
@@ -171,6 +209,8 @@ const SocialMediaLinks = styled.span`
            }
       `}
 `;
+
+SocialMediaLinks.displayName = 'SocialMediaLinks';
 
 const TermsAndPolicy = styled.div`
     display: flex;
@@ -191,3 +231,4 @@ const TermsAndPolicy = styled.div`
            }
       `}
 `;
+TermsAndPolicy.displayName = 'TermsAndPolicy';

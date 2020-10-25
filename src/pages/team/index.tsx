@@ -15,18 +15,28 @@ export const Team = ({ history }: IPagesProps) => {
 
     return (
         <>
-            <Navigation history={history}>
-                <HeaderNavigation />
-                {<BurgerMenu open={open} setOpen={setOpen} />}
-                <Menu open={open} setOpen={setOpen} />
+            <Navigation className="navigation-component" history={history}>
+                <HeaderNavigation className="header-navigation-component" />
+                {
+                    <BurgerMenu
+                        className="header-navigation-component"
+                        open={open}
+                        setOpen={setOpen}
+                    />
+                }
+                <Menu
+                    className="menu-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
             </Navigation>
-            <Main>Team</Main>
-            <Footer />
+            <TeamMain className="team-page-main">Team</TeamMain>
+            <Footer className="footer-component" />
         </>
     );
 };
 
-const Main = styled.main`
+const TeamMain = styled.main`
     padding: 2rem;
     display: flex;
     flex: 1;
@@ -35,3 +45,4 @@ const Main = styled.main`
        padding: 0.5rem;
   `}
 `;
+TeamMain.displayName = "TeamMain";

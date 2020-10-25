@@ -15,18 +15,26 @@ export const Careers = ({ history }: IPagesProps) => {
 
     return (
         <>
-            <Navigation history={history}>
-                <HeaderNavigation />
-                {<BurgerMenu open={open} setOpen={setOpen} />}
-                <Menu open={open} setOpen={setOpen} />
+            <Navigation className="navigation-component" history={history}>
+                <HeaderNavigation className="header-navigation-component" />
+                    <BurgerMenu
+                        className="header-navigation-component"
+                        open={open}
+                        setOpen={setOpen}
+                    />
+                <Menu
+                    className="menu-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
             </Navigation>
-            <Main>Careers</Main>
-            <Footer />
+            <CareersMain className="careers-main">Careers</CareersMain>
+            <Footer className="footer-component"/>
         </>
     );
 };
 
-const Main = styled.main`
+const CareersMain = styled.main`
     padding: 2rem;
     display: flex;
     flex: 1;
@@ -35,3 +43,4 @@ const Main = styled.main`
        padding: 0.5rem;
   `}
 `;
+CareersMain.displayName = "CareersMain";

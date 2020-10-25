@@ -19,17 +19,27 @@ export const Services = ({ history }: IPagesProps) => {
 
     return (
         <>
-            <Navigation history={history}>
-                <HeaderNavigation />
-                {<BurgerMenu open={open} setOpen={setOpen} />}
-                <Menu open={open} setOpen={setOpen} />
+             <Navigation className="navigation-component" history={history}>
+                <HeaderNavigation className="header-navigation-component" />
+                <BurgerMenu
+                    className="header-navigation-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
+                <Menu
+                    className="menu-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
             </Navigation>
-            <Main>
-                <CardContainer>
+            <ServicesMain className="services-main">
+                <CardContainer className="services-card-container">
                     {homepage.map((content: any) => {
                         return (
                             content.title && (
                                 <Card
+                                    className="services-page-card"
+                                    key={content.id}
                                     title={content.title}
                                     component={
                                         content.title === 'Web Consulting' ? (
@@ -44,14 +54,13 @@ export const Services = ({ history }: IPagesProps) => {
                         );
                     })}
                 </CardContainer>
-            </Main>
-
-            <Footer />
+            </ServicesMain>
+            <Footer className="footer-component"/>
         </>
     );
 };
 
-const Main = styled.main`
+const ServicesMain = styled.main`
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -61,6 +70,8 @@ const Main = styled.main`
        padding: 0.5rem;
     `}
 `;
+ServicesMain.displayName = "ServicesMain";
+
 const CardContainer = styled.section`
     display: flex;
     padding: 2rem;
@@ -73,3 +84,4 @@ const CardContainer = styled.section`
        flex-direction: column;
   `}
 `;
+CardContainer.displayName = "Cardcontainer";

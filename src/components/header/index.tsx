@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 export const Header = () => {
     return (
-        <HeaderWrapper>
-            <Anchor href="mailto:hello@saharadigital.co.uk">
-                {' '}
+        <HeaderWrapper className="header-wrapper">
+            <Anchor
+                className="anchor-tag-email"
+                href="mailto:hello@saharadigital.co.uk"
+            >
                 <i className="fas fa-envelope"></i>hello@saharadigital.co.uk
             </Anchor>
             <i className="fab fa-twitter"></i>
@@ -21,8 +23,10 @@ const HeaderWrapper = styled.div`
     ${({ theme }) => `color: ${theme.colors.brand.primary}`};
     padding: 0.5rem;
 `;
+HeaderWrapper.displayName = 'HeaderWrapper';
 
 const Anchor = styled.a`
     text-decoration: none;
     ${({ theme }) => `color: ${theme.colors.black}`};
 `;
+Anchor.displayName = 'Anchor';

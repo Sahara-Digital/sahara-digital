@@ -8,6 +8,7 @@ interface ICardProps {
     title?: string;
     itag?: any;
     paragraph?: string;
+    className?: string;
 }
 export const Card = ({
     component,
@@ -17,7 +18,7 @@ export const Card = ({
     paragraph,
 }: ICardProps) => {
     return (
-        <CardWrapper backgroundColor={backgroundColor}>
+        <CardWrapper className="card-wrapper" backgroundColor={backgroundColor}>
             <span className="container">
                 {component ? <SVGWrapper>{component}</SVGWrapper> : itag}
             </span>
@@ -31,6 +32,8 @@ const SVGWrapper = styled.div`
     top: -100px;
     left: 0;
 `;
+SVGWrapper.displayName = 'SVGWrapper';
+
 const CardWrapper = styled.div<{
     top?: number;
     left?: number;
@@ -75,3 +78,4 @@ const CardWrapper = styled.div<{
        padding: 1rem;
     `}
 `;
+CardWrapper.displayName = 'CardWrapper';

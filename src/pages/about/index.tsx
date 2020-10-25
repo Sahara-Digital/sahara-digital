@@ -17,26 +17,34 @@ export const About = ({ history }: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
     return (
         <>
-            <Navigation history={history}>
-                <HeaderNavigation />
-                {<BurgerMenu open={open} setOpen={setOpen} />}
-                <Menu open={open} setOpen={setOpen} />
+            <Navigation className="navigation-component" history={history}>
+                <HeaderNavigation className="header-navigation-component" />
+                <BurgerMenu
+                    className="header-navigation-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
+                <Menu
+                    className="menu-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
             </Navigation>
-            <Main>
-                <AboutUsWrapper>
+            <AboutUsMain>
+                <AboutUsWrapper className="about-us-wrapper">
                     <div>
-                        <AboutUsHeading>About us</AboutUsHeading>
+                        <AboutUsHeading className="about-us-heading">About us</AboutUsHeading>
                         {aboutPage.map((intro: any) => {
                             return (
                                 <React.Fragment key={intro.id}>
                                     {intro.id < 3 ? (
-                                        <Paragraph>{intro.paragraph}</Paragraph>
+                                        <Paragraph className="about-us-paragraph">{intro.paragraph}</Paragraph>
                                     ) : (
                                         <></>
                                     )}
                                     {intro.id === '1' ? (
-                                        <CogWrapper>
-                                            <Cog />
+                                        <CogWrapper className="about-us-cog-wrapper">
+                                            <Cog className="about-us-cog"/>
                                         </CogWrapper>
                                     ) : (
                                         <></>
@@ -46,46 +54,47 @@ export const About = ({ history }: IPagesProps) => {
                         })}
                     </div>
                 </AboutUsWrapper>
-                <AboutUsServices>
+                <AboutUsServices className="about-us-services">
                     {aboutPage[2].cardcontent.map((content: any) => {
                         return (
                             <React.Fragment key={content.id}>
                                 <Card
+                                    className="about-us-card"
                                     title="Digital Services"
                                     key={content.id}
                                     paragraph={content.paragraph}
-                                    itag={<Code />}
+                                    itag={<Code className="about-us-html-code" />}
                                     backgroundColor={'white'}
                                 />
                             </React.Fragment>
                         );
                     })}
                 </AboutUsServices>
-                <AboutUsContent>
-                    <WhyUs>Why work with us?</WhyUs>
-                    <ValuesWrapper>
+                <AboutUsContent className="about-us-content">
+                    <WhyUs className="about-us-work-with-us">Why work with us?</WhyUs>
+                    <ValuesWrapper className="about-us-company-values">
                         {values.map((value: any) => {
                             return (
                                 <React.Fragment key={value.id}>
-                                    <Values key={value.id}>
-                                        <Paragraph>
+                                    <Values className="about-us-values" key={value.id}>
+                                        <Paragraph className="about-us-paragraph">
                                             <strong>{value.name}</strong> <br />
                                             {value.paragraph}
                                         </Paragraph>
-                                        <Cog />
+                                        <Cog className="about-us-cog"/>
                                     </Values>
                                 </React.Fragment>
                             );
                         })}
                     </ValuesWrapper>
                 </AboutUsContent>
-            </Main>
-            <Footer />
+            </AboutUsMain>
+            <Footer className="footer-component" />
         </>
     );
 };
 
-const Main = styled.main`
+const AboutUsMain = styled.main`
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -95,9 +104,12 @@ const Main = styled.main`
        padding: 0.5rem;
     `}
 `;
+AboutUsMain.displayName = "AboutUsMain";
+
 const CogWrapper = styled.div`
     text-align: center;
 `;
+CogWrapper.displayName = "CogWrapper";
 
 const AboutUsServices = styled.div`
     display: flex;
@@ -110,6 +122,7 @@ const AboutUsServices = styled.div`
         background-image: linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
     }
 `;
+AboutUsServices.displayName = "AboutUsServices";
 
 const AboutUsWrapper = styled.section`
     width: 100%;
@@ -122,6 +135,8 @@ const AboutUsWrapper = styled.section`
        padding: 0.5rem;
     `}
 `;
+AboutUsWrapper.displayName = "AboutUsWrapper";
+
 const AboutUsContent = styled.section`
     padding: 2rem;
     display: flex;
@@ -133,6 +148,7 @@ const AboutUsContent = styled.section`
        padding: 0.5rem;
     `}
 `;
+AboutUsContent.displayName = "AboutUsContent";
 
 const ValuesWrapper = styled.div`
     display: flex;
@@ -141,6 +157,8 @@ const ValuesWrapper = styled.div`
     justify-content: center;
     align-items: flex-start;
 `;
+ValuesWrapper.displayName = "ValuesWrapper";
+
 const Values = styled.div`
     text-align: center;
     display: flex;
@@ -150,6 +168,7 @@ const Values = styled.div`
     align-items: center;
     max-width: 500px;
 `;
+Values.displayName = "Values";
 
 const Paragraph = styled.p`
     padding: 2rem;
@@ -158,6 +177,7 @@ const Paragraph = styled.p`
        padding: 1rem;
     `}
 `;
+Paragraph.displayName = "Paragraph";
 
 const WhyUs = styled.h2`
     font-weight: 500;
@@ -170,6 +190,7 @@ const WhyUs = styled.h2`
     margin-left: auto;
     margin-right: auto;
 `;
+WhyUs.displayName = "WhyUs";
 
 const AboutUsHeading = styled.h2`
     text-transform: uppercase;
@@ -184,3 +205,4 @@ const AboutUsHeading = styled.h2`
     margin-left: auto;
     margin-right: auto;
 `;
+AboutUsHeading.displayName = "AboutUsHeading";

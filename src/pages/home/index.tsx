@@ -17,27 +17,35 @@ export const Home = ({ history }: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
     return (
         <>
-            <Navigation history={history}>
-                <HeaderNavigation />
-                {<BurgerMenu open={open} setOpen={setOpen} />}
-                <Menu open={open} setOpen={setOpen} />
+             <Navigation className="navigation-component" history={history}>
+                <HeaderNavigation className="header-navigation-component" />
+                <BurgerMenu
+                    className="header-navigation-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
+                <Menu
+                    className="menu-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
             </Navigation>
-            <Main>
-                <Content className="qa-homepage-content">
+            <HomePageMain className="homepage-main">
+                <Content className="homepage-content">
                     <h1>
                         Solution driven <br /> digital consultancy
                     </h1>
                     {homepageIntro.map((intro: any) => {
                         return (
-                            <Paragraph key={intro.id}>
+                            <Paragraph className="home-page-paragraph-intro" key={intro.id}>
                                 {intro.paragraph}
                             </Paragraph>
                         );
                     })}
                     <Shapes />
                 </Content>
-            </Main>
-            <Footer />
+            </HomePageMain>
+            <Footer className="footer-component" />
         </>
     );
 };
@@ -69,7 +77,7 @@ const Content = styled.section`
         }
   `}
 `;
-const Main = styled.main`
+const HomePageMain = styled.main`
     padding: 2rem;
     display: flex;
     flex: 1;
@@ -81,3 +89,4 @@ const Main = styled.main`
         }
   `}
 `;
+HomePageMain.displayName = "HomePageMain";

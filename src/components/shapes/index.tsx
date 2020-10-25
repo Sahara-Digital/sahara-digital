@@ -30,8 +30,10 @@ const ShapesContainer = styled.div<{ zIndex?: number }>`
     position: absolute;
     top: 100px;
     left: 275px;
+    opacity: 0.75;
     ${media.lessThan('small')`
         top: 0px;
         left: 0px;
     `}
 `;
+ShapesContainer.displayName = 'ShapesContainer';
