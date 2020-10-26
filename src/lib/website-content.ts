@@ -3,7 +3,8 @@ export const values: Array<Record<any, any>> = [
         id: '1',
         title: 'Why choose us?',
         name: 'Integrity',
-        paragraph: 'We value honesty and uphold strong moral principles. Each and everyone holds themselves accountable, and we own up to our shortcomings.',
+        paragraph:
+            'We value honesty and uphold strong moral principles. Each and everyone holds themselves accountable, and we own up to our shortcomings.',
     },
     {
         id: '2',
