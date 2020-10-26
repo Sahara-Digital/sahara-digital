@@ -33,7 +33,7 @@ export const Footer = ({ className = 'footer' }: IProps) => {
                         <StyledLink className="styled-link" to="/about">
                             About
                         </StyledLink>
-                        <StyledLink className="styled-link" to="/services">
+                        {/* <StyledLink className="styled-link" to="/services">
                             Services
                         </StyledLink>
 
@@ -42,7 +42,7 @@ export const Footer = ({ className = 'footer' }: IProps) => {
                         </StyledLink>
                         <StyledLink className="styled-link" to="/team">
                             Team
-                        </StyledLink>
+                        </StyledLink> */}
                         <StyledLink className="styled-link" to="/contact">
                             Contact
                         </StyledLink>
