@@ -14,7 +14,9 @@ import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 import { homepage } from '../../lib/website-content';
 
-export const Services = ({ history }: IPagesProps) => {
+export const Services: React.FunctionComponent<IPagesProps> = ({
+    history,
+}: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
 
     return (
@@ -37,7 +39,7 @@ export const Services = ({ history }: IPagesProps) => {
                     Services
                 </ServicesHeading>
                 <CardContainer className="services-card-container">
-                    {homepage.map((content: any) => {
+                    {homepage.map((content: Record<string, string>) => {
                         return (
                             content.title && (
                                 <Card

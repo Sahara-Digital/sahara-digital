@@ -5,7 +5,7 @@ import { theme, GlobalStyle } from './styled-components';
 import { history } from './lib';
 import Routes from './app-routes';
 
-function App() {
+function App(): React.ReactElement {
     return (
         <AppContainer>
             <ThemeProvider theme={theme}>

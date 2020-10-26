@@ -10,13 +10,13 @@ interface ICardProps {
     paragraph?: string;
     className?: string;
 }
-export const Card = ({
+export const Card: React.FunctionComponent<ICardProps> = ({
     component,
     backgroundColor,
     title,
     itag,
     paragraph,
-}: ICardProps) => {
+}: ICardProps): JSX.Element => {
     return (
         <CardWrapper className="card-wrapper" backgroundColor={backgroundColor}>
             <span className="container">

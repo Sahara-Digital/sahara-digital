@@ -1,4 +1,14 @@
-export const values: Array<Record<any, any>> = [
+type PageContent = 'id' | 'paragraph';
+type PageNavigation = 'id' | 'to' | 'name';
+type ContactPage =
+    | 'id'
+    | 'question'
+    | 'subheading'
+    | 'coordinates'
+    | 'subintro'
+    | 'paragraph';
+
+export const values: Array<Record<string, string>> = [
     {
         id: '1',
         title: 'Why choose us?',
@@ -54,7 +64,7 @@ export const aboutPage: Array<Record<string, any>> = [
     },
 ];
 
-export const homepageIntro: Array<Record<any, any>> = [
+export const homepageIntro: Array<Record<PageContent, any>> = [
     {
         id: '1',
         paragraph:
@@ -81,7 +91,7 @@ export const homepage: Array<Record<string, any>> = [
     },
 ];
 
-export const contactUs: Array<Record<string, any>> = [
+export const contactUs: Array<Record<ContactPage, any>> = [
     {
         id: '1',
         question: 'How can we help?',
@@ -93,7 +103,7 @@ export const contactUs: Array<Record<string, any>> = [
     },
 ];
 
-export const team: Array<Record<string, any>> = [
+export const team: Array<Record<PageContent, any>> = [
     {
         id: '1',
         paragraph:
@@ -113,7 +123,7 @@ export const team: Array<Record<string, any>> = [
     },
 ];
 
-export const navigation: Array<Record<string, any>> = [
+export const navigation: Array<Record<PageNavigation, any>> = [
     {
         id: '1',
         to: '/',

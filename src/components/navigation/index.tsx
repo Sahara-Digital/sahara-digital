@@ -5,7 +5,10 @@ import { Image } from '../';
 import { saharadigital } from '../../img';
 import { IHeaderNavigation } from '../../interfaces';
 
-export const Navigation = ({ children, history }: IHeaderNavigation) => {
+export const Navigation: React.FunctionComponent<IHeaderNavigation> = ({
+    children,
+    history,
+}: IHeaderNavigation): JSX.Element => {
     return (
         <NavigationContainer className="navigation-container">
             <Router history={history}>

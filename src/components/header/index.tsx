@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const Header = () => {
+export const Header: React.FunctionComponent<unknown> = (): JSX.Element => {
     return (
         <HeaderWrapper className="header-wrapper">
             <Anchor

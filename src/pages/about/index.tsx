@@ -13,7 +13,9 @@ import { aboutPage, values } from '../../lib/website-content';
 import { Code, Cog } from '../../components/image/svg';
 import { customMedia } from '../../lib';
 
-export const About = ({ history }: IPagesProps) => {
+export const About: React.FunctionComponent<IPagesProps> = ({
+    history,
+}: IPagesProps): JSX.Element => {
     const [open, setOpen] = React.useState(false);
     return (
         <>
@@ -36,7 +38,7 @@ export const About = ({ history }: IPagesProps) => {
                         <AboutUsHeading className="about-us-heading">
                             About us
                         </AboutUsHeading>
-                        {aboutPage.map((intro: any) => {
+                        {aboutPage.map((intro: Record<string, any>) => {
                             return (
                                 <React.Fragment key={intro.id}>
                                     {intro.id < 3 ? (
@@ -59,22 +61,24 @@ export const About = ({ history }: IPagesProps) => {
                     </div>
                 </AboutUsWrapper>
                 <AboutUsServices className="about-us-services">
-                    {aboutPage[2].cardcontent.map((content: any) => {
-                        return (
-                            <React.Fragment key={content.id}>
-                                <Card
-                                    className="about-us-card"
-                                    title="Digital Services"
-                                    key={content.id}
-                                    paragraph={content.paragraph}
-                                    itag={
-                                        <Code className="about-us-html-code" />
-                                    }
-                                    backgroundColor={'white'}
-                                />
-                            </React.Fragment>
-                        );
-                    })}
+                    {aboutPage[2].cardcontent.map(
+                        (content: Record<string, string>) => {
+                            return (
+                                <React.Fragment key={content.id}>
+                                    <Card
+                                        className="about-us-card"
+                                        title="Digital Services"
+                                        key={content.id}
+                                        paragraph={content.paragraph}
+                                        itag={
+                                            <Code className="about-us-html-code" />
+                                        }
+                                        backgroundColor={'white'}
+                                    />
+                                </React.Fragment>
+                            );
+                        },
+                    )}
                 </AboutUsServices>
                 <AboutUsContent className="about-us-content">
                     <WhyUs className="about-us-work-with-us">

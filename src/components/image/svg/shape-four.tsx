@@ -5,7 +5,7 @@ export const SVG = ({
     viewBox = '0 0 200 200',
     fill = '#E8DAFF',
     width,
-}: ISVG) => {
+}: ISVG): JSX.Element => {
     return (
         <svg viewBox={viewBox} width={width}>
             <path
