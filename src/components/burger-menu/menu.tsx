@@ -5,7 +5,7 @@ import { IProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 import { navigation } from '../../lib/website-content';
 
-export const Menu = ({ open }: IProps) => {
+export const Menu: React.FunctionComponent<IProps> = ({ open }: IProps) => {
     return (
         open && (
             <StyledMenu className="styled-menu" open={open}>

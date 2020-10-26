@@ -9,7 +9,9 @@ import { customMedia } from '../../lib';
 interface IProps {
     className?: string;
 }
-export const Footer = ({ className = 'footer' }: IProps) => {
+export const Footer: React.FunctionComponent<IProps> = ({
+    className = 'footer',
+}: IProps): JSX.Element => {
     return (
         <>
             <FooterContainer className={`${className}-container`}>

@@ -10,7 +10,9 @@ import {
 import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 
-export const Careers = ({ history }: IPagesProps) => {
+export const Careers: React.FunctionComponent<IPagesProps> = ({
+    history,
+}: IPagesProps): JSX.Element => {
     const [open, setOpen] = React.useState(false);
 
     return (

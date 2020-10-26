@@ -1,7 +1,4 @@
-// import original module declarations
 import 'styled-components';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import { DefaultTheme } from 'styled-components';
 
 import theme from '../theme';
 

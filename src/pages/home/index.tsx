@@ -13,7 +13,9 @@ import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 import { homepageIntro } from '../../lib/website-content';
 
-export const Home = ({ history }: IPagesProps) => {
+export const Home: React.FunctionComponent<IPagesProps> = ({
+    history,
+}: IPagesProps): JSX.Element => {
     const [open, setOpen] = React.useState(false);
     return (
         <>
@@ -35,7 +37,7 @@ export const Home = ({ history }: IPagesProps) => {
                     <h1>
                         Solution driven <br /> digital consultancy
                     </h1>
-                    {homepageIntro.map((intro: any) => {
+                    {homepageIntro.map((intro: Record<string, string>) => {
                         return (
                             <Paragraph
                                 className="home-page-paragraph-intro"

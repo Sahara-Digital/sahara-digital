@@ -11,7 +11,9 @@ import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 import { contactUs } from '../../lib/website-content';
 
-export const Contact = ({ history }: IPagesProps) => {
+export const Contact: React.FunctionComponent<IPagesProps> = ({
+    history,
+}: IPagesProps): JSX.Element => {
     const [open, setOpen] = React.useState(false);
 
     return (
@@ -36,7 +38,7 @@ export const Contact = ({ history }: IPagesProps) => {
                     <ContactUsHeading className="contact-us-heading">
                         Contact Us
                     </ContactUsHeading>
-                    {contactUs.map((contact: any) => {
+                    {contactUs.map((contact: Record<string, string>) => {
                         return (
                             <ContactUsContent
                                 className="contact-us-content"

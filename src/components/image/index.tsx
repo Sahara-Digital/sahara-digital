@@ -9,7 +9,13 @@ interface IProps {
     props?: any;
 }
 
-export const Image = ({ img, alt, width, children, props }: IProps) => {
+export const Image = ({
+    img,
+    alt,
+    width,
+    children,
+    props,
+}: IProps): JSX.Element => {
     return (
         <>
             <Img width={width} src={img} alt={alt} {...props} />

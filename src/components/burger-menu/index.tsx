@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { IProps } from '../../interfaces';
 import { customMedia } from '../../lib/index';
 
-export const BurgerMenu = ({ open, setOpen }: IProps) => {
+export const BurgerMenu: React.FunctionComponent<IProps> = ({
+    open,
+    setOpen,
+}: IProps): JSX.Element => {
     return (
         <StyledBurger
             className="burger-menu"

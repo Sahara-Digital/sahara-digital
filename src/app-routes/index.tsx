@@ -1,13 +1,15 @@
 import React from 'react';
 import { History } from 'history';
 import { Router, Switch, Route } from 'react-router-dom';
-import { Home, About, Services, Team, Careers, Contact } from '../pages/';
+import { Home, About, Contact } from '../pages/';
 
 interface IProps {
     history: History;
 }
 
-const Routes = ({ history }: IProps) => {
+const Routes: React.FunctionComponent<IProps> = ({
+    history,
+}: IProps): JSX.Element => {
     return (
         <Router history={history}>
             <Switch>

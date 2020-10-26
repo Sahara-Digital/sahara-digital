@@ -11,7 +11,9 @@ import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 import { team } from '../../lib/website-content';
 
-export const Team = ({ history }: IPagesProps) => {
+export const Team: React.FunctionComponent<IPagesProps> = ({
+    history,
+}: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
 
     return (

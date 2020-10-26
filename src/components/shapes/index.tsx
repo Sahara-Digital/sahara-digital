@@ -9,7 +9,7 @@ import {
     ShapeFive,
 } from '../../components/image/svg';
 
-export const Shapes = () => {
+export const Shapes = (): JSX.Element => {
     return (
         <ShapesContainer>
             <ShapeOne width="15rem" />

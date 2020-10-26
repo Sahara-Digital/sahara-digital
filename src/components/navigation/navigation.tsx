@@ -9,7 +9,9 @@ interface IProps {
     open?: boolean;
     className?: string;
 }
-export const HeaderNavigation = ({ open }: IProps) => {
+export const HeaderNavigation: React.FunctionComponent<IProps> = ({
+    open,
+}: IProps): JSX.Element => {
     return (
         <HeaderContainer className="header-container" open={open}>
             {navigation.map((path: Record<string, any>) => {

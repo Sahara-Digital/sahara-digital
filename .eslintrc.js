@@ -20,7 +20,8 @@ module.exports = {
   ],
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["off"]
+    "no-use-before-define": [0],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-use-before-define": [0]
   },
 };
