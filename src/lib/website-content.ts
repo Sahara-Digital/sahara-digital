@@ -3,7 +3,7 @@ export const values: Array<Record<any, any>> = [
         id: '1',
         title: 'Why choose us?',
         name: 'Integrity',
-        paragraph: 'We value honesty and uphold strong moral principles',
+        paragraph: 'We value honesty and uphold strong moral principles. Each and everyone holds themselves accountable, and we own up to our shortcomings.',
     },
     {
         id: '2',
@@ -47,7 +47,7 @@ export const aboutPage: Array<Record<string, any>> = [
             {
                 id: '1',
                 paragraph:
-                    'We encompasse our knowledge to provide you with a range of services including Web developement, Responsive web design and Search engine optimisation.',
+                    'We encompasse our knowledge to provide you with a range of services including Web Developement, Responsive Web Design and Google Analytics.',
             },
         ],
     },
@@ -123,21 +123,21 @@ export const navigation: Array<Record<string, any>> = [
         to: '/about',
         name: 'About',
     },
-    {
-        id: '3',
-        to: '/services',
-        name: 'Services',
-    },
-    {
-        id: '4',
-        to: '/team',
-        name: 'Team',
-    },
-    {
-        id: '5',
-        to: '/careers',
-        name: 'Careers',
-    },
+    // {
+    //     id: '3',
+    //     to: '/services',
+    //     name: 'Services',
+    // },
+    // {
+    //     id: '4',
+    //     to: '/team',
+    //     name: 'Team',
+    // },
+    // {
+    //     id: '5',
+    //     to: '/careers',
+    //     name: 'Careers',
+    // },
     {
         id: '6',
         to: '/contact',

@@ -23,25 +23,25 @@ const Routes = ({ history }: IProps) => {
                         <About history={history} />
                     )}
                 />
-                <Route
+                {/* <Route
                     exact
                     path="/services"
                     render={({ history }: IProps) => (
                         <Services history={history} />
                     )}
-                />
-                <Route
+                /> */}
+                {/* <Route
                     exact
                     path="/team"
                     render={({ history }: IProps) => <Team history={history} />}
-                />
-                <Route
+                /> */}
+                {/* <Route
                     exact
                     path="/careers"
                     render={({ history }: IProps) => (
                         <Careers history={history} />
                     )}
-                />
+                /> */}
                 <Route
                     exact
                     path="/contact"
