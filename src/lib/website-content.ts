@@ -96,11 +96,19 @@ export const team: Array<Record<string, any>> = [
     {
         id: '1',
         paragraph:
-            'Sahara Digital was founded with the idea that everyone is equal, we are all human at the end of the day, we have one goal in mind to share knowledge, work together as a team to improve and grow because without people or knowledge, products or services would not exist.',
+            'Sahara Digital was founded with the idea that everyone is equal. We have one goal in mind to share knowledge and work together as a team to improve because, without people, products or services would not exist.',
     },
     {
         id: '2',
         paragraph: `We develop each person's skills and abilities alongside a core learning structure, treating everyone as an equal on their journey, we incorporate our Objective and Key Results (OKR) system at a developer level as we understand that each individual is at a different stage in their development.`,
+    },
+    {
+        id: '3',
+        paragraph: `Everything has a beginning, a middle, and an end. This is just the beginning.`,
+    },
+    {
+        id: '4',
+        paragraph: `Meet the team`,
     },
 ];
 

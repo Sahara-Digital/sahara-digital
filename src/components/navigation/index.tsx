@@ -28,6 +28,5 @@ const NavigationContainer = styled.nav`
     align-items: center;
     padding: 0.5rem;
     justify-content: space-between;
-    box-shadow: 0 10px 8px rgb(221, 221, 221);
 `;
 NavigationContainer.displayName = 'NavigationContainer';

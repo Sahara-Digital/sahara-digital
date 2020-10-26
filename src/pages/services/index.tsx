@@ -19,7 +19,7 @@ export const Services = ({ history }: IPagesProps) => {
 
     return (
         <>
-             <Navigation className="navigation-component" history={history}>
+            <Navigation className="navigation-component" history={history}>
                 <HeaderNavigation className="header-navigation-component" />
                 <BurgerMenu
                     className="header-navigation-component"
@@ -33,6 +33,9 @@ export const Services = ({ history }: IPagesProps) => {
                 />
             </Navigation>
             <ServicesMain className="services-main">
+                <ServicesHeading className="services-heading">
+                    Services
+                </ServicesHeading>
                 <CardContainer className="services-card-container">
                     {homepage.map((content: any) => {
                         return (
@@ -55,7 +58,7 @@ export const Services = ({ history }: IPagesProps) => {
                     })}
                 </CardContainer>
             </ServicesMain>
-            <Footer className="footer-component"/>
+            <Footer className="footer-component" />
         </>
     );
 };
@@ -70,7 +73,28 @@ const ServicesMain = styled.main`
        padding: 0.5rem;
     `}
 `;
-ServicesMain.displayName = "ServicesMain";
+ServicesMain.displayName = 'ServicesMain';
+
+const ServicesHeading = styled.h2`
+    text-transform: uppercase;
+    ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 20px;
+    line-height: 1.2;
+    border-radius: 3px;
+    ${({ theme }) => `border-bottom: 5px solid ${theme.colors.brand.primary}`};
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    ${customMedia.lessThan('small')`
+       text-align: center;
+       ${({ theme }) => `font-size:${theme.fontsize.xlarge}`};
+       ${({ theme }) =>
+           `border-bottom: 5px solid ${theme.colors.brand.primary}`};
+    `}
+`;
+ServicesHeading.displayName = 'ServicesHeading';
 
 const CardContainer = styled.section`
     display: flex;
@@ -84,4 +108,4 @@ const CardContainer = styled.section`
        flex-direction: column;
   `}
 `;
-CardContainer.displayName = "Cardcontainer";
+CardContainer.displayName = 'Cardcontainer';

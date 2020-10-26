@@ -9,6 +9,7 @@ import {
 } from '../../components';
 import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
+import { team } from '../../lib/website-content';
 
 export const Team = ({ history }: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
@@ -30,7 +31,12 @@ export const Team = ({ history }: IPagesProps) => {
                     setOpen={setOpen}
                 />
             </Navigation>
-            <TeamMain className="team-page-main">Team</TeamMain>
+            <TeamMain className="team-page-main">
+                <TeamHeading className="contact-us-heading">Team</TeamHeading>
+                {team.map((content) => {
+                    return <div key={content.id}>{content.paragraph}</div>;
+                })}
+            </TeamMain>
             <Footer className="footer-component" />
         </>
     );
@@ -45,4 +51,25 @@ const TeamMain = styled.main`
        padding: 0.5rem;
   `}
 `;
-TeamMain.displayName = "TeamMain";
+TeamMain.displayName = 'TeamMain';
+
+const TeamHeading = styled.h2`
+    text-transform: uppercase;
+    ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 20px;
+    line-height: 1.2;
+    border-radius: 3px;
+    ${({ theme }) => `border-bottom: 5px solid ${theme.colors.brand.primary}`};
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    ${customMedia.lessThan('small')`
+       text-align: center;
+       ${({ theme }) => `font-size:${theme.fontsize.xlarge}`};
+       ${({ theme }) =>
+           `border-bottom: 5px solid ${theme.colors.brand.primary}`};
+    `}
+`;
+TeamHeading.displayName = 'TeamHeading';
