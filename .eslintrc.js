@@ -16,15 +16,11 @@ module.exports = {
     "plugin:react/recommended", 
     "plugin:@typescript-eslint/recommended", 
     "prettier/@typescript-eslint", 
-    "plugin:prettier/recommended","react-app",
-    "airbnb",
-    "plugin:jsx-a11y/recommended",
-    "prettier",
-    "prettier/react"
+    "plugin:prettier/recommended",
   ],
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"]
+    "@typescript-eslint/no-use-before-define": ["off"]
   },
 };
