@@ -14,7 +14,7 @@ import { team } from '../../lib/website-content';
 export const Team: React.FunctionComponent<IPagesProps> = ({
     history,
 }: IPagesProps) => {
-    const [open, setOpen] = React.useState(false);
+    const [isOpen, setOpen] = React.useState(false);
 
     return (
         <>
@@ -23,13 +23,13 @@ export const Team: React.FunctionComponent<IPagesProps> = ({
                 {
                     <BurgerMenu
                         className="header-navigation-component"
-                        open={open}
+                        isOpen={isOpen}
                         setOpen={setOpen}
                     />
                 }
                 <Menu
                     className="menu-component"
-                    open={open}
+                    isOpen={isOpen}
                     setOpen={setOpen}
                 />
             </Navigation>

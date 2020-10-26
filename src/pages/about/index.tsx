@@ -16,19 +16,19 @@ import { customMedia } from '../../lib';
 export const About: React.FunctionComponent<IPagesProps> = ({
     history,
 }: IPagesProps): JSX.Element => {
-    const [open, setOpen] = React.useState(false);
+    const [isOpen, setOpen] = React.useState(false);
     return (
         <>
             <Navigation className="navigation-component" history={history}>
                 <HeaderNavigation className="header-navigation-component" />
                 <BurgerMenu
                     className="header-navigation-component"
-                    open={open}
+                    isOpen={isOpen}
                     setOpen={setOpen}
                 />
                 <Menu
                     className="menu-component"
-                    open={open}
+                    isOpen={isOpen}
                     setOpen={setOpen}
                 />
             </Navigation>
