@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/sahara-digital/static/css/main.31bc4ab1.chunk.css",
+    "main.js": "/sahara-digital/static/js/main.5b4e316f.chunk.js",
+    "main.js.map": "/sahara-digital/static/js/main.5b4e316f.chunk.js.map",
+    "runtime-main.js": "/sahara-digital/static/js/runtime-main.efe3a6b2.js",
+    "runtime-main.js.map": "/sahara-digital/static/js/runtime-main.efe3a6b2.js.map",
+    "static/js/2.1ccb2c03.chunk.js": "/sahara-digital/static/js/2.1ccb2c03.chunk.js",
+    "static/js/2.1ccb2c03.chunk.js.map": "/sahara-digital/static/js/2.1ccb2c03.chunk.js.map",
+    "index.html": "/sahara-digital/index.html",
+    "precache-manifest.da386e2513b460a3f9310ac6c02f3993.js": "/sahara-digital/precache-manifest.da386e2513b460a3f9310ac6c02f3993.js",
+    "service-worker.js": "/sahara-digital/service-worker.js",
+    "static/css/main.31bc4ab1.chunk.css.map": "/sahara-digital/static/css/main.31bc4ab1.chunk.css.map",
+    "static/js/2.1ccb2c03.chunk.js.LICENSE.txt": "/sahara-digital/static/js/2.1ccb2c03.chunk.js.LICENSE.txt",
+    "static/media/sahara-digital.png": "/sahara-digital/static/media/sahara-digital.e65d445c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.efe3a6b2.js",
+    "static/js/2.1ccb2c03.chunk.js",
+    "static/css/main.31bc4ab1.chunk.css",
+    "static/js/main.5b4e316f.chunk.js"
+  ]
+}
