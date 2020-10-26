@@ -1,28 +1,29 @@
-name: Deploy
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
+name: MasterDeployCI
 on:
   push:
-    branches: [ production ]
-
+    branches:
+      - production
+      - gh-pages
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
     steps:
     - uses: actions/checkout@v2
-
-    - name: Setup Node
-      uses: actions/setup-node@v2-beta
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-          node-version: 12
-
-    - name: Build React App
+        node-version: ${{ matrix.node-version }}
+    - name: Install Packages
+      run: CI=false npm install
+    - name: Deploy to GH Pages
       run: |
-        npm install # Install Dependencies
-        CI=false npm run build # CI=false to ignore warnings
-
-    - name: Install Surge
-      run: npm install -g surge
-
-    - name: Deploy to Surge
-      run:  surge ./build https://saharadigital.co.uk --token ${{secrets.SECRET}}
+        git config --global user.email ${{secrets.EMAIL}}
+        git config --global user.name ${{secrets.USERNAME}}
+        git remote set-url origin https://${{secrets.SAHARA}}@github.com/${{secrets.USERNAME}}/sahara-digital.git
+        CI=false npm run deploy
