@@ -10,12 +10,12 @@ export const Menu = ({ open }: IProps) => {
         open && (
             <StyledMenu className="styled-menu" open={open}>
                 {navigation.map((path: Record<string, any>) => {
-                return (
-                    <MenuLink key={path.id} exact={true} to={path.to}>
-                        {path.name}
-                    </MenuLink>
-                );
-            })}
+                    return (
+                        <MenuLink key={path.id} exact={true} to={path.to}>
+                            {path.name}
+                        </MenuLink>
+                    );
+                })}
             </StyledMenu>
         )
     );

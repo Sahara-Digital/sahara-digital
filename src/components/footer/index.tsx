@@ -178,7 +178,7 @@ FooterContent.displayName = 'FooterContent';
 const SocialMediaLinks = styled.span`
     display: flex;
     flex-direction: row;
-    
+
     font-size: ${({ theme }) => `${theme.fontsize.large}`};
     .fa-linkedin {
         ${({ theme }) => `color:${theme.colors.footer.linkedIn}`};

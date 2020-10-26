@@ -17,11 +17,11 @@ export const Careers = ({ history }: IPagesProps) => {
         <>
             <Navigation className="navigation-component" history={history}>
                 <HeaderNavigation className="header-navigation-component" />
-                    <BurgerMenu
-                        className="header-navigation-component"
-                        open={open}
-                        setOpen={setOpen}
-                    />
+                <BurgerMenu
+                    className="header-navigation-component"
+                    open={open}
+                    setOpen={setOpen}
+                />
                 <Menu
                     className="menu-component"
                     open={open}
@@ -29,7 +29,7 @@ export const Careers = ({ history }: IPagesProps) => {
                 />
             </Navigation>
             <CareersMain className="careers-main">Careers</CareersMain>
-            <Footer className="footer-component"/>
+            <Footer className="footer-component" />
         </>
     );
 };
@@ -43,4 +43,4 @@ const CareersMain = styled.main`
        padding: 0.5rem;
   `}
 `;
-CareersMain.displayName = "CareersMain";
+CareersMain.displayName = 'CareersMain';
