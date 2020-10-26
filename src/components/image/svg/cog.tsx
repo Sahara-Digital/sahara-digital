@@ -7,7 +7,12 @@ export const SVG = ({
     width = '34px',
 }: ISVG) => {
     return (
-        <svg className={className} width={width} viewBox={viewBox} version="1.1">
+        <svg
+            className={className}
+            width={width}
+            viewBox={viewBox}
+            version="1.1"
+        >
             <defs>
                 <linearGradient
                     x1="87.7944659%"

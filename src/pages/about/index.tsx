@@ -33,18 +33,22 @@ export const About = ({ history }: IPagesProps) => {
             <AboutUsMain>
                 <AboutUsWrapper className="about-us-wrapper">
                     <div>
-                        <AboutUsHeading className="about-us-heading">About us</AboutUsHeading>
+                        <AboutUsHeading className="about-us-heading">
+                            About us
+                        </AboutUsHeading>
                         {aboutPage.map((intro: any) => {
                             return (
                                 <React.Fragment key={intro.id}>
                                     {intro.id < 3 ? (
-                                        <Paragraph className="about-us-paragraph">{intro.paragraph}</Paragraph>
+                                        <Paragraph className="about-us-paragraph">
+                                            {intro.paragraph}
+                                        </Paragraph>
                                     ) : (
                                         <></>
                                     )}
                                     {intro.id === '1' ? (
                                         <CogWrapper className="about-us-cog-wrapper">
-                                            <Cog className="about-us-cog"/>
+                                            <Cog className="about-us-cog" />
                                         </CogWrapper>
                                     ) : (
                                         <></>
@@ -63,7 +67,9 @@ export const About = ({ history }: IPagesProps) => {
                                     title="Digital Services"
                                     key={content.id}
                                     paragraph={content.paragraph}
-                                    itag={<Code className="about-us-html-code" />}
+                                    itag={
+                                        <Code className="about-us-html-code" />
+                                    }
                                     backgroundColor={'white'}
                                 />
                             </React.Fragment>
@@ -71,17 +77,22 @@ export const About = ({ history }: IPagesProps) => {
                     })}
                 </AboutUsServices>
                 <AboutUsContent className="about-us-content">
-                    <WhyUs className="about-us-work-with-us">Why work with us?</WhyUs>
+                    <WhyUs className="about-us-work-with-us">
+                        Why work with us?
+                    </WhyUs>
                     <ValuesWrapper className="about-us-company-values">
                         {values.map((value: any) => {
                             return (
                                 <React.Fragment key={value.id}>
-                                    <Values className="about-us-values" key={value.id}>
+                                    <Values
+                                        className="about-us-values"
+                                        key={value.id}
+                                    >
                                         <Paragraph className="about-us-paragraph">
                                             <strong>{value.name}</strong> <br />
                                             {value.paragraph}
                                         </Paragraph>
-                                        <Cog className="about-us-cog"/>
+                                        <Cog className="about-us-cog" />
                                     </Values>
                                 </React.Fragment>
                             );
@@ -104,12 +115,12 @@ const AboutUsMain = styled.main`
        padding: 0.5rem;
     `}
 `;
-AboutUsMain.displayName = "AboutUsMain";
+AboutUsMain.displayName = 'AboutUsMain';
 
 const CogWrapper = styled.div`
     text-align: center;
 `;
-CogWrapper.displayName = "CogWrapper";
+CogWrapper.displayName = 'CogWrapper';
 
 const AboutUsServices = styled.div`
     display: flex;
@@ -122,7 +133,7 @@ const AboutUsServices = styled.div`
         background-image: linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
     }
 `;
-AboutUsServices.displayName = "AboutUsServices";
+AboutUsServices.displayName = 'AboutUsServices';
 
 const AboutUsWrapper = styled.section`
     width: 100%;
@@ -135,7 +146,7 @@ const AboutUsWrapper = styled.section`
        padding: 0.5rem;
     `}
 `;
-AboutUsWrapper.displayName = "AboutUsWrapper";
+AboutUsWrapper.displayName = 'AboutUsWrapper';
 
 const AboutUsContent = styled.section`
     padding: 2rem;
@@ -148,7 +159,7 @@ const AboutUsContent = styled.section`
        padding: 0.5rem;
     `}
 `;
-AboutUsContent.displayName = "AboutUsContent";
+AboutUsContent.displayName = 'AboutUsContent';
 
 const ValuesWrapper = styled.div`
     display: flex;
@@ -157,7 +168,7 @@ const ValuesWrapper = styled.div`
     justify-content: center;
     align-items: flex-start;
 `;
-ValuesWrapper.displayName = "ValuesWrapper";
+ValuesWrapper.displayName = 'ValuesWrapper';
 
 const Values = styled.div`
     text-align: center;
@@ -168,7 +179,7 @@ const Values = styled.div`
     align-items: center;
     max-width: 500px;
 `;
-Values.displayName = "Values";
+Values.displayName = 'Values';
 
 const Paragraph = styled.p`
     padding: 2rem;
@@ -177,7 +188,7 @@ const Paragraph = styled.p`
        padding: 1rem;
     `}
 `;
-Paragraph.displayName = "Paragraph";
+Paragraph.displayName = 'Paragraph';
 
 const WhyUs = styled.h2`
     font-weight: 500;
@@ -190,7 +201,7 @@ const WhyUs = styled.h2`
     margin-left: auto;
     margin-right: auto;
 `;
-WhyUs.displayName = "WhyUs";
+WhyUs.displayName = 'WhyUs';
 
 const AboutUsHeading = styled.h2`
     text-transform: uppercase;
@@ -205,4 +216,4 @@ const AboutUsHeading = styled.h2`
     margin-left: auto;
     margin-right: auto;
 `;
-AboutUsHeading.displayName = "AboutUsHeading";
+AboutUsHeading.displayName = 'AboutUsHeading';

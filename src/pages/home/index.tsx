@@ -17,7 +17,7 @@ export const Home = ({ history }: IPagesProps) => {
     const [open, setOpen] = React.useState(false);
     return (
         <>
-             <Navigation className="navigation-component" history={history}>
+            <Navigation className="navigation-component" history={history}>
                 <HeaderNavigation className="header-navigation-component" />
                 <BurgerMenu
                     className="header-navigation-component"
@@ -37,7 +37,10 @@ export const Home = ({ history }: IPagesProps) => {
                     </h1>
                     {homepageIntro.map((intro: any) => {
                         return (
-                            <Paragraph className="home-page-paragraph-intro" key={intro.id}>
+                            <Paragraph
+                                className="home-page-paragraph-intro"
+                                key={intro.id}
+                            >
                                 {intro.paragraph}
                             </Paragraph>
                         );
@@ -60,6 +63,8 @@ const Paragraph = styled.p`
         }
   `}
 `;
+Paragraph.displayName = 'Paragraph';
+
 const Content = styled.section`
     width: 100%;
     display: flex;
@@ -89,4 +94,4 @@ const HomePageMain = styled.main`
         }
   `}
 `;
-HomePageMain.displayName = "HomePageMain";
+HomePageMain.displayName = 'HomePageMain';
