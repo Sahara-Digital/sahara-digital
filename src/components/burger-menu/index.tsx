@@ -4,14 +4,14 @@ import { IProps } from '../../interfaces';
 import { customMedia } from '../../lib/index';
 
 export const BurgerMenu: React.FunctionComponent<IProps> = ({
-    open,
+    isOpen,
     setOpen,
 }: IProps): JSX.Element => {
     return (
         <StyledBurger
             className="burger-menu"
-            open={open}
-            onClick={() => setOpen(!open)}
+            isOpen={isOpen}
+            onClick={() => setOpen(!isOpen)}
         >
             <div />
             <div />
@@ -20,7 +20,7 @@ export const BurgerMenu: React.FunctionComponent<IProps> = ({
     );
 };
 
-const StyledBurger = styled.button<{ open: any }>`
+const StyledBurger = styled.button<{ isOpen: any }>`
     position: absolute;
     top: 5%;
     right: 5%;
@@ -42,24 +42,24 @@ const StyledBurger = styled.button<{ open: any }>`
     div {
         width: 2rem;
         height: 0.25rem;
-        background: ${({ open }) => (open ? '#2C353C' : '#2C353C')};
+        background: ${({ isOpen }) => (isOpen ? '#2C353C' : '#2C353C')};
         border-radius: 10px;
         transition: all 0.3s linear;
         position: relative;
         transform-origin: 1px;
 
         :first-child {
-            transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+            transform: ${({ isOpen }) => (isOpen ? 'rotate(45deg)' : 'rotate(0)')};
         }
 
         :nth-child(2) {
-            opacity: ${({ open }) => (open ? '0' : '1')};
-            transform: ${({ open }) =>
-                open ? 'translateX(20px)' : 'translateX(0)'};
+            opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
+            transform: ${({ isOpen }) =>
+                isOpen ? 'translateX(20px)' : 'translateX(0)'};
         }
 
         :nth-child(3) {
-            transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+            transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
         }
     }
 

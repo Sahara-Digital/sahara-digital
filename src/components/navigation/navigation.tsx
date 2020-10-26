@@ -6,14 +6,14 @@ import { customMedia } from '../../lib/index';
 import { navigation } from '../../lib/website-content';
 
 interface IProps {
-    open?: boolean;
+    isOpen?: boolean;
     className?: string;
 }
 export const HeaderNavigation: React.FunctionComponent<IProps> = ({
-    open,
+    isOpen,
 }: IProps): JSX.Element => {
     return (
-        <HeaderContainer className="header-container" open={open}>
+        <HeaderContainer className="header-container" isOpen={isOpen}>
             {navigation.map((path: Record<string, any>) => {
                 return (
                     <MenuLink key={path.id} exact={true} to={path.to}>
@@ -25,7 +25,7 @@ export const HeaderNavigation: React.FunctionComponent<IProps> = ({
     );
 };
 
-const HeaderContainer = styled.div<{ open: any }>`
+const HeaderContainer = styled.div<{ isOpen: any }>`
     padding: 1rem;
     display: flex;
     justify-content: space-evenly;
