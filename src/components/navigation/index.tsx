@@ -12,7 +12,7 @@ export const Navigation: React.FunctionComponent<IHeaderNavigation> = ({
     return (
         <NavigationContainer className="navigation-container">
             <Router history={history}>
-                <Link to={'/'}>
+                <Link to={process.env.PUBLIC_URL + '/'}>
                     <Image
                         width="11rem"
                         img={saharadigital}
