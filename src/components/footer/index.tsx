@@ -85,26 +85,26 @@ export const Footer: React.FunctionComponent<IProps> = ({
                     </FooterContent>
                 </FooterWrapper>
             </FooterContainer>
-            <TermsAndPolicy className="terms-privacy-policy">
+            {/* <TermsAndPolicy className="terms-privacy-policy">
                 <FooterLink className="styled-link" to={process.env.PUBLIC_URL + "/termsandconditions"}>
                     Terms and conditions
                 </FooterLink>
                 <FooterLink className="styled-link" to={process.env.PUBLIC_URL + "/privacypolicy"}>
                     Privacy policy
                 </FooterLink>
-            </TermsAndPolicy>
+            </TermsAndPolicy> */}
         </>
     );
 };
 
-const FooterLink = styled(StyledLink)`
-    padding: 0.5rem 0.5rem;
-    ${({ theme }) => `font-size:${theme.fontsize.medium}`};
-    .styled-link:hover {
-        ${({ theme }) => `color:${theme.colors.white}`};
-    }
-`;
-FooterLink.displayName = 'FooterLink';
+// const FooterLink = styled(StyledLink)`
+//     padding: 0.5rem 0.5rem;
+//     ${({ theme }) => `font-size:${theme.fontsize.medium}`};
+//     .styled-link:hover {
+//         ${({ theme }) => `color:${theme.colors.white}`};
+//     }
+// `;
+// FooterLink.displayName = 'FooterLink';
 
 const CompanyInfo = styled.span`
     ${({ theme }) => `font-size:${theme.fontsize.medium}`};
@@ -214,23 +214,23 @@ const SocialMediaLinks = styled.span`
 
 SocialMediaLinks.displayName = 'SocialMediaLinks';
 
-const TermsAndPolicy = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    ${({ theme }) => `background-color :${theme.colors.footer.primary}`};
-    ${({ theme }) => `font-size:${theme.fontsize.medium}`};
-    ${media.lessThan('small')`
-        margin: 0;
-        a {
-            ${({ theme }) => `font-size:${theme.fontsize.small}`};
-        }
-    `}
-    ${customMedia.between(`regular`, `medium`)`
-           a {
-            ${({ theme }) => `font-size:${theme.fontsize.small}`};
-           }
-      `}
-`;
-TermsAndPolicy.displayName = 'TermsAndPolicy';
+// const TermsAndPolicy = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     text-align: center;
+//     ${({ theme }) => `background-color :${theme.colors.footer.primary}`};
+//     ${({ theme }) => `font-size:${theme.fontsize.medium}`};
+//     ${media.lessThan('small')`
+//         margin: 0;
+//         a {
+//             ${({ theme }) => `font-size:${theme.fontsize.small}`};
+//         }
+//     `}
+//     ${customMedia.between(`regular`, `medium`)`
+//            a {
+//             ${({ theme }) => `font-size:${theme.fontsize.small}`};
+//            }
+//       `}
+// `;
+// TermsAndPolicy.displayName = 'TermsAndPolicy';
