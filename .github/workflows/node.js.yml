@@ -5,7 +5,7 @@ name: MasterDeployCI
 on:
   push:
     branches:
-      -production
+      - production
       - gh-pages
 jobs:
   build:
