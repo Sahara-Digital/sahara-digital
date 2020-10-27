@@ -15,38 +15,38 @@ const Routes: React.FunctionComponent<IProps> = ({
             <Switch>
                 <Route
                     exact
-                    path="/"
+                    path={process.env.PUBLIC_URL + '/'}
                     render={({ history }: IProps) => <Home history={history} />}
                 />
                 <Route
                     exact
-                    path="/about"
+                    path={process.env.PUBLIC_URL + '/about'}
                     render={({ history }: IProps) => (
                         <About history={history} />
                     )}
                 />
                 {/* <Route
                     exact
-                    path="/services"
+                    path={process.env.PUBLIC_URL + "/services"}
                     render={({ history }: IProps) => (
                         <Services history={history} />
                     )}
                 /> */}
                 {/* <Route
                     exact
-                    path="/team"
+                    path={process.env.PUBLIC_URL + "/team"}
                     render={({ history }: IProps) => <Team history={history} />}
                 /> */}
                 {/* <Route
                     exact
-                    path="/careers"
+                    path={process.env.PUBLIC_URL + "/careers"}
                     render={({ history }: IProps) => (
                         <Careers history={history} />
                     )}
                 /> */}
                 <Route
                     exact
-                    path="/contact"
+                    path={process.env.PUBLIC_URL + '/contact'}
                     render={({ history }: IProps) => (
                         <Contact history={history} />
                     )}
