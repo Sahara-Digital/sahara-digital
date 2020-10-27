@@ -19,7 +19,7 @@ export interface ISVG {
 }
 
 export interface IProps {
-    open: any;
+    isOpen: any;
     setOpen: any;
     className?: string;
 }

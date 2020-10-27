@@ -29,23 +29,23 @@ export const Footer: React.FunctionComponent<IProps> = ({
                     <FooterContent>
                         <h3>Navigation</h3>
 
-                        <StyledLink className="styled-link" to="/">
+                        <StyledLink className="styled-link" to={process.env.PUBLIC_URL +"/"}>
                             Home
                         </StyledLink>
-                        <StyledLink className="styled-link" to="/about">
+                        <StyledLink className="styled-link" to={process.env.PUBLIC_URL +"/about"}>
                             About
                         </StyledLink>
-                        {/* <StyledLink className="styled-link" to="/services">
+                        {/* <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/services"}>
                             Services
                         </StyledLink>
 
-                        <StyledLink className="styled-link" to="/careers">
+                        <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/careers"}>
                             Careers
                         </StyledLink>
-                        <StyledLink className="styled-link" to="/team">
+                        <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/team}>
                             Team
                         </StyledLink> */}
-                        <StyledLink className="styled-link" to="/contact">
+                        <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/contact"}>
                             Contact
                         </StyledLink>
                     </FooterContent>
@@ -86,10 +86,10 @@ export const Footer: React.FunctionComponent<IProps> = ({
                 </FooterWrapper>
             </FooterContainer>
             <TermsAndPolicy className="terms-privacy-policy">
-                <FooterLink className="styled-link" to="/termsandconditions">
+                <FooterLink className="styled-link" to={process.env.PUBLIC_URL + "/termsandconditions"}>
                     Terms and conditions
                 </FooterLink>
-                <FooterLink className="styled-link" to="/privacypolicy">
+                <FooterLink className="styled-link" to={process.env.PUBLIC_URL + "/privacypolicy"}>
                     Privacy policy
                 </FooterLink>
             </TermsAndPolicy>

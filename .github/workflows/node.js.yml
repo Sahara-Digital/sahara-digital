@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -25,5 +25,5 @@ jobs:
       run: |
         git config --global user.email ${{secrets.EMAIL}}
         git config --global user.name ${{secrets.USERNAME}}
-        git remote set-url origin https://${{secrets.SAHARA}}@github.com/${{secrets.USERNAME}}/sahara-digital.git
+        git remote set-url origin https://${{secrets.SAHARA}}@github.com/Saharadigital/sahara-digital.git
         CI=false npm run deploy

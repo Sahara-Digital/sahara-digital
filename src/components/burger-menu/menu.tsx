@@ -5,13 +5,13 @@ import { IProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 import { navigation } from '../../lib/website-content';
 
-export const Menu: React.FunctionComponent<IProps> = ({ open }: IProps) => {
+export const Menu: React.FunctionComponent<IProps> = ({ isOpen }: IProps) => {
     return (
-        open && (
-            <StyledMenu className="styled-menu" open={open}>
+        isOpen && (
+            <StyledMenu className="styled-menu" isOpen={isOpen}>
                 {navigation.map((path: Record<string, any>) => {
                     return (
-                        <MenuLink key={path.id} exact={true} to={path.to}>
+                        <MenuLink key={path.id} exact={true} to={process.env.PUBLIC_URL + path.to}>
                             {path.name}
                         </MenuLink>
                     );
@@ -21,7 +21,7 @@ export const Menu: React.FunctionComponent<IProps> = ({ open }: IProps) => {
     );
 };
 
-const StyledMenu = styled.div<{ open: any }>`
+const StyledMenu = styled.div<{ isOpen: any }>`
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ const StyledMenu = styled.div<{ open: any }>`
         background-color: ${theme.colors.white};
         font-size: ${theme.fontsize.xxlarge};
     `};
-    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+    transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(-100%)')};
     height: 100vh;
     text-align: left;
     padding: 5rem 2rem;
