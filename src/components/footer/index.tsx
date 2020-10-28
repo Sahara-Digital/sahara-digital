@@ -149,7 +149,6 @@ const FooterWrapper = styled.div`
 
    @media (max-width: 568px) and (min-width: 320px){
         margin: 0;
-        align-items: flex-start;
         padding: 0.5rem;
         span {
             margin: 0;
