@@ -29,11 +29,9 @@ const ShapesContainer = styled.div<{ zIndex?: number }>`
     z-index: -1;
     position: absolute;
     top: 100px;
-    left: 275px;
     opacity: 0.75;
     ${media.lessThan('small')`
         top: 0px;
-        left: 0px;
     `}
 `;
 ShapesContainer.displayName = 'ShapesContainer';
