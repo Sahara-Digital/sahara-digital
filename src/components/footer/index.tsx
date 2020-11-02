@@ -150,9 +150,7 @@ const FooterWrapper = styled.div`
    @media (max-width: 568px) and (min-width: 320px){
         margin: 0;
         padding: 0.5rem;
-        span {
-            margin: 0;
-        }
+        display: block;
     }
 `;
 FooterWrapper.displayName = 'FooterWrapper';
