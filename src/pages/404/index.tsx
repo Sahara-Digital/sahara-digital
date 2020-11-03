@@ -68,20 +68,19 @@ const HomeLink = styled(NavLink)`
     margin: 1rem;
     padding: 2rem;
     font-weight: 800;
-    border-radius: 25px;
     text-decoration: none;
-    color: #2c353c;
+    ${({ theme }) => `color:${theme.colors.black}`};
     font-family: 'Open Sans', sans-serif;
     svg {
         font-weight: 700;
-        color: #2c353c;
+        ${({ theme }) => `color:${theme.colors.black}`};
     }
 `;
 const Paragraph = styled.p`
     padding: 2rem;
     max-width: 750px;
     ${media.lessThan('small')`
-       padding: 1rem 1rem 1rem 1rem;
+       padding: 1rem;
         h1{
             ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
         }
