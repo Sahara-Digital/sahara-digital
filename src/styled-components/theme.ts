@@ -3,7 +3,7 @@ import { createGlobalStyle, DefaultTheme } from 'styled-components';
 const theme: DefaultTheme = {
     colors: {
         white: '#FFFFFF',
-        black: '#000000',
+        black: '#2c353c',
         blue: '#4da6ff',
         footer: {
             primary: '#2c353c',
