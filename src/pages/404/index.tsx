@@ -11,7 +11,8 @@ import {
 } from '../../components';
 import { House } from '../../components/image/svg';
 import { IPagesProps } from '../../interfaces';
-import { customMedia } from '../../lib';
+import { customMedia, background } from '../../lib';
+
 export const NotFoundPage: React.FunctionComponent<IPagesProps> = ({
     history,
 }: IPagesProps): JSX.Element => {
@@ -33,7 +34,7 @@ export const NotFoundPage: React.FunctionComponent<IPagesProps> = ({
             </Navigation>
             <HomePageMain className="homepage-main">
                 <Content>
-                    <ClipText> 404 - Page Not Found</ClipText>
+                    <ClipText background={background}> 404 - Page Not Found</ClipText>
 
                     <Paragraph>
                         The page you are looking for is not currently available,
@@ -51,16 +52,15 @@ export const NotFoundPage: React.FunctionComponent<IPagesProps> = ({
     );
 };
 
-const ClipText = styled.h1`
+const ClipText = styled.h1<{ background?: any}>`
     font-family: 'Open Sans', sans-serif;
     font-size: 80px;
     font-weight: 800;
-    background-image: url('https://images.unsplash.com/photo-1507499739999-097706ad8914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2158&q=80');
-    background-position: 100px 250px;
+    background-image: url(${({ background }) => background});
+    background-position: 150px 250px;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    color: #2c353c;
 `;
 
 const HomeLink = styled(NavLink)`
