@@ -7,4 +7,13 @@ import { SVG as Cog } from '../svg/cog';
 import { SVG as Code } from '../svg/code';
 import { SVG as House } from '../svg/house';
 
-export { ShapeOne, ShapeTwo, ShapeThree, ShapeFour, ShapeFive, Cog, Code, House };
+export {
+    ShapeOne,
+    ShapeTwo,
+    ShapeThree,
+    ShapeFour,
+    ShapeFive,
+    Cog,
+    Code,
+    House,
+};
