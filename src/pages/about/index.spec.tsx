@@ -13,7 +13,8 @@ const getTarget = () => {
         </MemoryRouter>,
     );
 };
-describe('<Shapes />', () => {
+
+describe('<About />', () => {
     const component = getTarget();
     it('should render without error', () => {
         expect(component).not.toBeUndefined();

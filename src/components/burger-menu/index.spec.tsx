@@ -1,19 +1,15 @@
 import React from 'react';
 import { createMemoryHistory } from 'history';
 import { MemoryRouter } from 'react-router-dom';
-import { Careers } from './';
+import { BurgerMenu } from './';
 import { fullMount } from '../../helpers/index';
 
-const history = createMemoryHistory();
-
+const isOpen = jest.fn();
+const setOpen = jest.fn();
 const getTarget = () => {
-    return fullMount(
-        <MemoryRouter>
-            <Careers history={history} />{' '}
-        </MemoryRouter>,
-    );
+    return fullMount(<BurgerMenu isOpen={isOpen} setOpen={setOpen} />);
 };
-describe('<Careers />', () => {
+describe('<BurgerMenu  />', () => {
     const component = getTarget();
     it('should render without error', () => {
         expect(component).not.toBeUndefined();

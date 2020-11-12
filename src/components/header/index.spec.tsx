@@ -1,19 +1,13 @@
 import React from 'react';
 import { createMemoryHistory } from 'history';
 import { MemoryRouter } from 'react-router-dom';
-import { Careers } from './';
+import { Header } from './';
 import { fullMount } from '../../helpers/index';
 
-const history = createMemoryHistory();
-
 const getTarget = () => {
-    return fullMount(
-        <MemoryRouter>
-            <Careers history={history} />{' '}
-        </MemoryRouter>,
-    );
+    return fullMount(<Header />);
 };
-describe('<Careers />', () => {
+describe('<Header  />', () => {
     const component = getTarget();
     it('should render without error', () => {
         expect(component).not.toBeUndefined();

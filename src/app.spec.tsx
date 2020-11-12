@@ -1,9 +1,13 @@
 import React from 'react';
 import App from './App';
-import { shallowMount } from './helpers';
+import { shallowMount, fullMount } from './helpers';
 
 const getTarget = () => {
     return shallowMount(<App />);
+};
+
+const newTarget = () => {
+    return fullMount(<App />);
 };
 
 describe('App', () => {
@@ -13,6 +17,7 @@ describe('App', () => {
     });
 
     it('should have a length', () => {
+        const wrapper = newTarget();
         expect(wrapper).toHaveLength(1);
     });
 });

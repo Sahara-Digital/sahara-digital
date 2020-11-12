@@ -1,17 +1,23 @@
 import React from 'react';
 import Routes from '.';
-import { shallowMount } from '../helpers';
+import { fullMount } from '../helpers/index';
 import { createMemoryHistory } from 'history';
+import { Home } from '../pages';
 
-const history = createMemoryHistory();
+export const history = createMemoryHistory();
 
 const getTarget = () => {
-    return shallowMount(<Routes history={history} />);
+    return fullMount(<Routes history={history} />);
 };
 
 describe('<Routes />', () => {
-    fit('should render without error', () => {
+    it('should render without error', () => {
         const wrapper = getTarget();
+        expect(wrapper).not.toBeUndefined();
         expect(wrapper.find('Routes').length).toEqual(1);
+    });
+    it('should show Home component', () => {
+        const wrapper = getTarget();
+        expect(wrapper.find(Home)).toHaveLength(1);
     });
 });
