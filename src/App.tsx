@@ -23,3 +23,5 @@ const AppContainer = styled.div`
     flex-direction: column;
     min-height: 100vh;
 `;
+
+AppContainer.displayName = 'AppContainer';

@@ -16,7 +16,11 @@ export const HeaderNavigation: React.FunctionComponent<IProps> = ({
         <HeaderContainer className="header-container" isOpen={isOpen}>
             {navigation.map((path: Record<string, any>) => {
                 return (
-                    <MenuLink key={path.id} exact={true} to={process.env.PUBLIC_URL + path.to}>
+                    <MenuLink
+                        key={path.id}
+                        exact={true}
+                        to={process.env.PUBLIC_URL + path.to}
+                    >
                         {path.name}
                     </MenuLink>
                 );

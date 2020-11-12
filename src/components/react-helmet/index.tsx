@@ -6,8 +6,15 @@ export const ReactHelmet: React.FunctionComponent = (): JSX.Element => {
         <Helmet defer={false}>
             <meta charSet="utf-8" />
             <title itemProp="name">Sahara Digital</title>
-            <link rel="icon" type="image/png" href={`${require('../../img/favicon.png')} `}   />
-            <link rel="file?name=manifest.json" href={`${require('../../lib/manifest.json')}`} />
+            <link
+                rel="icon"
+                type="image/png"
+                href={`${require('../../img/favicon.png')} `}
+            />
+            <link
+                rel="file?name=manifest.json"
+                href={`${require('../../lib/manifest.json')}`}
+            />
             <meta
                 name="viewport"
                 content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=0"
