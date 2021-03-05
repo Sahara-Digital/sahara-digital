@@ -9,10 +9,23 @@ import {
     BurgerMenu,
     Menu,
 } from '../../components';
-import { ShapeFour, ShapeThree } from '../../components/image/svg';
+import {
+    ShapeFour,
+    ShapeThree,
+    RightArrow,
+    ShapeTwo,
+    Serverless,
+} from '../../components/image/svg';
 import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 import { homepage } from '../../lib/website-content';
+import { StyledLink } from '../../components/styled-link/index';
+
+const CardContent = (content: any) => {
+    if (content.title === 'Web Consulting') return <ShapeFour width="10rem" />;
+    else if (content.title === 'Web Hosting') return <ShapeTwo width="10rem" />;
+    else return <ShapeThree width="10rem" />;
+};
 
 export const Services: React.FunctionComponent<IPagesProps> = ({
     history,
@@ -38,33 +51,113 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
                 <ServicesHeading className="services-heading">
                     Services
                 </ServicesHeading>
-                <CardContainer className="services-card-container">
-                    {homepage.map((content: Record<string, string>) => {
-                        return (
-                            content.title && (
-                                <Card
-                                    className="services-page-card"
-                                    key={content.id}
-                                    title={content.title}
-                                    component={
-                                        content.title === 'Web Consulting' ? (
-                                            <ShapeFour width="10rem" />
-                                        ) : (
-                                            <ShapeThree width="10rem" />
-                                        )
-                                    }
-                                    paragraph={content.paragraph}
-                                />
-                            )
-                        );
-                    })}
-                </CardContainer>
+                <ServicesPageWrapper>
+                    <Paragraph>
+                        Selecting the right service for your business is
+                        paramount, so whether you want a website for your
+                        product, company or to hire a developer to assist with
+                        your product or service.
+                    </Paragraph>
+                    <CardContainer className="services-card-container">
+                        {homepage.map((content: Record<string, string>) => {
+                            return (
+                                content.title && (
+                                    <React.Fragment key={content.id}>
+                                        <Card
+                                            className="services-page-card"
+                                            key={content.id}
+                                            title={content.title}
+                                            component={CardContent(content)}
+                                            paragraph={content.paragraph}
+                                        />
+                                            {/* <StyledLink to={content.weblink}>
+                                                <RightArrow />
+                                            </StyledLink> */}
+                                        {/* </Card> */}
+                                    </React.Fragment>
+                                )
+                            );
+                        })}
+                    </CardContainer>
+                </ServicesPageWrapper>
+                {/* <ServicesPageWrapper>
+                    <ServicesHeading className="products-heading">
+                        Products
+                    </ServicesHeading>
+                    <Paragraph>
+                        We offer a full product service in which we consult with
+                        you to find out what your business needs to assist in
+                        your digital transformation and we invest in your growth
+                        from start to finish.
+                    </Paragraph>
+                    <DigitalTransformation>
+                        <div>
+                            <h2>Digital Transformation</h2>
+                            <Paragraph>
+                                Digital transformation for a business or a company could be something on a small scale of updating the website to allow subscriptions to a news letter or on a larger scale of a business that operates a retail store but does not have an online platform 
+                            </Paragraph>
+                        </div>
+
+                        <div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Eum, doloribus aperiam. Culpa nihil nulla
+                            sequi reprehenderit praesentium ipsa eaque ullam
+                            aut? Reiciendis rem ullam voluptatum laborum ut
+                            corporis cupiditate vel.
+                        </div>
+                    </DigitalTransformation>
+
+                    <OnlineWebPresence>
+                        <div>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Impedit suscipit sapiente earum. Consequatur
+                            quaerat quos dolor a et cupiditate aspernatur cum ea
+                            esse maiores expedita culpa, dolore voluptate at
+                            porro!
+                        </div>
+                        <div>
+                            <h2>Online Web Presence</h2>
+                            <Paragraph>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Illo, architecto? Tempora, id
+                                a quae, fugit nesciunt aut sit atque similique
+                                mollitia voluptatum quam totam, maxime minima
+                                temporibus quo ipsam officia?
+                            </Paragraph>
+                        </div>
+                    </OnlineWebPresence>
+
+                    <div>
+                        <h2>Serverless Architecture</h2>
+                        <Paragraph>
+                            Infastructure has now become a huge part of 
+                        </Paragraph>
+                        <Serverless />
+                    </div>
+                </ServicesPageWrapper> */}
             </ServicesMain>
             <Footer className="footer-component" />
         </>
     );
 };
-
+const DigitalTransformation = styled.div`
+    display: flex;
+    border-top: 1px solid grey;
+    width: 100%;
+    margin: 1rem;
+    h2 {
+        margin-top: 1rem;
+    }
+`;
+const OnlineWebPresence = styled.div`
+    display: flex;
+    border-top: 1px solid grey;
+    margin: 1rem;
+    width: 100%;
+    h2 {
+        margin-top: 1rem;
+    }
+`;
 const ServicesMain = styled.main`
     padding: 2rem;
     display: flex;
@@ -98,11 +191,25 @@ const ServicesHeading = styled.h2`
 `;
 ServicesHeading.displayName = 'ServicesHeading';
 
+const ServicesPageWrapper = styled.section`
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ${customMedia.lessThan('small')`
+       padding: 0.5rem;
+    `}
+`;
+
 const CardContainer = styled.section`
     display: flex;
     padding: 2rem;
     margin: 2rem;
-    flex-direction: row;
+    text-align: center;
+    /* flex-direction: row; */
+    flex-flow: wrap;
     justify-content: center;
     ${media.lessThan('small')`
        padding: 1rem 1rem 1rem 1rem;
@@ -111,3 +218,12 @@ const CardContainer = styled.section`
   `}
 `;
 CardContainer.displayName = 'Cardcontainer';
+
+const Paragraph = styled.p`
+    padding: 2rem;
+    max-width: 750px;
+    ${customMedia.lessThan('small')`
+       padding: 1rem;
+    `}
+`;
+Paragraph.displayName = 'Paragraph';
