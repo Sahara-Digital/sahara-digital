@@ -7,6 +7,7 @@ import { SVG as Cog } from '../svg/cog';
 import { SVG as Code } from '../svg/code';
 import { SVG as House } from '../svg/house';
 import { SVG as RightArrow } from '../svg/right-arrow';
+import { SVG as Serverless } from '../svg/serverless';
 
 export {
     ShapeOne,
@@ -17,5 +18,6 @@ export {
     Cog,
     Code,
     House,
-    RightArrow
+    RightArrow,
+    Serverless
 };
