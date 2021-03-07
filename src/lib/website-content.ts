@@ -46,7 +46,7 @@ export const aboutPage: Array<Record<string, any>> = [
     {
         id: '1',
         pageTitle: 'About us',
-        paragraph: `We specialize in web and software development practices, our aim is to provide a full-stack service in the future, which will allow focus on the client or customers' needs and let the innovation takeplace naturally throughout the software development life cycle.`,
+        paragraph: `We specialize in web and software development practices, our aim is to provide a full-stack service, which will allow focus on the client or customers' needs and let the innovation takeplace naturally throughout the software development life cycle.`,
     },
     {
         id: '2',
@@ -81,14 +81,34 @@ export const homepage: Array<Record<string, any>> = [
     {
         id: '1',
         title: 'Web Consulting',
+        weblink: 'web-consulting',
         paragraph:
             'Our approach allows us to intergrate with your business to accomplish your objectives, solve problems and implement solutions.',
     },
     {
         id: '2',
         title: 'Web Development',
+        weblink: 'web-development',
         paragraph: `Your website is your companies digital portfolio to your customers, so don't just tell them how awesome you are, let's show them!`,
     },
+    {
+        id: '3',
+        title: 'Web Hosting',
+        weblink: 'web-hosting',
+        paragraph: `Hosting your website or application is a core feature of any business trying to reach out to its customers. Find out more: `,
+    },
+    {
+        id: '4',
+        title: 'Web Design',
+        weblink: 'web-design',
+        paragraph: `Web design has become another pinnacle part of the development process, allowing you to experience what your website would look like before development begins.`,
+    },
+    // {
+    //     id: '5',
+    //     title: 'Web applications',
+    //     weblink: 'web-applications',
+    //     paragraph: `Web applications `,
+    // }
 ];
 
 export const contactUs: Array<Record<ContactPage, any>> = [
@@ -134,11 +154,11 @@ export const navigation: Array<Record<PageNavigation, any>> = [
         to: '/about',
         name: 'About',
     },
-    // {
-    //     id: '3',
-    //     to: '/services',
-    //     name: 'Services',
-    // },
+    {
+        id: '3',
+        to: '/services',
+        name: 'Services',
+    },
     // {
     //     id: '4',
     //     to: '/team',

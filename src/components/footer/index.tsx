@@ -45,6 +45,7 @@ export const Footer: React.FunctionComponent<IProps> = ({
                         <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/team}>
                             Team
                         </StyledLink> */}
+
                         <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/contact"}>
                             Contact
                         </StyledLink>
@@ -108,7 +109,6 @@ export const Footer: React.FunctionComponent<IProps> = ({
 
 const CompanyInfo = styled.span`
     ${({ theme }) => `font-size:${theme.fontsize.medium}`};
-
 `;
 CompanyInfo.displayName = 'CompanyInfo';
 
@@ -126,7 +126,7 @@ const FooterContainer = styled.footer`
         ${({ theme }) => `color :${theme.colors.white}`};
     }
     padding: 1.5rem 0rem;
-    @media (max-width: 568px) and (min-width: 320px){
+    @media (max-width: 568px) and (min-width: 320px) {
         margin: 0;
         span {
             ${({ theme }) => `font-size:${theme.fontsize.small}`};
@@ -147,7 +147,7 @@ const FooterWrapper = styled.div`
        ${({ theme }) => `font-size:${theme.fontsize.small}`};
    `}
 
-   @media (max-width: 568px) and (min-width: 320px){
+    @media (max-width: 568px) and (min-width: 320px) {
         margin: 0;
         padding: 0.5rem;
         display: block;
@@ -181,8 +181,8 @@ const FooterContent = styled.span`
         ${({ theme }) => `font-size:${theme.fontsize.medium}`};
        }
     `}
-   
-      ${media.between(`small`, `medium`)`
+
+    ${media.between(`small`, `medium`)`
             padding: 0.5rem;
             a {
             ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
@@ -216,7 +216,7 @@ const FooterContent = styled.span`
         }
     
       `}
-      @media (max-width: 568px) and (min-width: 320px){
+      @media (max-width: 568px) and (min-width: 320px) {
         margin: 0;
         padding: 0.5rem;
         span {

@@ -50,6 +50,7 @@ const StyledBurger = styled.button<{ isOpen: any }>`
 
         :first-child {
             transform: ${({ isOpen }) => (isOpen ? 'rotate(45deg)' : 'rotate(0)')};
+
         }
 
         :nth-child(2) {

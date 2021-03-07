@@ -34,8 +34,10 @@ export const NotFoundPage: React.FunctionComponent<IPagesProps> = ({
             </Navigation>
             <HomePageMain className="homepage-main">
                 <Content>
-                    <ClipText background={background}> 404 - Page Not Found</ClipText>
-
+                    <ClipText background={background}>
+                        {' '}
+                        404 - Page Not Found
+                    </ClipText>
                     <Paragraph>
                         The page you are looking for is not currently available,
                         you can head back home below: -{' '}
@@ -52,7 +54,7 @@ export const NotFoundPage: React.FunctionComponent<IPagesProps> = ({
     );
 };
 
-const ClipText = styled.h1<{ background?: any}>`
+const ClipText = styled.h1<{ background?: any }>`
     font-family: 'Open Sans', sans-serif;
     font-size: 80px;
     font-weight: 800;

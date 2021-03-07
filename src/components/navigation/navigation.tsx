@@ -17,7 +17,7 @@ export const HeaderNavigation: React.FunctionComponent<IProps> = ({
             {navigation.map((path: Record<string, any>) => {
                 return (
                     <MenuLink key={path.id} exact={true} to={process.env.PUBLIC_URL + path.to}>
-                        {path.name}
+                      {path.name}
                     </MenuLink>
                 );
             })}
