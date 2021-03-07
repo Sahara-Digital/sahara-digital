@@ -97,9 +97,15 @@ export const homepage: Array<Record<string, any>> = [
         weblink: 'web-hosting',
         paragraph: `Hosting your website or application is a core feature of any business trying to reach out to its customers. Find out more: `,
     },
+    {
+        id: '4',
+        title: 'Web Design',
+        weblink: 'web-design',
+        paragraph: `Web design has become another pinnacle part of the development process, allowing you to experience what your website would look like before development begins.`,
+    },
     // {
-    //     id: '4',
-    //     title: 'Web Applications',
+    //     id: '5',
+    //     title: 'Web applications',
     //     weblink: 'web-applications',
     //     paragraph: `Web applications `,
     // }

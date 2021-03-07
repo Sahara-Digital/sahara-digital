@@ -32,7 +32,7 @@ const Routes: React.FunctionComponent<IProps> = ({
                         <Services history={history} />
                     )}
                 />
-                 <Route
+                 {/* <Route
                     exact
                     path={process.env.PUBLIC_URL + "/web-consulting"}
                     render={({ history }: IProps) => (
@@ -53,6 +53,13 @@ const Routes: React.FunctionComponent<IProps> = ({
                         <div>Page under Construction</div>
                     )}
                 />
+                <Route
+                    exact
+                    path={process.env.PUBLIC_URL + "/web-design"}
+                    render={({ history }: IProps) => (
+                        <div>Page under Construction</div>
+                    )}
+                /> */}
                 {/* <Route
                     exact
                     path={process.env.PUBLIC_URL + "/team"}

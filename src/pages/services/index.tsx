@@ -14,7 +14,9 @@ import {
     ShapeThree,
     RightArrow,
     ShapeTwo,
-    Serverless,
+    ShapeFive,
+    Digital,
+    WebDesign,
 } from '../../components/image/svg';
 import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
@@ -24,6 +26,7 @@ import { StyledLink } from '../../components/styled-link/index';
 const CardContent = (content: any) => {
     if (content.title === 'Web Consulting') return <ShapeFour width="10rem" />;
     else if (content.title === 'Web Hosting') return <ShapeTwo width="10rem" />;
+    else if (content.title === 'Web Design') return <ShapeFive width="10rem" />;
     else return <ShapeThree width="10rem" />;
 };
 
@@ -70,7 +73,7 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
                                             component={CardContent(content)}
                                             paragraph={content.paragraph}
                                         />
-                                            {/* <StyledLink to={content.weblink}>
+                                        {/* <StyledLink to={content.weblink}>
                                                 <RightArrow />
                                             </StyledLink> */}
                                         {/* </Card> */}
@@ -80,7 +83,7 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
                         })}
                     </CardContainer>
                 </ServicesPageWrapper>
-                {/* <ServicesPageWrapper>
+                <ServicesPageWrapper>
                     <ServicesHeading className="products-heading">
                         Products
                     </ServicesHeading>
@@ -94,70 +97,97 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
                         <div>
                             <h2>Digital Transformation</h2>
                             <Paragraph>
-                                Digital transformation for a business or a company could be something on a small scale of updating the website to allow subscriptions to a news letter or on a larger scale of a business that operates a retail store but does not have an online platform 
+                                Digital transformation for a small business or a
+                                growing company could be something on a small
+                                scale of updating the website to allow
+                                subscriptions to a news letter or on a larger
+                                scale of a business that operates a retail store
+                                but does not have an online platform, if you
+                                would like to know more, contact us for an
+                                initial consultation.
                             </Paragraph>
                         </div>
-
-                        <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Eum, doloribus aperiam. Culpa nihil nulla
-                            sequi reprehenderit praesentium ipsa eaque ullam
-                            aut? Reiciendis rem ullam voluptatum laborum ut
-                            corporis cupiditate vel.
-                        </div>
+                        <Digital />
                     </DigitalTransformation>
 
                     <OnlineWebPresence>
-                        <div>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Impedit suscipit sapiente earum. Consequatur
-                            quaerat quos dolor a et cupiditate aspernatur cum ea
-                            esse maiores expedita culpa, dolore voluptate at
-                            porro!
-                        </div>
+                        <WebDesign />
                         <div>
                             <h2>Online Web Presence</h2>
+
                             <Paragraph>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Illo, architecto? Tempora, id
-                                a quae, fugit nesciunt aut sit atque similique
-                                mollitia voluptatum quam totam, maxime minima
-                                temporibus quo ipsam officia?
+                                Our approach to development will allow you to
+                                focus on what your business needs, if you
+                                require a design solution or a website we aim to
+                                provide you with a tailor made solution
+                                appropriate for your needs, wether that is a
+                                fully developed website using our internal
+                                software systems, we will provide you with
+                                alternatives and assist with building your
+                                website on the many popular platforms such as
+                                Wix or Squarespace.
                             </Paragraph>
                         </div>
                     </OnlineWebPresence>
-
-                    <div>
-                        <h2>Serverless Architecture</h2>
-                        <Paragraph>
-                            Infastructure has now become a huge part of 
-                        </Paragraph>
-                        <Serverless />
-                    </div>
-                </ServicesPageWrapper> */}
+                </ServicesPageWrapper>
             </ServicesMain>
             <Footer className="footer-component" />
         </>
     );
 };
+
 const DigitalTransformation = styled.div`
     display: flex;
-    border-top: 1px solid grey;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid #9ccccc;
     width: 100%;
     margin: 1rem;
+    padding: 1rem;
     h2 {
         margin-top: 1rem;
     }
+    svg {
+        margin: 1rem;
+    }
+    ${media.lessThan('small')`
+       padding: 1rem 1rem 1rem 1rem;
+       margin: 0;
+       flex-direction: column;
+       svg {
+        margin: 0;
+        width: 75%;
+    }
+  `}
 `;
 const OnlineWebPresence = styled.div`
     display: flex;
-    border-top: 1px solid grey;
-    margin: 1rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid #9ccccc;
     width: 100%;
+    margin: 1rem;
+    padding: 1rem;
     h2 {
         margin-top: 1rem;
     }
+    svg {
+        margin: 1rem;
+        width: 50%;
+    }
+    ${media.lessThan('small')`
+       padding: 1rem 1rem 1rem 1rem;
+       margin: 0;
+       flex-direction: column-reverse;
+       svg {
+        margin: 0;
+        width: 75%;
+    }
+  `}    
 `;
+
 const ServicesMain = styled.main`
     padding: 2rem;
     display: flex;
