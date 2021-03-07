@@ -1,7 +1,7 @@
 import React from 'react';
 import { History } from 'history';
 import { Router, Switch, Route } from 'react-router-dom';
-import { Home, About, Contact } from '../pages/';
+import { Home, About, Contact, Services, NotFoundPage } from '../pages/';
 
 interface IProps {
     history: History;
@@ -25,11 +25,39 @@ const Routes: React.FunctionComponent<IProps> = ({
                         <About history={history} />
                     )}
                 />
-                {/* <Route
+                <Route
                     exact
                     path={process.env.PUBLIC_URL + "/services"}
                     render={({ history }: IProps) => (
                         <Services history={history} />
+                    )}
+                />
+                 {/* <Route
+                    exact
+                    path={process.env.PUBLIC_URL + "/web-consulting"}
+                    render={({ history }: IProps) => (
+                        <div>Page under Construction</div>
+                    )}
+                />
+                  <Route
+                    exact
+                    path={process.env.PUBLIC_URL + "/web-development"}
+                    render={({ history }: IProps) => (
+                        <div>Page under Construction</div>
+                    )}
+                />
+                  <Route
+                    exact
+                    path={process.env.PUBLIC_URL + "/web-hosting"}
+                    render={({ history }: IProps) => (
+                        <div>Page under Construction</div>
+                    )}
+                />
+                <Route
+                    exact
+                    path={process.env.PUBLIC_URL + "/web-design"}
+                    render={({ history }: IProps) => (
+                        <div>Page under Construction</div>
                     )}
                 /> */}
                 {/* <Route
@@ -49,6 +77,13 @@ const Routes: React.FunctionComponent<IProps> = ({
                     path={process.env.PUBLIC_URL + '/contact'}
                     render={({ history }: IProps) => (
                         <Contact history={history} />
+                    )}
+                />
+                <Route
+                    exact
+                    path={process.env.PUBLIC_URL + '*'}
+                    render={({ history }: IProps) => (
+                        <NotFoundPage history={history} />
                     )}
                 />
             </Switch>

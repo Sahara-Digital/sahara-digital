@@ -9,6 +9,7 @@ interface ICardProps {
     itag?: any;
     paragraph?: string;
     className?: string;
+    children?: React.ReactChild
 }
 export const Card: React.FunctionComponent<ICardProps> = ({
     component,
@@ -16,6 +17,7 @@ export const Card: React.FunctionComponent<ICardProps> = ({
     title,
     itag,
     paragraph,
+    children
 }: ICardProps): JSX.Element => {
     return (
         <CardWrapper className="card-wrapper" backgroundColor={backgroundColor}>
@@ -24,6 +26,7 @@ export const Card: React.FunctionComponent<ICardProps> = ({
             </span>
             <h3>{title}</h3>
             <p>{paragraph}</p>
+            {children}
         </CardWrapper>
     );
 };
@@ -61,7 +64,6 @@ const CardWrapper = styled.div<{
     span:before {
         content: '';
         position: absolute;
-
         ${({ left }) => (left ? `${left} ` : `left: 100px;`)};
         
         ${({ top }) => (top ? `${top}` : ` top: -5px`)};

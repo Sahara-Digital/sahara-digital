@@ -15,7 +15,7 @@ export const Footer: React.FunctionComponent<IProps> = ({
     return (
         <>
             <FooterContainer className={`${className}-container`}>
-                <FooterWrapper>
+                <FooterWrapper className="footer-wrapper">
                     <FooterContent className={`${className}-company-info`}>
                         <Image
                             width="9rem"
@@ -26,7 +26,7 @@ export const Footer: React.FunctionComponent<IProps> = ({
                         <CompanyInfo>Company no: 12636576.</CompanyInfo>
                     </FooterContent>
 
-                    <FooterContent>
+                    <FooterContent className="footer-navigation">
                         <h3>Navigation</h3>
 
                         <StyledLink className="styled-link" to={process.env.PUBLIC_URL +"/"}>
@@ -45,6 +45,7 @@ export const Footer: React.FunctionComponent<IProps> = ({
                         <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/team}>
                             Team
                         </StyledLink> */}
+
                         <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/contact"}>
                             Contact
                         </StyledLink>
@@ -85,26 +86,26 @@ export const Footer: React.FunctionComponent<IProps> = ({
                     </FooterContent>
                 </FooterWrapper>
             </FooterContainer>
-            <TermsAndPolicy className="terms-privacy-policy">
+            {/* <TermsAndPolicy className="terms-privacy-policy">
                 <FooterLink className="styled-link" to={process.env.PUBLIC_URL + "/termsandconditions"}>
                     Terms and conditions
                 </FooterLink>
                 <FooterLink className="styled-link" to={process.env.PUBLIC_URL + "/privacypolicy"}>
                     Privacy policy
                 </FooterLink>
-            </TermsAndPolicy>
+            </TermsAndPolicy> */}
         </>
     );
 };
 
-const FooterLink = styled(StyledLink)`
-    padding: 0.5rem 0.5rem;
-    ${({ theme }) => `font-size:${theme.fontsize.medium}`};
-    .styled-link:hover {
-        ${({ theme }) => `color:${theme.colors.white}`};
-    }
-`;
-FooterLink.displayName = 'FooterLink';
+// const FooterLink = styled(StyledLink)`
+//     padding: 0.5rem 0.5rem;
+//     ${({ theme }) => `font-size:${theme.fontsize.medium}`};
+//     .styled-link:hover {
+//         ${({ theme }) => `color:${theme.colors.white}`};
+//     }
+// `;
+// FooterLink.displayName = 'FooterLink';
 
 const CompanyInfo = styled.span`
     ${({ theme }) => `font-size:${theme.fontsize.medium}`};
@@ -124,6 +125,13 @@ const FooterContainer = styled.footer`
     h3 {
         ${({ theme }) => `color :${theme.colors.white}`};
     }
+    padding: 1.5rem 0rem;
+    @media (max-width: 568px) and (min-width: 320px) {
+        margin: 0;
+        span {
+            ${({ theme }) => `font-size:${theme.fontsize.small}`};
+        }
+    }
 `;
 FooterContainer.displayName = 'FooterContainer';
 
@@ -138,6 +146,12 @@ const FooterWrapper = styled.div`
        flex-direction: column;
        ${({ theme }) => `font-size:${theme.fontsize.small}`};
    `}
+
+    @media (max-width: 568px) and (min-width: 320px) {
+        margin: 0;
+        padding: 0.5rem;
+        display: block;
+    }
 `;
 FooterWrapper.displayName = 'FooterWrapper';
 
@@ -167,13 +181,48 @@ const FooterContent = styled.span`
         ${({ theme }) => `font-size:${theme.fontsize.medium}`};
        }
     `}
-    ${customMedia.between(`regular`, `medium`)`
-            padding: 1rem 1rem;
+
+    ${media.between(`small`, `medium`)`
+            padding: 0.5rem;
             a {
-            ${({ theme }) => `font-size:${theme.fontsize.small}`};
+            ${({ theme }) => `font-size:${theme.fontsize.xxlarge}`};
            }
-           ${({ theme }) => `font-size:${theme.fontsize.small}`};
+           h3{
+            ${({ theme }) => `font-size:${theme.fontsize.medium}`};  
+           }
+    
       `}
+     ${media.between(`small`, `medium`)`
+            margin: 1rem 1rem 0 0;
+            a {
+            ${({ theme }) => `font-size:${theme.fontsize.medium}`};
+           }
+        .fa-linkedin, .fa-twitter, .fa-facebook {
+            ${({ theme }) => `font-size:${theme.fontsize.regular}`};
+        }
+    
+      `}
+      ${media.between(`medium`, `large`)`
+            padding: 0.5rem;
+            a {
+            ${({ theme }) => `font-size:${theme.fontsize.medium}`};
+           }
+           h3{
+            ${({ theme }) => `font-size:${theme.fontsize.medium}`};  
+           }
+    
+        .fa-linkedin, .fa-twitter, .fa-facebook {
+            ${({ theme }) => `font-size:${theme.fontsize.regular}`};
+        }
+    
+      `}
+      @media (max-width: 568px) and (min-width: 320px) {
+        margin: 0;
+        padding: 0.5rem;
+        span {
+            margin: 0;
+        }
+    }
 `;
 FooterContent.displayName = 'FooterContent';
 
@@ -214,23 +263,23 @@ const SocialMediaLinks = styled.span`
 
 SocialMediaLinks.displayName = 'SocialMediaLinks';
 
-const TermsAndPolicy = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    ${({ theme }) => `background-color :${theme.colors.footer.primary}`};
-    ${({ theme }) => `font-size:${theme.fontsize.medium}`};
-    ${media.lessThan('small')`
-        margin: 0;
-        a {
-            ${({ theme }) => `font-size:${theme.fontsize.small}`};
-        }
-    `}
-    ${customMedia.between(`regular`, `medium`)`
-           a {
-            ${({ theme }) => `font-size:${theme.fontsize.small}`};
-           }
-      `}
-`;
-TermsAndPolicy.displayName = 'TermsAndPolicy';
+// const TermsAndPolicy = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     text-align: center;
+//     ${({ theme }) => `background-color :${theme.colors.footer.primary}`};
+//     ${({ theme }) => `font-size:${theme.fontsize.medium}`};
+//     ${media.lessThan('small')`
+//         margin: 0;
+//         a {
+//             ${({ theme }) => `font-size:${theme.fontsize.small}`};
+//         }
+//     `}
+//     ${customMedia.between(`regular`, `medium`)`
+//            a {
+//             ${({ theme }) => `font-size:${theme.fontsize.small}`};
+//            }
+//       `}
+// `;
+// TermsAndPolicy.displayName = 'TermsAndPolicy';
