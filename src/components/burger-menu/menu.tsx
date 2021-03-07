@@ -11,11 +11,7 @@ export const Menu: React.FunctionComponent<IProps> = ({ isOpen }: IProps) => {
             <StyledMenu className="styled-menu" isOpen={isOpen}>
                 {navigation.map((path: Record<string, any>) => {
                     return (
-                        <MenuLink
-                            key={path.id}
-                            exact={true}
-                            to={process.env.PUBLIC_URL + path.to}
-                        >
+                        <MenuLink key={path.id} exact={true} to={process.env.PUBLIC_URL + path.to}>
                             {path.name}
                         </MenuLink>
                     );
@@ -34,8 +30,7 @@ const StyledMenu = styled.div<{ isOpen: any }>`
         background-color: ${theme.colors.white};
         font-size: ${theme.fontsize.xxlarge};
     `};
-    transform: ${({ isOpen }) =>
-        isOpen ? 'translateX(0)' : 'translateX(-100%)'};
+    transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(-100%)')};
     height: 100vh;
     text-align: left;
     padding: 5rem 2rem;

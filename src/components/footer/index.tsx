@@ -29,16 +29,10 @@ export const Footer: React.FunctionComponent<IProps> = ({
                     <FooterContent className="footer-navigation">
                         <h3>Navigation</h3>
 
-                        <StyledLink
-                            className="styled-link"
-                            to={process.env.PUBLIC_URL + '/'}
-                        >
+                        <StyledLink className="styled-link" to={process.env.PUBLIC_URL +"/"}>
                             Home
                         </StyledLink>
-                        <StyledLink
-                            className="styled-link"
-                            to={process.env.PUBLIC_URL + '/about'}
-                        >
+                        <StyledLink className="styled-link" to={process.env.PUBLIC_URL +"/about"}>
                             About
                         </StyledLink>
                         {/* <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/services"}>
@@ -51,10 +45,8 @@ export const Footer: React.FunctionComponent<IProps> = ({
                         <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/team}>
                             Team
                         </StyledLink> */}
-                        <StyledLink
-                            className="styled-link"
-                            to={process.env.PUBLIC_URL + '/contact'}
-                        >
+
+                        <StyledLink className="styled-link" to={process.env.PUBLIC_URL + "/contact"}>
                             Contact
                         </StyledLink>
                     </FooterContent>
