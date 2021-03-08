@@ -103,8 +103,10 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
                                 subscriptions to a news letter or on a larger
                                 scale of a business that operates a retail store
                                 but does not have an online platform, if you
-                                would like to know more, contact us for an
-                                initial consultation.
+                                would like to know more,
+                                <ContactLink to="/contact">
+                                    contact us here.
+                                </ContactLink>
                             </Paragraph>
                         </div>
                         <Digital />
@@ -121,11 +123,11 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
                                 require a design solution or a website we aim to
                                 provide you with a tailor made solution
                                 appropriate for your needs, wether that is a
-                                fully developed website using our internal
-                                software systems, we will provide you with
-                                alternatives and assist with building your
-                                website on the many popular platforms such as
-                                Wix or Squarespace.
+                                fully customised website or design using our
+                                internal software, or using one of the existing
+                                platforms, if you would like to know more you
+                                can contact us
+                                <ContactLink to="/contact">here</ContactLink>.
                             </Paragraph>
                         </div>
                     </OnlineWebPresence>
@@ -135,7 +137,9 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
         </>
     );
 };
-
+const ContactLink = styled(StyledLink)`
+    padding-left: 0.2rem;
+`
 const DigitalTransformation = styled.div`
     display: flex;
     flex-direction: row;
@@ -185,7 +189,7 @@ const OnlineWebPresence = styled.div`
         margin: 0;
         width: 75%;
     }
-  `}    
+  `}
 `;
 
 const ServicesMain = styled.main`
