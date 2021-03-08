@@ -38,7 +38,6 @@ export const NotFoundPage: React.FunctionComponent<IPagesProps> = ({
                         {' '}
                         404 - Page Not Found
                     </ClipText>
-
                     <Paragraph>
                         The page you are looking for is not currently available,
                         you can head back home below: -{' '}
