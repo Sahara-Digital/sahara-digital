@@ -49,8 +49,8 @@ const StyledBurger = styled.button<{ isOpen: any }>`
         transform-origin: 1px;
 
         :first-child {
-            transform: ${({ isOpen }) => (isOpen ? 'rotate(45deg)' : 'rotate(0)')};
-
+            transform: ${({ isOpen }) =>
+                isOpen ? 'rotate(45deg)' : 'rotate(0)'};
         }
 
         :nth-child(2) {
@@ -60,7 +60,8 @@ const StyledBurger = styled.button<{ isOpen: any }>`
         }
 
         :nth-child(3) {
-            transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
+            transform: ${({ isOpen }) =>
+                isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
         }
     }
 
