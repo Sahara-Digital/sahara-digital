@@ -43,5 +43,7 @@ export const Button = styled.button<IButtonProps>`
             width: ${buttonOptions[variant].width};
         `}
     &:hover {
+        color: white;
+        width: 100px;
     }
 `;
