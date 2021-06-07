@@ -31,7 +31,7 @@ export const Button = styled.button<IButtonProps>`
     border: none;
     border-radius: 3px;
     display: block;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    ${({ theme }) => `font-family: ${theme.fontFamily.Poppins}`};
     ${({ variant }) =>
         variant &&
         buttonOptions[variant] &&
