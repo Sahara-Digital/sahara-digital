@@ -9,7 +9,7 @@ interface ICardProps {
     itag?: any;
     paragraph?: string;
     className?: string;
-    children?: React.ReactChild
+    children?: React.ReactChild;
 }
 export const Card: React.FunctionComponent<ICardProps> = ({
     component,
@@ -17,7 +17,7 @@ export const Card: React.FunctionComponent<ICardProps> = ({
     title,
     itag,
     paragraph,
-    children
+    children,
 }: ICardProps): JSX.Element => {
     return (
         <CardWrapper className="card-wrapper" backgroundColor={backgroundColor}>
@@ -33,14 +33,14 @@ export const Card: React.FunctionComponent<ICardProps> = ({
 
 const SVGWrapper = styled.div`
     position: absolute;
-// eslint-disable-next-line no-restricted-globals
+    // eslint-disable-next-line no-restricted-globals
     top: -100px;
     left: 0;
 `;
 SVGWrapper.displayName = 'SVGWrapper';
 
 const CardWrapper = styled.div<{
-// eslint-disable-next-line no-restricted-globals
+    // eslint-disable-next-line no-restricted-globals
     top?: number;
     left?: number;
     backgroundColor?: string;
@@ -65,7 +65,7 @@ const CardWrapper = styled.div<{
         content: '';
         position: absolute;
         ${({ left }) => (left ? `${left} ` : `left: 100px;`)};
-        
+
         ${({ top }) => (top ? `${top}` : ` top: -5px`)};
         transform: translate(50%, -50%);
         width: 80px;

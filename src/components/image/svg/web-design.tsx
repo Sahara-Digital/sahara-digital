@@ -2,17 +2,12 @@ import React from 'react';
 import { ISVG } from '../../../interfaces';
 
 export const SVG = ({
-    width="452",
-    height="187",
-    viewBox="0 0 452 187"
+    width = '452',
+    height = '187',
+    viewBox = '0 0 452 187',
 }: ISVG): JSX.Element => {
     return (
-        <svg
-            width={width}
-            height={height}
-            viewBox={viewBox}
-            fill="none"
-        >
+        <svg width={width} height={height} viewBox={viewBox} fill="none">
             <g>
                 <path
                     d="M67.9003 94.8308C67.9003 96.4249 47.9375 114.074 45.7825 117.149C43.6274 120.223 42.0394 137.986 42.0394 137.986C41.6425 141.061 44.3079 143.11 47.0869 142.769C47.0869 142.769 65.0647 141.175 67.9003 139.011C70.736 136.848 84.8007 119.654 85.9349 120.792C87.0692 121.931 86.7901 129.821 93.3643 136.221C97.6454 140.39 105.201 142.862 113.611 142.996C123.09 143.148 131.725 138.372 136.069 130.87C141.496 121.495 142.988 109.064 141.4 108.95C139.812 108.836 133.46 114.758 129.83 117.149C126.201 119.54 126.325 115.811 126.087 114.074C124.84 104.965 111.682 98.8162 107.145 99.4994C102.608 100.183 135.615 71.3173 138.904 67.8444C142.194 64.3715 142.08 58.6212 138.678 54.9774C135.275 51.3337 131.305 47.3484 129.717 45.982C128.129 44.6156 127.108 43.1353 123.252 43.0214C119.395 42.9076 116.56 45.7542 116.56 45.7542C116.56 45.7542 89.9048 74.1071 88.5437 73.8793C87.1826 73.6516 76.4072 54.8636 72.7776 50.0812C69.148 45.2988 64.1573 42.7368 60.074 43.0214C55.9907 43.3061 52.2477 44.0462 48.2211 47.9177C40.9619 53.611 40.1105 63.9882 46.6899 71.2604C57.9189 83.6719 67.9003 93.2367 67.9003 94.8308Z"
@@ -53,12 +48,12 @@ export const SVG = ({
                 <path
                     d="M295.22 142.985H314.164H405.729C410.203 143.158 411.104 141.816 410.991 137.884L409.974 47.089C410.013 44.167 409.412 43.0147 405.729 43.0083H295.22C291.997 42.9017 291.076 43.7952 291.01 47.089V138.904C290.873 142.608 292.131 143.103 295.22 142.985Z"
                     stroke="#99CCCC"
-                    stroke-width="4"
+                    strokeWidth="4"
                 />
                 <path
                     d="M305.945 44V59M305.945 59H292M305.945 59H410"
                     stroke="#99CCCC"
-                    stroke-width="4"
+                    strokeWidth="4"
                 />
             </g>
             <defs>
@@ -69,9 +64,9 @@ export const SVG = ({
                     width="108"
                     height="108"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -102,9 +97,9 @@ export const SVG = ({
                     width="72.1667"
                     height="40.0833"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -135,9 +130,9 @@ export const SVG = ({
                     width="138.001"
                     height="118.001"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
