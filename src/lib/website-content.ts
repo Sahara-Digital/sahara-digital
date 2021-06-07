@@ -1,12 +1,6 @@
 type PageContent = 'id' | 'paragraph';
 type PageNavigation = 'id' | 'to' | 'name';
-type ContactPage =
-    | 'id'
-    | 'question'
-    | 'subheading'
-    | 'coordinates'
-    | 'subintro'
-    | 'paragraph';
+type ContactPage = 'id' | 'question' | 'subheading' | 'subintro' | 'paragraph';
 
 export const values: Array<Record<string, string>> = [
     {
@@ -115,11 +109,10 @@ export const contactUs: Array<Record<ContactPage, any>> = [
     {
         id: '1',
         question: 'How can we help?',
-        subheading: 'Getting in touch is easy, you can find us at: -',
-        coordinates: `23° 48' 21.8808'' N and 11° 17' 18.4272'' E.`,
-        subintro: 'We would love to help you.',
+        subheading: 'We would love to help you, Getting in touch is easy',
+        subintro: '',
         paragraph:
-            'If you have any queries, do not hesitate to contact us on our socials, Facebook, Twitter, LinkedIn; or via the email address below: - ',
+            'If you have any queries, do not hesitate to contact us on our socials, Facebook, Twitter, LinkedIn; or via the contact form below: - ',
     },
 ];
 
