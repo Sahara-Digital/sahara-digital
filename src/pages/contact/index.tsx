@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import {
     Navigation,
@@ -7,6 +8,8 @@ import {
     BurgerMenu,
     Menu,
 } from '../../components';
+import ContactForm from '../../components/contact-form';
+import { Cog } from '../../components/image/svg';
 import { IPagesProps } from '../../interfaces';
 import { customMedia } from '../../lib';
 import { contactUs } from '../../lib/website-content';
@@ -33,11 +36,12 @@ export const Contact: React.FunctionComponent<IPagesProps> = ({
                     setOpen={setOpen}
                 />
             </Navigation>
-            <ContactUsMain className="contact-us-main">
+            <Container fluid="md" className="contact-us-main">
                 <ContactUsWrapper className="contact-us-wrapper">
                     <ContactUsHeading className="contact-us-heading">
                         Contact Us
                     </ContactUsHeading>
+                    <Cog />
                     {contactUs.map((contact: Record<string, string>) => {
                         return (
                             <ContactUsContent
@@ -45,31 +49,31 @@ export const Contact: React.FunctionComponent<IPagesProps> = ({
                                 key={contact.id}
                             >
                                 <h3> {contact.subheading}</h3>
-
-                                <Coordinates className="contact-us-coordinates">
-                                    {contact.coordinates}
-                                </Coordinates>
-
+                                <CogWrapper>
+                                    <Cog />
+                                </CogWrapper>
                                 <h4>{contact.subintro} </h4>
 
                                 <Paragraph className="contact-us-paragraph">
-                                    {' '}
                                     {contact.paragraph}
                                 </Paragraph>
-                                <Email className="contact-us-email">
-                                    <a href="mailto:hello@saharadigital.co.uk">
-                                        hello@saharadigital.co.uk
-                                    </a>
-                                </Email>
+                                <ContactForm />
                             </ContactUsContent>
                         );
                     })}
                 </ContactUsWrapper>
-            </ContactUsMain>
+            </Container>
             <Footer />
         </>
     );
 };
+
+const CogWrapper = styled.div`
+    align-content: center;
+    margin: 1.5rem 0.5rem;
+`;
+
+CogWrapper.displayName = 'CogWrapper';
 
 const ContactUsMain = styled.main`
     padding: 2rem;
@@ -124,7 +128,13 @@ const ContactUsContent = styled.div`
     max-width: 500px;
     ${customMedia.lessThan('small')`
        padding: 2rem;
-       margin: 2rem 0rem;
+       margin: 0rem;
+       h3{
+        ${customMedia.lessThan('small')`
+       padding: 1rem 0;
+       margin: 0.5rem 0;
+    `}
+       }
     `}
 `;
 ContactUsContent.displayName = 'ContactUsContent';

@@ -12,7 +12,6 @@ import {
 import {
     ShapeFour,
     ShapeThree,
-    RightArrow,
     ShapeTwo,
     ShapeFive,
     Digital,
@@ -73,10 +72,6 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
                                             component={CardContent(content)}
                                             paragraph={content.paragraph}
                                         />
-                                        {/* <StyledLink to={content.weblink}>
-                                                <RightArrow />
-                                            </StyledLink> */}
-                                        {/* </Card> */}
                                     </React.Fragment>
                                 )
                             );
@@ -128,7 +123,6 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
                                 platforms, if you would like to know more you
                                 can contact us
                                 <ContactLink to="/contact">here</ContactLink>.
-
                             </Paragraph>
                         </div>
                     </OnlineWebPresence>
@@ -140,8 +134,32 @@ export const Services: React.FunctionComponent<IPagesProps> = ({
 };
 const ContactLink = styled(StyledLink)`
     padding-left: 0.2rem;
-`
-
+`;
+const DigitalTransformation = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid #9ccccc;
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    h2 {
+        margin-top: 1rem;
+    }
+    svg {
+        margin: 1rem;
+    }
+    ${media.lessThan('small')`
+       padding: 1rem 1rem 1rem 1rem;
+       margin: 0;
+       flex-direction: column;
+       svg {
+        margin: 0;
+        width: 75%;
+    }
+  `}
+`;
 const OnlineWebPresence = styled.div`
     display: flex;
     flex-direction: row;
@@ -162,32 +180,6 @@ const OnlineWebPresence = styled.div`
        padding: 1rem 1rem 1rem 1rem;
        margin: 0;
        flex-direction: column-reverse;
-       svg {
-        margin: 0;
-        width: 75%;
-    }
-  `}
-`;
-
-const DigitalTransformation = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    border-top: 1px solid #9ccccc;
-    width: 100%;
-    margin: 1rem;
-    padding: 1rem;
-    h2 {
-        margin-top: 1rem;
-    }
-    svg {
-        margin: 1rem;
-    }
-    ${media.lessThan('small')`
-       padding: 1rem 1rem 1rem 1rem;
-       margin: 0;
-       flex-direction: column;
        svg {
         margin: 0;
         width: 75%;

@@ -14,7 +14,7 @@ export const SVG = ({
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <g clip-path="url(#clip0)">
+            <g clipPath="url(#clip0)">
                 <path
                     d="M37.789 44.9427L33.3547 43.656C32.8894 43.5251 32.6277 43.038 32.7586 42.5727L42.6813 8.38983C42.8121 7.92456 43.2992 7.66284 43.7644 7.7937L48.1988 9.08047C48.664 9.21133 48.9257 9.69841 48.7949 10.1637L38.8721 44.3466C38.734 44.8119 38.2542 45.0808 37.789 44.9427ZM29.5019 36.7859L32.6641 33.4127C32.9985 33.0565 32.9766 32.4894 32.6059 32.1623L26.0198 26.3682L32.6059 20.5741C32.9766 20.247 33.0057 19.6799 32.6641 19.3237L29.5019 15.9505C29.1748 15.6015 28.6223 15.5797 28.2661 15.9141L17.7909 25.7285C17.4201 26.0701 17.4201 26.659 17.7909 27.0007L28.2661 36.8223C28.6223 37.1567 29.1748 37.1422 29.5019 36.7859ZM53.2873 36.8295L63.7626 27.008C64.1333 26.6663 64.1333 26.0774 63.7626 25.7357L53.2873 15.9069C52.9384 15.5797 52.3859 15.5943 52.0515 15.9432L48.8894 19.3164C48.555 19.6727 48.5768 20.2397 48.9475 20.5669L55.5336 26.3682L48.9475 32.1623C48.5768 32.4894 48.5477 33.0565 48.8894 33.4127L52.0515 36.7859C52.3787 37.1422 52.9311 37.1567 53.2873 36.8295Z"
                     fill="url(#paint0_linear)"
@@ -34,7 +34,7 @@ export const SVG = ({
                 <path
                     d="M277.825 98.1489L304.41 75.1086V5.98775"
                     stroke="#9CCCCC"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
                 <circle cx="303.967" cy="7.31698" r="6.64623" fill="#9CCCCC" />
             </g>
@@ -42,7 +42,7 @@ export const SVG = ({
                 <path
                     d="M10.6462 55.613H107.238L127.177 75.9947H175.03"
                     stroke="#9CCCCC"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
                 <ellipse
                     cx="10.4493"
@@ -69,7 +69,7 @@ export const SVG = ({
                     rx="2"
                     fill="white"
                     stroke="#9CCCCC"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
                 <rect
                     x="344.608"
@@ -87,14 +87,14 @@ export const SVG = ({
                     rx="2"
                     fill="white"
                     stroke="#9CCCCC"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
             </g>
             <g filter="url(#filter4_d)">
                 <path
                     d="M191.867 148.66L169.713 169.042H38.5604"
                     stroke="#99CCCC"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
             </g>
             <g filter="url(#filter5_d)">
@@ -145,7 +145,7 @@ export const SVG = ({
                 <path
                     d="M264.532 148.66L299.093 186.765H389.482L408.977 202.716"
                     stroke="#9CCCCC"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
             </g>
             <g filter="url(#filter11_d)">
@@ -157,7 +157,7 @@ export const SVG = ({
             <path
                 d="M292.89 121.189H412.679L453.285 92.8319"
                 stroke="#9CCCCC"
-                stroke-width="2"
+                strokeWidth="2"
             />
             <g filter="url(#filter13_d)">
                 <rect
@@ -171,7 +171,7 @@ export const SVG = ({
                 <path
                     d="M453.285 122.777H470.108M509.519 122.777H470.108M470.108 122.777V154.802M458.092 129.674H463.379M456.65 133.616H460.014"
                     stroke="white"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
                 <ellipse
                     cx="469.076"
@@ -204,12 +204,12 @@ export const SVG = ({
                 <path
                     d="M476.356 129.674H486.93M481.162 133.123H490.775"
                     stroke="white"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
                 <path
                     d="M478.759 138.05H494.139M475.875 144.455H497.023M475.875 150.86H488.372"
                     stroke="white"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
             </g>
             <g filter="url(#filter14_dd)">
@@ -233,7 +233,7 @@ export const SVG = ({
             <path
                 d="M349.604 235.061H382.835M349.604 242.594H382.835M349.604 249.683H368.657"
                 stroke="white"
-                stroke-width="2"
+                strokeWidth="2"
             />
             <defs>
                 <filter
@@ -243,9 +243,9 @@ export const SVG = ({
                     width="150.786"
                     height="107.364"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -276,9 +276,9 @@ export const SVG = ({
                     width="41.443"
                     height="106.234"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -309,9 +309,9 @@ export const SVG = ({
                     width="179.03"
                     height="35.5849"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -342,9 +342,9 @@ export const SVG = ({
                     width="59.3707"
                     height="71.8039"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -375,9 +375,9 @@ export const SVG = ({
                     width="161.984"
                     height="30.1177"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -408,9 +408,9 @@ export const SVG = ({
                     width="21.2925"
                     height="21.2925"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -441,9 +441,9 @@ export const SVG = ({
                     width="23.5531"
                     height="23.5531"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -474,9 +474,9 @@ export const SVG = ({
                     width="25.3106"
                     height="25.3106"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -507,9 +507,9 @@ export const SVG = ({
                     width="23.5531"
                     height="23.5531"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -540,9 +540,9 @@ export const SVG = ({
                     width="23.5531"
                     height="23.5531"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -573,9 +573,9 @@ export const SVG = ({
                     width="153.819"
                     height="63.5018"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -606,9 +606,9 @@ export const SVG = ({
                     width="21.2925"
                     height="21.2925"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -639,9 +639,9 @@ export const SVG = ({
                     width="21.2925"
                     height="21.2925"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -672,9 +672,9 @@ export const SVG = ({
                     width="64.7145"
                     height="56.284"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -705,9 +705,9 @@ export const SVG = ({
                     width="53.1944"
                     height="62.9422"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -755,9 +755,9 @@ export const SVG = ({
                     y2="32.3003"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#FFBD77" />
-                    <stop offset="0.239922" stop-color="#F0F4A4" />
-                    <stop offset="1" stop-color="#9CCCCC" />
+                    <stop stopColor="#FFBD77" />
+                    <stop offset="0.239922" stopColor="#F0F4A4" />
+                    <stop offset="1" stopColor="#9CCCCC" />
                 </linearGradient>
                 <clipPath id="clip0">
                     <rect

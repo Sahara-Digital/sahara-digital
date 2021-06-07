@@ -22,6 +22,36 @@ const theme: DefaultTheme = {
             tertiary: '#FDD200',
         },
     },
+    buttons: {
+        primary: {
+            color: '#232F3E',
+            bg: '#9CCCCC',
+            width: {
+                small: '105px',
+                large: '233px',
+            },
+        },
+        secondary: {
+            color: '#232F3E',
+            bg: '#FFFFFF',
+        },
+    },
+    border: {
+        primary: '1px solid #232F3E',
+        secondary: '1px solid #232F3E',
+        none: 'none',
+    },
+    borderRadius: {
+        small: '1px',
+        medium: '3px',
+        large: '5px',
+    },
+    padding: {
+        small: '1rem',
+        medium: '2rem',
+        large: '3rem',
+        other: '1rem 1.5rem 1rem 1.5rem',
+    },
     fontsize: {
         xsmall: '0.6rem',
         small: '0.8rem',

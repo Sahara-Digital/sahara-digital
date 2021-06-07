@@ -27,12 +27,12 @@ const Routes: React.FunctionComponent<IProps> = ({
                 />
                 <Route
                     exact
-                    path={process.env.PUBLIC_URL + "/services"}
+                    path={process.env.PUBLIC_URL + '/services'}
                     render={({ history }: IProps) => (
                         <Services history={history} />
                     )}
                 />
-                 {/* <Route
+                {/* <Route
                     exact
                     path={process.env.PUBLIC_URL + "/web-consulting"}
                     render={({ history }: IProps) => (
